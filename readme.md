@@ -23,7 +23,7 @@ the following links for release notes, training materials, and interface referen
 - [Release Notes](release_notes.md)
 - [MPLAB® Harmony License](mplab_harmony_license.md)
 - [MPLAB® Harmony 3 Aerospace Wiki](https://github.com/Microchip-MPLAB-Harmony/aerospace/wiki)
-- [MPLAB® Harmony 3 Aerospace API Help](page-overview)
+- [MPLAB® Harmony 3 Aerospace API Help](page-overview.md)
 
 # Contents Summary
 
