@@ -73,24 +73,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md33">Porting Aria Applications to Legato</a><ul><li class="level3"><a href="#autotoc_md34">Project Graph Component Changes</a></li>
-<li class="level3"><a href="#autotoc_md35">Middleware Folder Changes</a></li>
-<li class="level3"><a href="#autotoc_md36">Generated GFX File Changes</a></li>
-<li class="level3"><a href="#autotoc_md37">Generated Harmony File Changes</a></li>
-<li class="level3"><a href="#autotoc_md38">Driver Interface Changes</a></li>
-<li class="level3"><a href="#autotoc_md39">Widgets and Screen Changes</a></li>
-<li class="level3"><a href="#autotoc_md40">Memory Use Changes</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md57">Porting Aria Applications to Legato</a><ul><li class="level3"><a href="#autotoc_md58">Project Graph Component Changes</a></li>
+<li class="level3"><a href="#autotoc_md59">Middleware Folder Changes</a></li>
+<li class="level3"><a href="#autotoc_md60">Generated GFX File Changes</a></li>
+<li class="level3"><a href="#autotoc_md61">Generated Harmony File Changes</a></li>
+<li class="level3"><a href="#autotoc_md62">Driver Interface Changes</a></li>
+<li class="level3"><a href="#autotoc_md63">Widgets and Screen Changes</a></li>
+<li class="level3"><a href="#autotoc_md64">Memory Use Changes</a></li>
 </ul>
 </li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md33"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md57"></a>
 Porting Aria Applications to Legato</h2>
 <p>Microchip Harmony Graphics Suite Legato graphics library is a result of an on going effort to make graphics applications and development more easy to use and high performance..</p>
 <p>When porting Aria-related code to Legato library, application developers should be aware that the graphics development infrastructure has undergone considerable changes in Legato.</p>
 <p>The table below details items to consider and the impact they have when porting an application using the Aria graphics library to the Legato graphics library.</p>
-<h3><a class="anchor" id="autotoc_md34"></a>
+<h3><a class="anchor" id="autotoc_md58"></a>
 Project Graph Component Changes</h3>
 <p>There are a few changes in MHC that affect the Aria applications. These are:</p>
 <p>|-------&mdash;|-------&mdash;| </p><table class="markdownTable">
@@ -103,7 +103,7 @@ Project Graph Component Changes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">GFX Core Hardware Abstraction Layer component </td><td class="markdownTableBodyNone">GFX Core LE component for display management purposes </td><td class="markdownTableBodyNone">The HAL is no longer needed. The GFX Core LE is enabled on selection of a LE display driver.  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md35"></a>
+<h3><a class="anchor" id="autotoc_md59"></a>
 Middleware Folder Changes</h3>
 <p>There are a few folder changes which affect Aria applications. These are:</p>
 <p>|-------&mdash;|-------&mdash;| </p><table class="markdownTable">
@@ -112,7 +112,7 @@ Middleware Folder Changes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">middleware/aria </td><td class="markdownTableBodyNone">middleware/legato </td><td class="markdownTableBodyNone">The aria folder is not used for Legato applications. All related support files will exist in the legato folder. This includes library and drivers and templates.  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md36"></a>
+<h3><a class="anchor" id="autotoc_md60"></a>
 Generated GFX File Changes</h3>
 <p>There are a few changes which effect the content of generated files. These are:</p>
 <p>|-------&mdash;|-------&mdash;| </p><table class="markdownTable">
@@ -122,16 +122,16 @@ Generated GFX File Changes</h3>
 <td class="markdownTableBodyNone">Application specific files are scattered under the config folder in various locations. </td><td class="markdownTableBodyNone">Application specific files are located in the config/&lt;your config&gt;/gfx/legato/generate </td><td class="markdownTableBodyNone">All Legato applications will generate fonts, images, screen and app support files to a single folder named "generate".  </td></tr>
 </table>
 <p>| The UI design is hidden in the harmony.prj file | The UI design is stored in a single zip file named: &lt;your_config&gt;_design.zip. | This file is selected when invoking Graphics Designer |</p>
-<h3><a class="anchor" id="autotoc_md37"></a>
+<h3><a class="anchor" id="autotoc_md61"></a>
 Generated Harmony File Changes</h3>
 <p>There are a few changes to the content of generated files that should be noted. These are:</p>
-<h3><a class="anchor" id="autotoc_md38"></a>
+<h3><a class="anchor" id="autotoc_md62"></a>
 Driver Interface Changes</h3>
 <p>There are a few changes which effect Aria driver interface. These are:</p>
-<h3><a class="anchor" id="autotoc_md39"></a>
+<h3><a class="anchor" id="autotoc_md63"></a>
 Widgets and Screen Changes</h3>
 <p>Widgets and screens have a new declaration and calling mechanism. More facilities for speciality in Legato: These ar</p>
-<h3><a class="anchor" id="autotoc_md40"></a>
+<h3><a class="anchor" id="autotoc_md64"></a>
 Memory Use Changes</h3>
 <p>Memory use was found to be problematic in Aria during heavy heap usage and debugging. Legato addresses heap allocation and dynamic memory as follows: </p>
 </div></div><!-- contents -->

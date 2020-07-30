@@ -102,15 +102,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="legato__event_8h__dep__incl.png" border="0" usemap="#C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2core_2legato__event_8hdep" alt=""/></div>
 <map name="C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2core_2legato__event_8hdep" id="C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2core_2legato__event_8hdep">
-<area shape="rect" title="Legato event definitions." alt="" coords="215,5,403,61"/>
-<area shape="rect" href="legato__input_8h.html" title="Legato input definitions." alt="" coords="5,213,193,269"/>
-<area shape="rect" href="legato__widget_8h.html" title="Legato widget definitions." alt="" coords="301,109,497,165"/>
-<area shape="rect" href="legato__state_8h.html" title=" " alt="" coords="100,325,288,381"/>
-<area shape="rect" href="legato_8h.html" title="The header file joins all header files used in the graphics object library." alt="" coords="232,436,420,492"/>
-<area shape="rect" href="legato__renderer_8h.html" title=" " alt="" coords="562,213,778,269"/>
-<area shape="rect" href="legato__widget__skin__classic__common_8h_source.html" title=" " alt="" coords="576,317,764,388"/>
-<area shape="rect" href="legato__widget__arc_8h.html" title="Arc widget definitions and functions." alt="" coords="364,317,552,388"/>
-<area shape="rect" href="legato__editwidget_8h.html" title="Edit widget functions and definitions." alt="" coords="217,213,435,269"/>
+<area shape="rect" title="Legato event definitions." alt="" coords="655,5,843,61"/>
+<area shape="rect" href="legato__input_8h.html" title="Legato input definitions." alt="" coords="843,213,1031,269"/>
+<area shape="rect" href="legato__widget_8h.html" title="Legato widget definitions." alt="" coords="524,109,720,165"/>
+<area shape="rect" href="legato__state_8h.html" title=" " alt="" coords="748,325,936,381"/>
+<area shape="rect" href="legato_8h.html" title="The header file joins all header files used in the graphics object library." alt="" coords="616,436,804,492"/>
+<area shape="rect" href="legato__renderer_8h.html" title=" " alt="" coords="283,213,499,269"/>
+<area shape="rect" href="legato__widget__skin__classic__common_8h_source.html" title=" " alt="" coords="484,317,672,388"/>
+<area shape="rect" href="legato__widget__arc_8h.html" title="Arc widget definitions and functions." alt="" coords="5,317,193,388"/>
+<area shape="rect" href="legato__editwidget_8h.html" title="Edit widget functions and definitions." alt="" coords="601,213,819,269"/>
+<area shape="rect" href="legato__gpu_8h.html" title="Defines wrapper for interfacing with Harmony GPU interface." alt="" coords="269,325,460,381"/>
 </map>
 </div>
 </div>
@@ -130,9 +131,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aa61f395b9e0a3e08d4c85374d24702bb"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="legato__event_8h.html#a99b04b30ecc41596e80ac7db95106ea9">leEventID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__event_8h.html#aa61f395b9e0a3e08d4c85374d24702bb">leEventID</a></td></tr>
 <tr class="memdesc:aa61f395b9e0a3e08d4c85374d24702bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enum represents valid event IDs.  <a href="legato__event_8h.html#aa61f395b9e0a3e08d4c85374d24702bb">More...</a><br /></td></tr>
 <tr class="separator:aa61f395b9e0a3e08d4c85374d24702bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dad264a6f2d2701bc8a247670abaf82"><td class="memItemLeft" align="right" valign="top"><a id="a1dad264a6f2d2701bc8a247670abaf82"></a>
-typedef struct <a class="el" href="structleWidget.html">leWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><b>leWidget</b></td></tr>
-<tr class="separator:a1dad264a6f2d2701bc8a247670abaf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3e553b4d404e388b81fa8a866aa80fd"><td class="memItemLeft" align="right" valign="top"><a id="ae3e553b4d404e388b81fa8a866aa80fd"></a>
 typedef struct <a class="el" href="structleEvent.html">leEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__event_8h.html#ae3e553b4d404e388b81fa8a866aa80fd">leEvent</a></td></tr>
 <tr class="memdesc:ae3e553b4d404e388b81fa8a866aa80fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enum presents a event. An event contains valid event ids. <br /></td></tr>
@@ -469,7 +467,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="alegato__event_8h_html_a107996c97fad1a489f12053b41db2fa6"><div class="ttname"><a href="legato__event_8h.html#a107996c97fad1a489f12053b41db2fa6">leEvent_AddEvent</a></div><div class="ttdeci">leResult leEvent_AddEvent(leEvent *evt)</div><div class="ttdoc">Add event.</div><div class="ttdef"><b>Definition:</b> legato_event.c:73</div></div>
 <div class="ttc" id="alegato__event_8h_html_a5a415b36d6f99beb28fb9bbb6af103b8"><div class="ttname"><a href="legato__event_8h.html#a5a415b36d6f99beb28fb9bbb6af103b8">leEvent_SetFilter</a></div><div class="ttdeci">LIB_EXPORT leResult leEvent_SetFilter(leEvent_FilterEvent cb)</div><div class="ttdoc">Set filter event callback.</div><div class="ttdef"><b>Definition:</b> legato_event.c:66</div></div>
 <div class="ttc" id="alegato__event_8h_html_a7925957d651e3db342669a550a16d057"><div class="ttname"><a href="legato__event_8h.html#a7925957d651e3db342669a550a16d057">leEvent_GetCount</a></div><div class="ttdeci">uint32_t leEvent_GetCount()</div><div class="ttdoc">Get Event Count.</div><div class="ttdef"><b>Definition:</b> legato_event.c:61</div></div>
-<div class="ttc" id="alegato__event_8h_html_afe26ab4e00b40d87f41c66ef8963cbf4"><div class="ttname"><a href="legato__event_8h.html#afe26ab4e00b40d87f41c66ef8963cbf4">leEvent_FilterEvent</a></div><div class="ttdeci">leBool(* leEvent_FilterEvent)(leEvent *)</div><div class="ttdoc">FilterEvent function pointer.</div><div class="ttdef"><b>Definition:</b> legato_event.h:100</div></div>
+<div class="ttc" id="alegato__event_8h_html_afe26ab4e00b40d87f41c66ef8963cbf4"><div class="ttname"><a href="legato__event_8h.html#afe26ab4e00b40d87f41c66ef8963cbf4">leEvent_FilterEvent</a></div><div class="ttdeci">leBool(* leEvent_FilterEvent)(leEvent *)</div><div class="ttdoc">FilterEvent function pointer.</div><div class="ttdef"><b>Definition:</b> legato_event.h:99</div></div>
 <div class="ttc" id="alegato__event_8h_html_a64faed86ab5b1bf21fe973e51f696c14"><div class="ttname"><a href="legato__event_8h.html#a64faed86ab5b1bf21fe973e51f696c14">leEvent_ProcessEvents</a></div><div class="ttdeci">leResult leEvent_ProcessEvents()</div><div class="ttdoc">Process events.</div><div class="ttdef"><b>Definition:</b> legato_event.c:90</div></div>
 <div class="ttc" id="alegato__event_8h_html_ae58133f6fd00eb37ecbf7e92d5f700a4"><div class="ttname"><a href="legato__event_8h.html#ae58133f6fd00eb37ecbf7e92d5f700a4">leEvent_ClearList</a></div><div class="ttdeci">leResult leEvent_ClearList()</div><div class="ttdoc">Clear event list.</div><div class="ttdef"><b>Definition:</b> legato_event.c:83</div></div>
 <!-- start footer part -->

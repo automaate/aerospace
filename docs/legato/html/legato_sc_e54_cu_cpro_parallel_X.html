@@ -73,16 +73,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md134">Defining the Architecture</a></li>
-<li class="level2"><a href="#autotoc_md135">Demonstration Features</a></li>
-<li class="level2"><a href="#autotoc_md136">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md137">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md138">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md139">Running the Demonstration</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md261">Defining the Architecture</a></li>
+<li class="level2"><a href="#autotoc_md262">Demonstration Features</a></li>
+<li class="level2"><a href="#autotoc_md263">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md264">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md265">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md266">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md134"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md261"></a>
 Defining the Architecture</h2>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_e54_cult_cpro_parallel_arch.png" alt="" class="inline"/></p>
 <p>The block diagrams below show the various software and hardware blocks used in this application.</p>
@@ -90,7 +90,7 @@ Defining the Architecture</h2>
 <p>Finally, the application uses the Timer System Service and driver to send timer events for transitioning images in the Slideshow Demo at specified intervals.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service. <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md135"></a>
+<h2><a class="anchor" id="autotoc_md262"></a>
 Demonstration Features</h2>
 <ul>
 <li>Legato Graphics Library</li>
@@ -101,7 +101,7 @@ Demonstration Features</h2>
 <li>Graphics widgets: List wheel, Touch Test, Keypad, Slideshow</li>
 <li>Alpha-blending</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md136"></a>
+<h2><a class="anchor" id="autotoc_md263"></a>
 Creating the Project Graph</h2>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_e54_cult_xpro_parallel-pg.png" alt="" class="inline"/></p>
 <p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
@@ -115,7 +115,7 @@ Creating the Project Graph</h2>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_x_r_e54_cult_cpro_parallel.X_conf4.png" alt="" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_x_r_e54_cult_cpro_parallel.X_conf5.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md137"></a>
+<h2><a class="anchor" id="autotoc_md264"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx_apps/legato_showcase. To build this application, use MPLAB X IDE to open the gfx_apps/legato_showcase/firmware/legato_sc_e54_cult_xpro_parallel.X project file.</p>
 <p>The following table lists configuration properties:</p>
@@ -128,7 +128,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md138"></a>
+<h2><a class="anchor" id="autotoc_md265"></a>
 Configuring the Hardware</h2>
 <p>This section describes how to configure the supported hardware.</p>
 <p>Configure the hardware as follows:</p>
@@ -141,7 +141,7 @@ Configuring the Hardware</h2>
 </ul>
 <p>The final hardware setup should be:</p>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf7.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md139"></a>
+<h2><a class="anchor" id="autotoc_md266"></a>
 Running the Demonstration</h2>
 <p>The app first boots to the animation Splash Screen. Once the Splash Screen animation completes, the Home Screen is shown:</p>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running1.png" alt="" class="inline"/></p>

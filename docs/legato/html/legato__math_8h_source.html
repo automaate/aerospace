@@ -496,162 +496,227 @@ $(function() {
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;LIB_EXPORT <span class="keywordtype">double</span> <a class="code" href="legato__math_8h.html#a10b22167cf1c5ee73245cc7e052b679e">leAtan</a>(<span class="keywordtype">double</span> val);</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="comment">//Returns true if arc overlaps with quadrant</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment"></span><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> <a class="code" href="legato__math_8h.html#ac8fa4d3fdca450d73cb52d557e683c54">leArcsOverlapQuadrant</a>(int32_t startAngleArc0, </div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                             int32_t endAngleArc0, </div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                             <a class="code" href="legato__math_8h.html#ab0fdee693ed63bb7ca0aaf19c77a7f93">leArcDir</a> dir, </div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                             uint32_t quadrant);</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">/* Function:</span></div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="comment">    void leSortPointsX(lePoint* p1, lePoint* p2)</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="comment">    Sorts two points on the X axis.</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;<span class="comment">    Sorts two points on the X axis.</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno"><a class="line" href="structleArcQuadrantQuery.html">  708</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;{</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> q1;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> q2;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> q3;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> q4;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;} <a class="code" href="structleArcQuadrantQuery.html">leArcQuadrantQuery</a>;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> lePointOnLineSide(<a class="code" href="structlePoint.html">lePoint</a>* pt,</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                         <a class="code" href="structlePoint.html">lePoint</a>* linePt,</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;                         <a class="code" href="structlePoint.html">lePoint</a>* sign);</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160; </div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="comment">    void leSortPointsX(lePoint* p1, lePoint* p2)</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">    Sorts two points on the X axis.</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">    Sorts two points on the X axis.</span></div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="comment">    lePoint* p1 - the first point</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="comment">    lePoint* p2 - the second point</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="comment">    The pointers are modified with the results of the sort</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;<span class="comment">  Remarks:</span></div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;<span class="comment">    lePoint* p1 - the first point</span></div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="comment">    lePoint* p2 - the second point</span></div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="comment">    The pointers are modified with the results of the sort</span></div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="keywordtype">void</span> <a class="code" href="legato__math_8h.html#abaceb63d086f56f5b7a73a7c1fade169">leSortPointsX</a>(<a class="code" href="structlePoint.html">lePoint</a>* p1, <a class="code" href="structlePoint.html">lePoint</a>* p2);</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="comment">/* Function:</span></div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">    void leSortPointsX(lePoint* p1, lePoint* p2)</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">    Sorts two points on the Y axis.</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="comment">    Sorts two points on the Y axis.</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="keywordtype">void</span> <a class="code" href="legato__math_8h.html#abaceb63d086f56f5b7a73a7c1fade169">leSortPointsX</a>(<a class="code" href="structlePoint.html">lePoint</a>* p1, <a class="code" href="structlePoint.html">lePoint</a>* p2);</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="comment">    void leSortPointsX(lePoint* p1, lePoint* p2)</span></div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="comment">    Sorts two points on the Y axis.</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="comment">    Sorts two points on the Y axis.</span></div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">    lePoint* p1 - the first point</span></div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment">    lePoint* p2 - the second point</span></div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="comment">    The pointers are modified with the results of the sort</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="comment">  Remarks:</span></div>
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="comment">    lePoint* p1 - the first point</span></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;<span class="comment">    lePoint* p2 - the second point</span></div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;<span class="comment">    The pointers are modified with the results of the sort</span></div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="keywordtype">void</span> <a class="code" href="legato__math_8h.html#a94c3e343d61512d000c0c26e427cb136">leSortPointsY</a>(<a class="code" href="structlePoint.html">lePoint</a>* p1, <a class="code" href="structlePoint.html">lePoint</a>* p2);</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="comment">/* Function:</span></div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="comment">    int32_t leGetXGivenYOnLine(lePoint p1, lePoint p2, int32_t y)</span></div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="comment">    Projects a point onto another point given a y coordinate.</span></div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="comment">    Projects a point onto another point given a y coordinate.</span></div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="comment">    lePoint p1 - the first point</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;<span class="comment">    lePoint p2 - the second point</span></div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;<span class="comment">    int32_t y - the y coordinate</span></div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;<span class="comment">    int32_t - the resultant x coordinate</span></div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;int32_t <a class="code" href="legato__math_8h.html#af81c0b9353940dabb486d0f6b85021fd">leGetXGivenYOnLine</a>(<a class="code" href="structlePoint.html">lePoint</a> p1, <a class="code" href="structlePoint.html">lePoint</a> p2, int32_t y);</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160; </div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="comment">/* Function:</span></div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;<span class="comment">    int32_t leGetYGivenXOnLine(lePoint p1, lePoint p2, int32_t x)</span></div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;<span class="comment">    Projects a point onto another point given a x coordinate.</span></div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;<span class="comment">    Projects a point onto another point given a x coordinate.</span></div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;<span class="comment">    lePoint p1 - the first point</span></div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;<span class="comment">    lePoint p2 - the second point</span></div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;<span class="comment">    int32_t x - the x coordinate</span></div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;<span class="comment">    int32_t - the resultant y coordinate</span></div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;int32_t <a class="code" href="legato__math_8h.html#a8fb8b23ccd1be2fa428318dfebb295cb">leGetYGivenXOnLine</a>(<a class="code" href="structlePoint.html">lePoint</a> p1, <a class="code" href="structlePoint.html">lePoint</a> p2, int32_t x);</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160; </div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;<span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="comment">/* Function:</span></div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;<span class="comment">    lePoint leRotatePoint(lePoint pos,</span></div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="comment">                          lePoint org,</span></div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;<span class="comment">                          int32_t ang)</span></div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="comment">    Rotates a point given an origin and an angle in degrees.</span></div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;<span class="comment">    Rotates a point given an origin and an angle in degrees.</span></div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="comment">    lePoint pos - the point to rotate</span></div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;<span class="comment">    lePoint org - the origin of the rotation</span></div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;<span class="comment">    int32_t ang - the angle in degrees</span></div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;<span class="comment">    lePoint - the rotated point</span></div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;<a class="code" href="structlePoint.html">lePoint</a> <a class="code" href="legato__math_8h.html#a74bd8aa8179412a74c2383660ab85e8c">leRotatePoint</a>(<a class="code" href="structlePoint.html">lePoint</a> pos,</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;                      <a class="code" href="structlePoint.html">lePoint</a> org,</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;                      int32_t ang);</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160; </div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;<span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="comment">/* Function:</span></div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="comment">    leRect leRotatedRectBounds(leRect rect,</span></div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="comment">                               lePoint org,</span></div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;<span class="comment">                               int32_t ang)</span></div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;<span class="comment">    Calculates the bounding rectangle of an area rotated around</span></div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;<span class="comment">    an anchor point.</span></div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="keywordtype">void</span> <a class="code" href="legato__math_8h.html#a94c3e343d61512d000c0c26e427cb136">leSortPointsY</a>(<a class="code" href="structlePoint.html">lePoint</a>* p1, <a class="code" href="structlePoint.html">lePoint</a>* p2);</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160; </div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="comment">    int32_t leGetXGivenYOnLine(lePoint p1, lePoint p2, int32_t y)</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;<span class="comment">    Projects a point onto another point given a y coordinate.</span></div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="comment">    Projects a point onto another point given a y coordinate.</span></div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="comment">    lePoint p1 - the first point</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="comment">    lePoint p2 - the second point</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="comment">    int32_t y - the y coordinate</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="comment">    int32_t - the resultant x coordinate</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;int32_t <a class="code" href="legato__math_8h.html#af81c0b9353940dabb486d0f6b85021fd">leGetXGivenYOnLine</a>(<a class="code" href="structlePoint.html">lePoint</a> p1, <a class="code" href="structlePoint.html">lePoint</a> p2, int32_t y);</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160; </div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;<span class="comment">    int32_t leGetYGivenXOnLine(lePoint p1, lePoint p2, int32_t x)</span></div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;<span class="comment">    Projects a point onto another point given a x coordinate.</span></div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;<span class="comment">    Projects a point onto another point given a x coordinate.</span></div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;<span class="comment">    lePoint p1 - the first point</span></div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;<span class="comment">    lePoint p2 - the second point</span></div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;<span class="comment">    int32_t x - the x coordinate</span></div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;<span class="comment">    int32_t - the resultant y coordinate</span></div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;int32_t <a class="code" href="legato__math_8h.html#a8fb8b23ccd1be2fa428318dfebb295cb">leGetYGivenXOnLine</a>(<a class="code" href="structlePoint.html">lePoint</a> p1, <a class="code" href="structlePoint.html">lePoint</a> p2, int32_t x);</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160; </div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;<span class="comment">    lePoint leRotatePoint(lePoint pos,</span></div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;<span class="comment">                          lePoint org,</span></div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;<span class="comment">                          int32_t ang)</span></div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;<span class="comment">    Rotates a point given an origin and an angle in degrees.</span></div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="comment">    Rotates a point given an origin and an angle in degrees.</span></div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;<span class="comment">    lePoint pos - the point to rotate</span></div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;<span class="comment">    lePoint org - the origin of the rotation</span></div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="comment">    int32_t ang - the angle in degrees</span></div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;<span class="comment">    lePoint - the rotated point</span></div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;<a class="code" href="structlePoint.html">lePoint</a> <a class="code" href="legato__math_8h.html#a74bd8aa8179412a74c2383660ab85e8c">leRotatePoint</a>(<a class="code" href="structlePoint.html">lePoint</a> pos,</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;                      <a class="code" href="structlePoint.html">lePoint</a> org,</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;                      int32_t ang);</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160; </div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;<span class="comment">    leRect leRotatedRectBounds(leRect rect,</span></div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;<span class="comment">                               lePoint org,</span></div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;<span class="comment">                               int32_t ang)</span></div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;<span class="comment">    Calculates the bounding rectangle of an area rotated around</span></div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;<span class="comment">    an anchor point.</span></div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="comment">    Calculates the bounding rectangle of an area rotated around</span></div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="comment">    an anchor point.</span></div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;<span class="comment">    leRect rect - the area to rotate</span></div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;<span class="comment">    lePoint org - the origin of the rotation</span></div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;<span class="comment">    int32_t ang - the angle in degrees</span></div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<span class="comment">    Calculates the bounding rectangle of an area rotated around</span></div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;<span class="comment">    an anchor point.</span></div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;<span class="comment">    leRect rect - the area to rotate</span></div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;<span class="comment">    lePoint org - the origin of the rotation</span></div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;<span class="comment">    int32_t ang - the angle in degrees</span></div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;<span class="comment">    leRect - the rectangle that completely contains the rotated area</span></div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<a class="code" href="structleRect.html">leRect</a> <a class="code" href="legato__math_8h.html#a159be5a07a7c920b406c888639b25891">leRotatedRectBounds</a>(<a class="code" href="structleRect.html">leRect</a> rect,</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                           <a class="code" href="structlePoint.html">lePoint</a> org,</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                           int32_t ang);</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160; </div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LE_MATH_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<span class="comment">    leRect - the rectangle that completely contains the rotated area</span></div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;<a class="code" href="structleRect.html">leRect</a> <a class="code" href="legato__math_8h.html#aa97347881b1ba0d4147a52a4ff7281f9">leRotatedRectBounds</a>(<a class="code" href="structleRect.html">leRect</a> rect,</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                           int32_t ang);</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160; </div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160; </div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;<span class="comment">    float leSqrt(const float x)</span></div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;<span class="comment">    Fast square root approximation function.</span></div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="comment">    Approximates a square root using the magic number method.</span></div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="comment">    const float x - the number to calculate the root for</span></div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="comment">    float - square root of the input number</span></div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;<span class="keywordtype">float</span> leSqrt(<span class="keyword">const</span> <span class="keywordtype">float</span> x);</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160; </div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<a class="code" href="structlePoint.html">lePoint</a> lePointOnCircle(uint32_t radius,</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                        int32_t angle);</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160; </div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;uint32_t leDegreesFromPercent(uint32_t percent,</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;                              int32_t centerAngle,</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;                              int32_t startAngle);</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160; </div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;uint32_t lePercentFromDegrees(uint32_t degrees,</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;                              int32_t centerAngle,</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;                              int32_t startAngle);</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160; </div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;<span class="keywordtype">void</span> leNormalizeAngles(int32_t startAngle,</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;                       int32_t spanAngle,</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;                       int32_t* normalizedStartAngle,</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;                       int32_t* normalizedEndAngle);</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160; </div>
+<div class="line"><a name="l00987"></a><span class="lineno"><a class="line" href="structleResolvedAngleRanges.html">  987</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structleResolvedAngleRanges.html">leResolvedAngleRanges</a></div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;{</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;    uint32_t angleCount;</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;    <span class="keyword">struct</span></div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;    {</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;        int32_t startAngle;</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;        int32_t endAngle;</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;        <a class="code" href="structleArcQuadrantQuery.html">leArcQuadrantQuery</a> quadrants;</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    } angle0;</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <span class="keyword">struct</span></div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    {</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;        int32_t startAngle;</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;        int32_t endAngle;</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;        <a class="code" href="structleArcQuadrantQuery.html">leArcQuadrantQuery</a> quadrants;</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;    } angle1;</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;} <a class="code" href="structleResolvedAngleRanges.html">leResolvedAngleRanges</a>;</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160; </div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;<a class="code" href="structleResolvedAngleRanges.html">leResolvedAngleRanges</a> leResolveAngles(int32_t startAngle,</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;                                      int32_t spanAngle);</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160; </div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;<span class="keywordtype">float</span> leRound(<span class="keywordtype">float</span> flt);</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160; </div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LE_MATH_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="alegato__math_8h_html_a40f2fd917b91367018699f4876df788a"><div class="ttname"><a href="legato__math_8h.html#a40f2fd917b91367018699f4876df788a">leNormalizeAngle</a></div><div class="ttdeci">LIB_EXPORT int32_t leNormalizeAngle(int32_t t)</div><div class="ttdoc">Normalize an angle between 0 - 360.</div><div class="ttdef"><b>Definition:</b> legato_math.c:49</div></div>
-<div class="ttc" id="alegato__math_8h_html"><div class="ttname"><a href="legato__math_8h.html">legato_math.h</a></div><div class="ttdoc">An array implementation for storing pointers.</div></div>
+<div class="ttc" id="alegato__math_8h_html"><div class="ttname"><a href="legato__math_8h.html">legato_math.h</a></div><div class="ttdoc">Defines common math functions for general use.</div></div>
 <div class="ttc" id="alegato__math_8h_html_a70450fdc6d9f42d82accbcc1873ffd2c"><div class="ttname"><a href="legato__math_8h.html#a70450fdc6d9f42d82accbcc1873ffd2c">leClampf</a></div><div class="ttdeci">LIB_EXPORT float leClampf(float min, float max, float f)</div><div class="ttdoc">Calculate clamp of a float.</div><div class="ttdef"><b>Definition:</b> legato_math.c:185</div></div>
 <div class="ttc" id="alegato__common_8h_html_af467b597a37f8d8851b61addcb8e2e0f"><div class="ttname"><a href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a></div><div class="ttdeci">leResult</div><div class="ttdoc">This enum represents function call results.</div><div class="ttdef"><b>Definition:</b> legato_common.h:134</div></div>
 <div class="ttc" id="alegato__math_8h_html_a65dabffaba577d0ff3378501161ed1ab"><div class="ttname"><a href="legato__math_8h.html#a65dabffaba577d0ff3378501161ed1ab">lePercentWholeRounded</a></div><div class="ttdeci">LIB_EXPORT uint32_t lePercentWholeRounded(uint32_t l, uint32_t r)</div><div class="ttdoc">Calculate percent whole rounded.</div><div class="ttdef"><b>Definition:</b> legato_math.c:204</div></div>
@@ -666,30 +731,31 @@ $(function() {
 <div class="ttc" id="alegato__math_8h_html_af2d186a1b4a1a2d1aca8213589962af6"><div class="ttname"><a href="legato__math_8h.html#af2d186a1b4a1a2d1aca8213589962af6">lePercentOf</a></div><div class="ttdeci">LIB_EXPORT uint32_t lePercentOf(uint32_t num, uint32_t percent)</div><div class="ttdoc">Calculate percent of a number.</div><div class="ttdef"><b>Definition:</b> legato_math.c:218</div></div>
 <div class="ttc" id="alegato__math_8h_html_a31842ab556a8d3b8f140b1f8166b7cd2"><div class="ttname"><a href="legato__math_8h.html#a31842ab556a8d3b8f140b1f8166b7cd2">leSin</a></div><div class="ttdeci">LIB_EXPORT int32_t leSin(int32_t v)</div><div class="ttdoc">Calculate sin of a number.</div><div class="ttdef"><b>Definition:</b> legato_math.c:64</div></div>
 <div class="ttc" id="alegato__math_8h_html_aeb6d31d021822d743a3b63607f916a0c"><div class="ttname"><a href="legato__math_8h.html#aeb6d31d021822d743a3b63607f916a0c">lePercent</a></div><div class="ttdeci">LIB_EXPORT uint32_t lePercent(uint32_t l, uint32_t r)</div><div class="ttdoc">Calculate percent of number.</div><div class="ttdef"><b>Definition:</b> legato_math.c:199</div></div>
-<div class="ttc" id="alegato__math_8h_html_af81c0b9353940dabb486d0f6b85021fd"><div class="ttname"><a href="legato__math_8h.html#af81c0b9353940dabb486d0f6b85021fd">leGetXGivenYOnLine</a></div><div class="ttdeci">int32_t leGetXGivenYOnLine(lePoint p1, lePoint p2, int32_t y)</div><div class="ttdoc">Project point.</div><div class="ttdef"><b>Definition:</b> legato_math.c:507</div></div>
+<div class="ttc" id="astructleArcQuadrantQuery_html"><div class="ttname"><a href="structleArcQuadrantQuery.html">leArcQuadrantQuery</a></div><div class="ttdef"><b>Definition:</b> legato_math.h:709</div></div>
+<div class="ttc" id="alegato__math_8h_html_af81c0b9353940dabb486d0f6b85021fd"><div class="ttname"><a href="legato__math_8h.html#af81c0b9353940dabb486d0f6b85021fd">leGetXGivenYOnLine</a></div><div class="ttdeci">int32_t leGetXGivenYOnLine(lePoint p1, lePoint p2, int32_t y)</div><div class="ttdoc">Project point.</div><div class="ttdef"><b>Definition:</b> legato_math.c:438</div></div>
 <div class="ttc" id="alegato__math_8h_html_ae5575576d6fe57557e32f51ad7d7e564"><div class="ttname"><a href="legato__math_8h.html#ae5575576d6fe57557e32f51ad7d7e564">LE_TRIG_FUNCTION_TYPE</a></div><div class="ttdeci">LE_TRIG_FUNCTION_TYPE</div><div class="ttdoc">Used to define the types of trig functions.</div><div class="ttdef"><b>Definition:</b> legato_math.h:57</div></div>
 <div class="ttc" id="alegato__math_8h_html_ac06ee9a5a66b42a332e3dd73f81c2aba"><div class="ttname"><a href="legato__math_8h.html#ac06ee9a5a66b42a332e3dd73f81c2aba">leMaxi</a></div><div class="ttdeci">LIB_EXPORT int32_t leMaxi(int32_t l, int32_t r)</div><div class="ttdoc">Calculate maximum of two integers.</div><div class="ttdef"><b>Definition:</b> legato_math.c:156</div></div>
 <div class="ttc" id="alegato__math_8h_html_ab0fdee693ed63bb7ca0aaf19c77a7f93ab70fbe31032044a418439100a9ea5943"><div class="ttname"><a href="legato__math_8h.html#ab0fdee693ed63bb7ca0aaf19c77a7f93ab70fbe31032044a418439100a9ea5943">LE_CCW</a></div><div class="ttdeci">@ LE_CCW</div><div class="ttdef"><b>Definition:</b> legato_math.h:80</div></div>
-<div class="ttc" id="alegato__math_8h_html_ac8fa4d3fdca450d73cb52d557e683c54"><div class="ttname"><a href="legato__math_8h.html#ac8fa4d3fdca450d73cb52d557e683c54">leArcsOverlapQuadrant</a></div><div class="ttdeci">leBool leArcsOverlapQuadrant(int32_t startAngleArc0, int32_t endAngleArc0, leArcDir dir, uint32_t quadrant)</div><div class="ttdoc">Determines if arc overlaps quadrant.</div><div class="ttdef"><b>Definition:</b> legato_math.c:351</div></div>
 <div class="ttc" id="alegato__common_8h_html_acd3365f0b79c37d8894559b5afed374b"><div class="ttname"><a href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a></div><div class="ttdeci">leBool</div><div class="ttdoc">This enum represents booleans.</div><div class="ttdef"><b>Definition:</b> legato_common.h:157</div></div>
 <div class="ttc" id="alegato__math_8h_html_a10b22167cf1c5ee73245cc7e052b679e"><div class="ttname"><a href="legato__math_8h.html#a10b22167cf1c5ee73245cc7e052b679e">leAtan</a></div><div class="ttdeci">LIB_EXPORT double leAtan(double val)</div><div class="ttdoc">Calculate atan of points.</div><div class="ttdef"><b>Definition:</b> legato_math.c:145</div></div>
 <div class="ttc" id="alegato__common_8h_html_acd3365f0b79c37d8894559b5afed374ba4c0b054924a260bd75cb267c59a46014"><div class="ttname"><a href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374ba4c0b054924a260bd75cb267c59a46014">LE_FALSE</a></div><div class="ttdeci">@ LE_FALSE</div><div class="ttdef"><b>Definition:</b> legato_common.h:158</div></div>
+<div class="ttc" id="alegato__math_8h_html_aa97347881b1ba0d4147a52a4ff7281f9"><div class="ttname"><a href="legato__math_8h.html#aa97347881b1ba0d4147a52a4ff7281f9">leRotatedRectBounds</a></div><div class="ttdeci">leRect leRotatedRectBounds(leRect rect, int32_t ang)</div><div class="ttdoc">Calculate bounding rectangle.</div><div class="ttdef"><b>Definition:</b> legato_math.c:475</div></div>
 <div class="ttc" id="alegato__math_8h_html_a39162e27547b3fe4750d6c8d5fe9dbf3"><div class="ttname"><a href="legato__math_8h.html#a39162e27547b3fe4750d6c8d5fe9dbf3">leMinf</a></div><div class="ttdeci">LIB_EXPORT float leMinf(float l, float r)</div><div class="ttdoc">Calculate minimum of two floats.</div><div class="ttdef"><b>Definition:</b> legato_math.c:161</div></div>
 <div class="ttc" id="alegato__math_8h_html_a1780cc3644fdb7be2cae8886a36d292b"><div class="ttname"><a href="legato__math_8h.html#a1780cc3644fdb7be2cae8886a36d292b">leScaleIntegerSigned</a></div><div class="ttdeci">LIB_EXPORT int32_t leScaleIntegerSigned(int32_t num, int32_t oldMax, int32_t newMax)</div><div class="ttdoc">Calculate the scale of signed integer.</div><div class="ttdef"><b>Definition:</b> legato_math.c:245</div></div>
 <div class="ttc" id="alegato__math_8h_html_a1eb8c7816f265d0a378b495781d48676"><div class="ttname"><a href="legato__math_8h.html#a1eb8c7816f265d0a378b495781d48676">leMini</a></div><div class="ttdeci">LIB_EXPORT int32_t leMini(int32_t l, int32_t r)</div><div class="ttdoc">Calculate minimum of two integers.</div><div class="ttdef"><b>Definition:</b> legato_math.c:151</div></div>
 <div class="ttc" id="alegato__math_8h_html_a5c9e73532347e08ce06493339b3465bb"><div class="ttname"><a href="legato__math_8h.html#a5c9e73532347e08ce06493339b3465bb">leClampi</a></div><div class="ttdeci">LIB_EXPORT int32_t leClampi(int32_t min, int32_t max, int32_t i)</div><div class="ttdoc">Calculates clamp of an integer.</div><div class="ttdef"><b>Definition:</b> legato_math.c:171</div></div>
 <div class="ttc" id="alegato__math_8h_html_af45f7f97a62ca241abbd8accf0c205e0"><div class="ttname"><a href="legato__math_8h.html#af45f7f97a62ca241abbd8accf0c205e0">lePolarToXY</a></div><div class="ttdeci">LIB_EXPORT leResult lePolarToXY(int32_t r, int32_t a, lePoint *p)</div><div class="ttdoc">Generate points in an arc.</div><div class="ttdef"><b>Definition:</b> legato_math.c:124</div></div>
-<div class="ttc" id="alegato__math_8h_html_a74bd8aa8179412a74c2383660ab85e8c"><div class="ttname"><a href="legato__math_8h.html#a74bd8aa8179412a74c2383660ab85e8c">leRotatePoint</a></div><div class="ttdeci">lePoint leRotatePoint(lePoint pos, lePoint org, int32_t ang)</div><div class="ttdoc">Rotates point.</div><div class="ttdef"><b>Definition:</b> legato_math.c:523</div></div>
+<div class="ttc" id="alegato__math_8h_html_a74bd8aa8179412a74c2383660ab85e8c"><div class="ttname"><a href="legato__math_8h.html#a74bd8aa8179412a74c2383660ab85e8c">leRotatePoint</a></div><div class="ttdeci">lePoint leRotatePoint(lePoint pos, lePoint org, int32_t ang)</div><div class="ttdoc">Rotates point.</div><div class="ttdef"><b>Definition:</b> legato_math.c:454</div></div>
 <div class="ttc" id="alegato__math_8h_html_a2f7c4ac26750796b8d51febee51e89de"><div class="ttname"><a href="legato__math_8h.html#a2f7c4ac26750796b8d51febee51e89de">leAbsoluteValue</a></div><div class="ttdeci">LIB_EXPORT uint32_t leAbsoluteValue(int32_t val)</div><div class="ttdoc">Calculates the absolute value of a signed integer.</div><div class="ttdef"><b>Definition:</b> legato_math.c:280</div></div>
-<div class="ttc" id="alegato__math_8h_html_a94c3e343d61512d000c0c26e427cb136"><div class="ttname"><a href="legato__math_8h.html#a94c3e343d61512d000c0c26e427cb136">leSortPointsY</a></div><div class="ttdeci">void leSortPointsY(lePoint *p1, lePoint *p2)</div><div class="ttdoc">Sorts two points on the Y axis.</div><div class="ttdef"><b>Definition:</b> legato_math.c:495</div></div>
+<div class="ttc" id="alegato__math_8h_html_a94c3e343d61512d000c0c26e427cb136"><div class="ttname"><a href="legato__math_8h.html#a94c3e343d61512d000c0c26e427cb136">leSortPointsY</a></div><div class="ttdeci">void leSortPointsY(lePoint *p1, lePoint *p2)</div><div class="ttdoc">Sorts two points on the Y axis.</div><div class="ttdef"><b>Definition:</b> legato_math.c:426</div></div>
 <div class="ttc" id="alegato__math_8h_html_ab0fdee693ed63bb7ca0aaf19c77a7f93a14f59582d1500031ac35b6e0471064a6"><div class="ttname"><a href="legato__math_8h.html#ab0fdee693ed63bb7ca0aaf19c77a7f93a14f59582d1500031ac35b6e0471064a6">LE_CW</a></div><div class="ttdeci">@ LE_CW</div><div class="ttdef"><b>Definition:</b> legato_math.h:81</div></div>
 <div class="ttc" id="alegato__math_8h_html_ab5ef516aa0c8af0eb72dcf5254b05492"><div class="ttname"><a href="legato__math_8h.html#ab5ef516aa0c8af0eb72dcf5254b05492">leScaleInteger</a></div><div class="ttdeci">LIB_EXPORT uint32_t leScaleInteger(uint32_t num, uint32_t oldMax, uint32_t newMax)</div><div class="ttdoc">Calculate the scale of an integer.</div><div class="ttdef"><b>Definition:</b> legato_math.c:256</div></div>
-<div class="ttc" id="alegato__math_8h_html_a159be5a07a7c920b406c888639b25891"><div class="ttname"><a href="legato__math_8h.html#a159be5a07a7c920b406c888639b25891">leRotatedRectBounds</a></div><div class="ttdeci">leRect leRotatedRectBounds(leRect rect, lePoint org, int32_t ang)</div><div class="ttdoc">Calculate bounding rectangle.</div><div class="ttdef"><b>Definition:</b> legato_math.c:544</div></div>
+<div class="ttc" id="astructleResolvedAngleRanges_html"><div class="ttname"><a href="structleResolvedAngleRanges.html">leResolvedAngleRanges</a></div><div class="ttdef"><b>Definition:</b> legato_math.h:988</div></div>
 <div class="ttc" id="alegato__common_8h_html_acd3365f0b79c37d8894559b5afed374ba1657003cf978c872cb6396fefaa710d1"><div class="ttname"><a href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374ba1657003cf978c872cb6396fefaa710d1">LE_TRUE</a></div><div class="ttdeci">@ LE_TRUE</div><div class="ttdef"><b>Definition:</b> legato_common.h:159</div></div>
 <div class="ttc" id="alegato__common_8h_html"><div class="ttname"><a href="legato__common_8h.html">legato_common.h</a></div><div class="ttdoc">Common macros and definitions used by Legato.</div></div>
 <div class="ttc" id="alegato__math_8h_html_ac60502a9cf80ff20a3cdceefbc96dbf5"><div class="ttname"><a href="legato__math_8h.html#ac60502a9cf80ff20a3cdceefbc96dbf5">leDivideRounding</a></div><div class="ttdeci">LIB_EXPORT int32_t leDivideRounding(int32_t num, int32_t denom)</div><div class="ttdoc">Performs a linear interpolation of an integer based on a percentage between two signed points.</div><div class="ttdef"><b>Definition:</b> legato_math.c:328</div></div>
-<div class="ttc" id="alegato__math_8h_html_abaceb63d086f56f5b7a73a7c1fade169"><div class="ttname"><a href="legato__math_8h.html#abaceb63d086f56f5b7a73a7c1fade169">leSortPointsX</a></div><div class="ttdeci">void leSortPointsX(lePoint *p1, lePoint *p2)</div><div class="ttdoc">Sorts two points on the X axis.</div><div class="ttdef"><b>Definition:</b> legato_math.c:483</div></div>
-<div class="ttc" id="alegato__math_8h_html_a8fb8b23ccd1be2fa428318dfebb295cb"><div class="ttname"><a href="legato__math_8h.html#a8fb8b23ccd1be2fa428318dfebb295cb">leGetYGivenXOnLine</a></div><div class="ttdeci">int32_t leGetYGivenXOnLine(lePoint p1, lePoint p2, int32_t x)</div><div class="ttdoc">Project Y give X.</div><div class="ttdef"><b>Definition:</b> legato_math.c:515</div></div>
+<div class="ttc" id="alegato__math_8h_html_abaceb63d086f56f5b7a73a7c1fade169"><div class="ttname"><a href="legato__math_8h.html#abaceb63d086f56f5b7a73a7c1fade169">leSortPointsX</a></div><div class="ttdeci">void leSortPointsX(lePoint *p1, lePoint *p2)</div><div class="ttdoc">Sorts two points on the X axis.</div><div class="ttdef"><b>Definition:</b> legato_math.c:414</div></div>
+<div class="ttc" id="alegato__math_8h_html_a8fb8b23ccd1be2fa428318dfebb295cb"><div class="ttname"><a href="legato__math_8h.html#a8fb8b23ccd1be2fa428318dfebb295cb">leGetYGivenXOnLine</a></div><div class="ttdeci">int32_t leGetYGivenXOnLine(lePoint p1, lePoint p2, int32_t x)</div><div class="ttdoc">Project Y give X.</div><div class="ttdef"><b>Definition:</b> legato_math.c:446</div></div>
 <div class="ttc" id="astructlePoint_html"><div class="ttname"><a href="structlePoint.html">lePoint</a></div><div class="ttdoc">This structure represents a integer Cartesian point.</div><div class="ttdef"><b>Definition:</b> legato_common.h:357</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

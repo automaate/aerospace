@@ -409,15 +409,17 @@ $(function() {
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;     </div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="preprocessor">#endif // LEGATO_COMMON_H</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="comment"> End of File</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="preprocessor">#define ASSIGN_VIRTUAL_FUNCTION(name) .name = name</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="preprocessor">#define ASSIGN_VTABLE_FUNCTION(vtable, name) vtable.name = name</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">#endif // LEGATO_COMMON_H</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment"> End of File</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment">*/</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="alegato__common_8h_html_aa99598706cf044d45a11026397558e1baebd46c31a39f989cba5ab0c6858af9db"><div class="ttname"><a href="legato__common_8h.html#aa99598706cf044d45a11026397558e1baebd46c31a39f989cba5ab0c6858af9db">LE_HALIGN_RIGHT</a></div><div class="ttdeci">@ LE_HALIGN_RIGHT</div><div class="ttdef"><b>Definition:</b> legato_common.h:209</div></div>
-<div class="ttc" id="alegato__math_8h_html"><div class="ttname"><a href="legato__math_8h.html">legato_math.h</a></div><div class="ttdoc">An array implementation for storing pointers.</div></div>
+<div class="ttc" id="alegato__math_8h_html"><div class="ttname"><a href="legato__math_8h.html">legato_math.h</a></div><div class="ttdoc">Defines common math functions for general use.</div></div>
 <div class="ttc" id="alegato__common_8h_html_af467b597a37f8d8851b61addcb8e2e0f"><div class="ttname"><a href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a></div><div class="ttdeci">leResult</div><div class="ttdoc">This enum represents function call results.</div><div class="ttdef"><b>Definition:</b> legato_common.h:134</div></div>
 <div class="ttc" id="alegato__math_8h_html_a0082f809b7e5da40dd3afb689eb5e66b"><div class="ttname"><a href="legato__math_8h.html#a0082f809b7e5da40dd3afb689eb5e66b">leLerp</a></div><div class="ttdeci">LIB_EXPORT int32_t leLerp(int32_t x, int32_t y, uint32_t per)</div><div class="ttdoc">Calculates a linear interpolation of an integer based on a percentage between two signed points.</div><div class="ttdef"><b>Definition:</b> legato_math.c:290</div></div>
 <div class="ttc" id="alegato__color_8h_html_a99a315210e3dcfc88bd239549745b140"><div class="ttname"><a href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a></div><div class="ttdeci">leColorMode</div><div class="ttdoc">This enum represents the supported RGB color formats.</div><div class="ttdef"><b>Definition:</b> legato_color.h:146</div></div>

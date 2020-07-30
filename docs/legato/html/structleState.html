@@ -80,19 +80,22 @@ Collaboration diagram for leState:</div>
 <div class="dyncontent">
 <div class="center"><img src="structleState__coll__graph.png" border="0" usemap="#leState_coll__map" alt="Collaboration graph"/></div>
 <map name="leState_coll__map" id="leState_coll__map">
-<area shape="rect" title="This struct represents the state of the library." alt="" coords="345,363,407,389"/>
-<area shape="rect" href="structleStringTable.html" title="This struct represents string a string table." alt="" coords="227,273,325,300"/>
+<area shape="rect" title="This struct represents the state of the library." alt="" coords="397,365,459,392"/>
+<area shape="rect" href="structleStringTable.html" title="This struct represents string a string table." alt="" coords="227,275,325,301"/>
 <area shape="rect" href="structleStreamDescriptor.html" title="This struct represents a stream descriptor." alt="" coords="43,95,176,121"/>
 <area shape="rect" href="structleFont.html" title="This struct represents a font object." alt="" coords="247,184,305,211"/>
-<area shape="rect" title=" " alt="" coords="149,5,193,32"/>
+<area shape="rect" title=" " alt="" coords="143,5,187,32"/>
 <area shape="rect" href="structleArray.html" title="This struct represents a array." alt="" coords="201,95,263,121"/>
 <area shape="rect" href="structleWidgetEventFilter.html" title="Used to define widget touch event filter." alt="" coords="287,95,422,121"/>
-<area shape="rect" href="structleEditWidget.html" title=" " alt="" coords="436,273,532,300"/>
-<area shape="rect" href="structleWidget.html" title="Used to define a widget." alt="" coords="343,184,417,211"/>
+<area shape="rect" href="structleEditWidget.html" title=" " alt="" coords="471,275,567,301"/>
+<area shape="rect" href="structleWidget.html" title="Used to define a widget." alt="" coords="346,184,419,211"/>
 <area shape="rect" href="structleMargin.html" title="This struct represents the four margin settings for objects." alt="" coords="446,95,517,121"/>
 <area shape="rect" href="structleRect.html" title="This struct represents a rectangle." alt="" coords="541,95,600,121"/>
-<area shape="rect" href="structleScheme.html" title="This struct represents style scheme components for objects." alt="" coords="633,95,713,121"/>
-<area shape="rect" href="structleEditWidgetVTable.html" title=" " alt="" coords="507,184,643,211"/>
+<area shape="rect" href="structleScheme.html" title=" " alt="" coords="633,95,713,121"/>
+<area shape="rect" href="unionleSchemeColorTable.html" title=" " alt="" coords="603,5,744,32"/>
+<area shape="rect" href="structleEditWidgetVTable.html" title=" " alt="" coords="509,184,645,211"/>
+<area shape="rect" href="structleLayerState.html" title="This struct describes the layer state for a layer." alt="" coords="739,275,834,301"/>
+<area shape="rect" href="structlePoint.html" title="This structure represents a integer Cartesian point." alt="" coords="773,184,835,211"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -112,28 +115,15 @@ Data Fields</h2></td></tr>
 <tr class="separator:ad585520671df05d6e92266d1304251bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58f63917593714e436d70889e01d6e74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__state_8h.html#a0dcf5bbc7f1bea1a6bc7432b1f0494b5">leLanguageChangedCallback_FnPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleState.html#a58f63917593714e436d70889e01d6e74">languageChangedCB</a></td></tr>
 <tr class="separator:a58f63917593714e436d70889e01d6e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bc56c731a128426b8d18e244b8e10ed"><td class="memItemLeft" align="right" valign="top">leStreamManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleState.html#a0bc56c731a128426b8d18e244b8e10ed">activeStream</a></td></tr>
-<tr class="separator:a0bc56c731a128426b8d18e244b8e10ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1eed9fe79ab88d8375ac3a014f042e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structleWidget.html">leWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleState.html#ab1eed9fe79ab88d8375ac3a014f042e0">rootWidget</a> [LE_LAYER_COUNT]</td></tr>
+<tr class="separator:ab1eed9fe79ab88d8375ac3a014f042e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45eb768e2bde6028db8b1817e3096926"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structleLayerState.html">leLayerState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleState.html#a45eb768e2bde6028db8b1817e3096926">layerStates</a> [LE_LAYER_COUNT]</td></tr>
+<tr class="separator:a45eb768e2bde6028db8b1817e3096926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This struct represents the state of the library. </p>
 <p>The state of the libary is a global structure. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a0bc56c731a128426b8d18e244b8e10ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bc56c731a128426b8d18e244b8e10ed">&#9670;&nbsp;</a></span>activeStream</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leStreamManager* activeStream</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>active stream state </p>
-
-</div>
-</div>
 <a id="a3a960e8f4ab65fdde97532d6ebdb665d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a960e8f4ab65fdde97532d6ebdb665d">&#9670;&nbsp;</a></span>defaultScheme</h2>
 
@@ -190,8 +180,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>language changed callback</p>
-<p><a class="el" href="structleWidget.html" title="Used to define a widget.">leWidget</a> rootWidget[LE_LAYER_COUNT]; /**&lt; root widgets of the scene </p>
+<p>language changed callback </p>
 
 </div>
 </div>
@@ -207,6 +196,36 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>the currently active language </p>
+
+</div>
+</div>
+<a id="a45eb768e2bde6028db8b1817e3096926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45eb768e2bde6028db8b1817e3096926">&#9670;&nbsp;</a></span>layerStates</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structleLayerState.html">leLayerState</a> layerStates[LE_LAYER_COUNT]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>layer states </p>
+
+</div>
+</div>
+<a id="ab1eed9fe79ab88d8375ac3a014f042e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1eed9fe79ab88d8375ac3a014f042e0">&#9670;&nbsp;</a></span>rootWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structleWidget.html">leWidget</a> rootWidget[LE_LAYER_COUNT]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>root widgets of the scene </p>
 
 </div>
 </div>

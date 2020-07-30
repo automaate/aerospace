@@ -78,10 +78,12 @@ Collaboration diagram for gfxDisplayDriver:</div>
 <div class="dyncontent">
 <div class="center"><img src="structgfxDisplayDriver__coll__graph.png" border="0" usemap="#gfxDisplayDriver_coll__map" alt="Collaboration graph"/></div>
 <map name="gfxDisplayDriver_coll__map" id="gfxDisplayDriver_coll__map">
-<area shape="rect" title="This struct represents the display driver interface." alt="" coords="55,187,169,213"/>
+<area shape="rect" title="This struct represents the display driver interface." alt="" coords="112,187,227,213"/>
 <area shape="rect" href="structgfxPixelBuffer.html" title="This struct represents a pixel buffer." alt="" coords="5,96,107,123"/>
 <area shape="rect" href="structgfxSize.html" title="This struct represents a size." alt="" coords="18,5,83,32"/>
 <area shape="rect" title=" " alt="" coords="127,5,171,32"/>
+<area shape="rect" href="structgfxLayerState.html" title="This struct represents a layer state." alt="" coords="234,96,337,123"/>
+<area shape="rect" href="structgfxRect.html" title="This struct represents a rectangle." alt="" coords="252,5,319,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -111,9 +113,12 @@ uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>getActiveLayer<
 <tr class="memitem:af9dbcae374c45835f445b54240561184"><td class="memItemLeft" align="right" valign="top"><a id="af9dbcae374c45835f445b54240561184"></a>
 <a class="el" href="gfx__driver_8h_8ftl.html#a2db8b494c615174612389b8140b5354b">gfxResult</a>(*&#160;</td><td class="memItemRight" valign="bottom"><b>setActiveLayer</b> )(uint32_t idx)</td></tr>
 <tr class="separator:af9dbcae374c45835f445b54240561184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf8536f297cac621e17b74e9a32dec2"><td class="memItemLeft" align="right" valign="top"><a id="afcf8536f297cac621e17b74e9a32dec2"></a>
-<a class="el" href="gfx__driver_8h_8ftl.html#a2db8b494c615174612389b8140b5354b">gfxResult</a>(*&#160;</td><td class="memItemRight" valign="bottom"><b>blitBuffer</b> )(int32_t x, int32_t y, <a class="el" href="structgfxPixelBuffer.html">gfxPixelBuffer</a> *buf, <a class="el" href="gfx__driver_8h_8ftl.html#ae02cfd742b5afcb664b8afedcd983e31">gfxBlend</a> gfx)</td></tr>
-<tr class="separator:afcf8536f297cac621e17b74e9a32dec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab906837b79217fb5d329c1d815e0a8a4"><td class="memItemLeft" align="right" valign="top"><a id="ab906837b79217fb5d329c1d815e0a8a4"></a>
+<a class="el" href="structgfxLayerState.html">gfxLayerState</a>(*&#160;</td><td class="memItemRight" valign="bottom"><b>getLayerState</b> )(uint32_t idx)</td></tr>
+<tr class="separator:ab906837b79217fb5d329c1d815e0a8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a7ec14e3e44f36a1aee324b3c04d4ad"><td class="memItemLeft" align="right" valign="top"><a id="a0a7ec14e3e44f36a1aee324b3c04d4ad"></a>
+<a class="el" href="gfx__driver_8h_8ftl.html#a2db8b494c615174612389b8140b5354b">gfxResult</a>(*&#160;</td><td class="memItemRight" valign="bottom"><b>blitBuffer</b> )(int32_t x, int32_t y, <a class="el" href="structgfxPixelBuffer.html">gfxPixelBuffer</a> *buf)</td></tr>
+<tr class="separator:a0a7ec14e3e44f36a1aee324b3c04d4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b10a383060938e0c61b0e4a158fd611"><td class="memItemLeft" align="right" valign="top"><a id="a9b10a383060938e0c61b0e4a158fd611"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> )(void)</td></tr>
 <tr class="separator:a9b10a383060938e0c61b0e4a158fd611"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +128,9 @@ uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>getVSYNCCount</
 <tr class="memitem:a7cbb33fda75502515b01e0430ce4eae7"><td class="memItemLeft" align="right" valign="top"><a id="a7cbb33fda75502515b01e0430ce4eae7"></a>
 <a class="el" href="structgfxPixelBuffer.html">gfxPixelBuffer</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><b>getFrameBuffer</b> )(int32_t idx)</td></tr>
 <tr class="separator:a7cbb33fda75502515b01e0430ce4eae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d7619ce399f659879340c1fcfe570b"><td class="memItemLeft" align="right" valign="top"><a id="a80d7619ce399f659879340c1fcfe570b"></a>
+<a class="el" href="gfx__driver_8h_8ftl.html#a2db8b494c615174612389b8140b5354b">gfxResult</a>(*&#160;</td><td class="memItemRight" valign="bottom"><b>setPalette</b> )(<a class="el" href="gfx__driver_8h_8ftl.html#a413ad5defcccf6161af33478645701a1">gfxBuffer</a> *palette, <a class="el" href="gfx__driver_8h_8ftl.html#a7f8359e4f2773641407bec260089c52e">gfxColorMode</a> mode, uint32_t colorCount)</td></tr>
+<tr class="separator:a80d7619ce399f659879340c1fcfe570b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b9ca2fc82619a5e1ba94c1dd818f1e"><td class="memItemLeft" align="right" valign="top"><a id="a98b9ca2fc82619a5e1ba94c1dd818f1e"></a>
 <a class="el" href="gfx__driver_8h_8ftl.html#a2db8b494c615174612389b8140b5354b">gfxResult</a>(*&#160;</td><td class="memItemRight" valign="bottom"><b>ctrlrConfig</b> )(<a class="el" href="gfx__driver_8h_8ftl.html#abcb89c3c5183a5af08b40e7040444111">ctlrCfg</a> request, void *arg)</td></tr>
 <tr class="separator:a98b9ca2fc82619a5e1ba94c1dd818f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +139,7 @@ uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>getVSYNCCount</
 <div class="textblock"><p>This struct represents the display driver interface. </p>
 <p>Establishes the interface for a Legato display driver. All drivers must, at a minimum, implement these interfaces. Interfaces with gfxResult can return unsuccessful if not supported. </p><dl class="section see"><dt>See also</dt><dd>implementations:<ul>
 <li>drv_gfx_lcc_ftl.h</li>
-<li><a class="el" href="drv__gfx__glcd_8h.html" title="GLCD driver functions and definitions.">drv_gfx_glcd.h</a></li>
+<li>drv_gfx_glcd.h</li>
 <li>drv_gfx_external_controller_ftl.h </li>
 </ul>
 </dd></dl>

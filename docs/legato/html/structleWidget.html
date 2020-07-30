@@ -83,10 +83,11 @@ Collaboration diagram for leWidget:</div>
 <area shape="rect" title="Used to define a widget." alt="" coords="217,184,291,211"/>
 <area shape="rect" href="structleMargin.html" title="This struct represents the four margin settings for objects." alt="" coords="5,95,76,121"/>
 <area shape="rect" href="structleArray.html" title="This struct represents a array." alt="" coords="100,95,163,121"/>
-<area shape="rect" title=" " alt="" coords="176,5,220,32"/>
+<area shape="rect" title=" " alt="" coords="183,5,227,32"/>
 <area shape="rect" href="structleWidgetEventFilter.html" title="Used to define widget touch event filter." alt="" coords="187,95,321,121"/>
 <area shape="rect" href="structleRect.html" title="This struct represents a rectangle." alt="" coords="346,95,405,121"/>
-<area shape="rect" href="structleScheme.html" title="This struct represents style scheme components for objects." alt="" coords="429,95,509,121"/>
+<area shape="rect" href="structleScheme.html" title=" " alt="" coords="429,95,509,121"/>
+<area shape="rect" href="unionleSchemeColorTable.html" title=" " alt="" coords="398,5,539,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -101,51 +102,24 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
 <tr class="memitem:ad971383ec6cf76a60e9aa0de4e707fee"><td class="memItemLeft" align="right" valign="top"><a id="ad971383ec6cf76a60e9aa0de4e707fee"></a>
 <a class="el" href="legato__widget_8h.html#a9f2462955971329925105509340c22bf">leWidgetType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
 <tr class="separator:ad971383ec6cf76a60e9aa0de4e707fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a121c61577ef4dcc581554bdb04ef2b08"><td class="memItemLeft" align="right" valign="top"><a id="a121c61577ef4dcc581554bdb04ef2b08"></a>
-<a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
-<tr class="separator:a121c61577ef4dcc581554bdb04ef2b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14097338965388843259a127e5595e1a"><td class="memItemLeft" align="right" valign="top"><a id="a14097338965388843259a127e5595e1a"></a>
-<a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b></td></tr>
-<tr class="separator:a14097338965388843259a127e5595e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82978a6b6d5b8f136b364453e21f5cb1"><td class="memItemLeft" align="right" valign="top"><a id="a82978a6b6d5b8f136b364453e21f5cb1"></a>
 <a class="el" href="structleRect.html">leRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rect</b></td></tr>
 <tr class="separator:a82978a6b6d5b8f136b364453e21f5cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa097316ec73627afaad34f6a9a3e7256"><td class="memItemLeft" align="right" valign="top"><a id="aa097316ec73627afaad34f6a9a3e7256"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>cornerRadius</b></td></tr>
-<tr class="separator:aa097316ec73627afaad34f6a9a3e7256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e4d32d00e99728b2ff682a39d53945f"><td class="memItemLeft" align="right" valign="top"><a id="a8e4d32d00e99728b2ff682a39d53945f"></a>
-<a class="el" href="legato__common_8h.html#aa99598706cf044d45a11026397558e1b">leHAlignment</a>&#160;</td><td class="memItemRight" valign="bottom"><b>halign</b></td></tr>
-<tr class="separator:a8e4d32d00e99728b2ff682a39d53945f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21d1364fd34a32230487603fa8e663e5"><td class="memItemLeft" align="right" valign="top"><a id="a21d1364fd34a32230487603fa8e663e5"></a>
-<a class="el" href="legato__common_8h.html#a169e44baabeda5a3657e3e2e0e7f3c50">leVAlignment</a>&#160;</td><td class="memItemRight" valign="bottom"><b>valign</b></td></tr>
-<tr class="separator:a21d1364fd34a32230487603fa8e663e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773b39d480759f67926cb18ae2219281"><td class="memItemLeft" align="right" valign="top"><a id="a773b39d480759f67926cb18ae2219281"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
+<tr class="separator:a773b39d480759f67926cb18ae2219281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fca5730a7168dff72b720e4d52d83e"><td class="memItemLeft" align="right" valign="top"><a id="a19fca5730a7168dff72b720e4d52d83e"></a>
+leWidgetStyle&#160;</td><td class="memItemRight" valign="bottom"><b>style</b></td></tr>
+<tr class="separator:a19fca5730a7168dff72b720e4d52d83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8fe0b4c37e5a12cd6c7c677feacdfb"><td class="memItemLeft" align="right" valign="top"><a id="a9f8fe0b4c37e5a12cd6c7c677feacdfb"></a>
+leWidgetStatus&#160;</td><td class="memItemRight" valign="bottom"><b>status</b></td></tr>
+<tr class="separator:a9f8fe0b4c37e5a12cd6c7c677feacdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00f5eda9b0280fbe21d58dedc178b14e"><td class="memItemLeft" align="right" valign="top"><a id="a00f5eda9b0280fbe21d58dedc178b14e"></a>
 <a class="el" href="structleMargin.html">leMargin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>margin</b></td></tr>
 <tr class="separator:a00f5eda9b0280fbe21d58dedc178b14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa19adbc3010dee5bac47b6c42144ed11"><td class="memItemLeft" align="right" valign="top"><a id="aa19adbc3010dee5bac47b6c42144ed11"></a>
-<a class="el" href="legato__widget_8h.html#a99d9b36cb4ba3419cff508dc2bd77d84">leBorderType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>borderType</b></td></tr>
-<tr class="separator:aa19adbc3010dee5bac47b6c42144ed11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeada964adb1b20baa388eeeafe6e4539"><td class="memItemLeft" align="right" valign="top"><a id="aeada964adb1b20baa388eeeafe6e4539"></a>
-<a class="el" href="legato__widget_8h.html#a0cdd28606b9b77230c25905b1af68afb">leBackgroundType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>backgroundType</b></td></tr>
-<tr class="separator:aeada964adb1b20baa388eeeafe6e4539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e4590290b6db537a54442d2d3eafb2b"><td class="memItemLeft" align="right" valign="top"><a id="a4e4590290b6db537a54442d2d3eafb2b"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>optimizationFlags</b></td></tr>
-<tr class="separator:a4e4590290b6db537a54442d2d3eafb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dc870d7100917ce70024819d48b1306"><td class="memItemLeft" align="right" valign="top"><a id="a1dc870d7100917ce70024819d48b1306"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>drawCount</b></td></tr>
 <tr class="separator:a1dc870d7100917ce70024819d48b1306"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2acbcb03bd958d6e13e122b18efa8d8c"><td class="memItemLeft" align="right" valign="top"><a id="a2acbcb03bd958d6e13e122b18efa8d8c"></a>
-<a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>alphaEnabled</b></td></tr>
-<tr class="separator:a2acbcb03bd958d6e13e122b18efa8d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5edb5a487fd20eb949feeabcad25e82b"><td class="memItemLeft" align="right" valign="top"><a id="a5edb5a487fd20eb949feeabcad25e82b"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>alphaAmount</b></td></tr>
-<tr class="separator:a5edb5a487fd20eb949feeabcad25e82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef5e3925d56eca0ca091a74fafbfce50"><td class="memItemLeft" align="right" valign="top"><a id="aef5e3925d56eca0ca091a74fafbfce50"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dirtyState</b></td></tr>
-<tr class="separator:aef5e3925d56eca0ca091a74fafbfce50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2105076eb684426249d51d0bc2442488"><td class="memItemLeft" align="right" valign="top"><a id="a2105076eb684426249d51d0bc2442488"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>drawState</b></td></tr>
-<tr class="separator:a2105076eb684426249d51d0bc2442488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcaa42e24ce329d7d9bf354ca31b5432"><td class="memItemLeft" align="right" valign="top"><a id="afcaa42e24ce329d7d9bf354ca31b5432"></a>
 leWidget_DrawFunction_FnPtr&#160;</td><td class="memItemRight" valign="bottom"><b>drawFunc</b></td></tr>
 <tr class="separator:afcaa42e24ce329d7d9bf354ca31b5432"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,9 +129,6 @@ const <a class="el" href="structleScheme.html">leScheme</a> *&#160;</td><td clas
 <tr class="memitem:a1fa9654c6805177db2ed15d8851d643b"><td class="memItemLeft" align="right" valign="top"><a id="a1fa9654c6805177db2ed15d8851d643b"></a>
 <a class="el" href="structleWidgetEventFilter.html">leWidgetEventFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>eventFilters</b> [LE_WIDGET_MAX_EVENT_FILTERS]</td></tr>
 <tr class="separator:a1fa9654c6805177db2ed15d8851d643b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6e4aa3bceca25dcc533e29375817f46"><td class="memItemLeft" align="right" valign="top"><a id="ab6e4aa3bceca25dcc533e29375817f46"></a>
-<a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>root</b></td></tr>
-<tr class="separator:ab6e4aa3bceca25dcc533e29375817f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a458c6cd9b652964583d7fe14a05f1f8b"><td class="memItemLeft" align="right" valign="top"><a id="a458c6cd9b652964583d7fe14a05f1f8b"></a>
 <a class="el" href="structleWidget.html">leWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b></td></tr>
 <tr class="separator:a458c6cd9b652964583d7fe14a05f1f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>

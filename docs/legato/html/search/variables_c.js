@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['orientation_1315',['orientation',['../structn2d__buffer.html#a1459989fdb1f41c27093b783da831255',1,'n2d_buffer']]]
+  ['precbuserdata_1255',['preCBUserData',['../structleString.html#a592225069217dcd4250d80da662f9027',1,'leString']]],
+  ['preinvcallback_1256',['preInvCallback',['../structleString.html#a6420a3227871988b0bde9791b6065235',1,'leString']]]
 ];

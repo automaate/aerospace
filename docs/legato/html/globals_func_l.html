@@ -73,9 +73,6 @@ $(function() {
 <li>leAddRootWidget()
 : <a class="el" href="legato__state_8h.html#ae1fdbdd6f59bedfb5a7c1ad39ca934a8">legato_state.h</a>
 </li>
-<li>leArcsOverlapQuadrant()
-: <a class="el" href="legato__math_8h.html#ac8fa4d3fdca450d73cb52d557e683c54">legato_math.h</a>
-</li>
 <li>leArcWidget_Constructor()
 : <a class="el" href="legato__widget__arc_8h.html#a11212ffe2509b29311317fed6aef576d">legato_widget_arc.h</a>
 </li>
@@ -150,6 +147,9 @@ $(function() {
 </li>
 <li>leColorChannelGreen()
 : <a class="el" href="legato__color_8h.html#a660e1e7870a889cb3962ec6d9c4a5289">legato_color.h</a>
+</li>
+<li>leColorChannelRed()
+: <a class="el" href="legato__color_8h.html#a87ebd7123a2d9f519752d3b2a9be8ba9">legato_color.h</a>
 </li>
 <li>leColorConvert()
 : <a class="el" href="legato__color_8h.html#a53c185c8a78fff8675a52086fed04f65">legato_color.h</a>
@@ -235,23 +235,23 @@ $(function() {
 <li>leFont_GetGlyphRect()
 : <a class="el" href="legato__font_8h.html#a4df6bc70706d862a4c431b0c88fb6227">legato_font.h</a>
 </li>
-<li>leFree()
-: <a class="el" href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">legato_memory.h</a>
-</li>
 <li>leGetColorMode()
 : <a class="el" href="legato__state_8h.html#a58508d6a76ab9d561d31ec76a9ed8a3c">legato_state.h</a>
 </li>
 <li>leGetDefaultScheme()
 : <a class="el" href="legato__state_8h.html#aab6dcb18de4dcda36e3e55157addf155">legato_state.h</a>
 </li>
-<li>leGetDisplayRect()
-: <a class="el" href="legato__state_8h.html#a53d37a1507739e2dff0293e1ffe51bea">legato_state.h</a>
-</li>
 <li>leGetEditWidget()
 : <a class="el" href="legato__state_8h.html#ad4db8bffda6606a9eb8bca6eb71c89ae">legato_state.h</a>
 </li>
 <li>leGetFocusWidget()
 : <a class="el" href="legato__state_8h.html#a0e6f9902c4f65742fb7d425b41b99566">legato_state.h</a>
+</li>
+<li>leGetLayerColorMode()
+: <a class="el" href="legato__state_8h.html#a1955a578acc97ff613b15544086bf9dd">legato_state.h</a>
+</li>
+<li>leGetLayerRenderHorizontal()
+: <a class="el" href="legato__state_8h.html#acd64a1e60938af173f30096ac5969d16">legato_state.h</a>
 </li>
 <li>leGetStringLanguage()
 : <a class="el" href="legato__state_8h.html#a0a5b1d26afc71db9027ab46e332a7849">legato_state.h</a>
@@ -275,7 +275,7 @@ $(function() {
 : <a class="el" href="legato__image_8h.html#a09a9b474e79ac6a703538be5a54ee4fd">legato_image.h</a>
 </li>
 <li>leImage_Draw()
-: <a class="el" href="legato__image_8h.html#a7123c9d6ac8589a927c6fbcf0a0e302b">legato_image.h</a>
+: <a class="el" href="legato__image_8h.html#ad53fd7c01f9ebc9eeb50eaf9cc191541">legato_image.h</a>
 </li>
 <li>leImage_Free()
 : <a class="el" href="legato__image_8h.html#af05cda8d7125d09ed0ec1d1bf66c4966">legato_image.h</a>
@@ -293,19 +293,25 @@ $(function() {
 : <a class="el" href="legato__image_8h.html#aa7de02c69b2b2e13109a883b0768f659">legato_image.h</a>
 </li>
 <li>leImage_Rotate()
-: <a class="el" href="legato__image_8h.html#a2edb96940e310fd7cc8e2d2cadde5f74">legato_image.h</a>
+: <a class="el" href="legato__image_8h.html#a8cb042c340c6eb6f10427e4618d2e42d">legato_image.h</a>
 </li>
 <li>leImage_RotateDraw()
-: <a class="el" href="legato__image_8h.html#a0644045ee3b6ab426b190cc5c44116be">legato_image.h</a>
+: <a class="el" href="legato__image_8h.html#a2f0844aef061111194df5a1f69aab156">legato_image.h</a>
 </li>
 <li>leInitialize()
-: <a class="el" href="legato__state_8h.html#a1467181552ce6400971058ea64ca68bd">legato_state.h</a>
+: <a class="el" href="legato__state_8h.html#a88af1218e876364e090404b01f53a035">legato_state.h</a>
 </li>
 <li>leInput_GetEnabled()
 : <a class="el" href="legato__input_8h.html#adf5375a8f9e81edbe43feb6453ea5754">legato_input.h</a>
 </li>
 <li>leInput_InjectTouchDown()
 : <a class="el" href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">legato_input.h</a>
+</li>
+<li>leInput_InjectTouchMoved()
+: <a class="el" href="legato__input_8h.html#ac5692c4065d22b46b94895c7191db253">legato_input.h</a>
+</li>
+<li>leInput_InjectTouchUp()
+: <a class="el" href="legato__input_8h.html#a952c85e0ebb91354e2e2483d615b2ebb">legato_input.h</a>
 </li>
 <li>leInput_SetEnabled()
 : <a class="el" href="legato__input_8h.html#a49e056fe81085771c819159d5e26ef0f">legato_input.h</a>
@@ -358,23 +364,11 @@ $(function() {
 <li>leList_RemoveAt()
 : <a class="el" href="legato__list_8h.html#af747774d663673ba7e94fe0e528619d0">legato_list.h</a>
 </li>
-<li>leMalloc()
-: <a class="el" href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">legato_memory.h</a>
-</li>
 <li>leMaxf()
 : <a class="el" href="legato__math_8h.html#a6bccab06e5d23303012c82a8f38fa3f5">legato_math.h</a>
 </li>
 <li>leMaxi()
 : <a class="el" href="legato__math_8h.html#ac06ee9a5a66b42a332e3dd73f81c2aba">legato_math.h</a>
-</li>
-<li>leMemory_Init()
-: <a class="el" href="legato__memory_8h.html#ac38c0f1de3cbbd9241ea502463708e95">legato_memory.h</a>
-</li>
-<li>leMemoryGetUsageReport()
-: <a class="el" href="legato__memory_8h.html#a18e99e3de406051641d6ebfc39d012ed">legato_memory.h</a>
-</li>
-<li>leMemoryValidateHeaps()
-: <a class="el" href="legato__memory_8h.html#ad25b9c94f320a6a7592022cd03a1c8a9">legato_memory.h</a>
 </li>
 <li>leMinf()
 : <a class="el" href="legato__math_8h.html#a39162e27547b3fe4750d6c8d5fe9dbf3">legato_math.h</a>
@@ -442,9 +436,6 @@ $(function() {
 <li>lePolarToXY()
 : <a class="el" href="legato__math_8h.html#af45f7f97a62ca241abbd8accf0c205e0">legato_math.h</a>
 </li>
-<li>leRealloc()
-: <a class="el" href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">legato_memory.h</a>
-</li>
 <li>leRectArray_Clear()
 : <a class="el" href="legato__rectarray_8h.html#afc556f36297620c3121f263c5214721d">legato_rectarray.h</a>
 </li>
@@ -456,6 +447,12 @@ $(function() {
 </li>
 <li>leRectArray_CropToArea()
 : <a class="el" href="legato__rectarray_8h.html#a4afa7945ee58ea2a9a01d93890634af4">legato_rectarray.h</a>
+</li>
+<li>leRectArray_CropToSizeX()
+: <a class="el" href="legato__rectarray_8h.html#a86adfae7f151280270ce80fb8f7ac4ec">legato_rectarray.h</a>
+</li>
+<li>leRectArray_CropToSizeY()
+: <a class="el" href="legato__rectarray_8h.html#a9e8fee395776196c079c7256ba450f0b">legato_rectarray.h</a>
 </li>
 <li>leRectArray_Destroy()
 : <a class="el" href="legato__rectarray_8h.html#ae7e3d261685bbae473c36178272c0094">legato_rectarray.h</a>
@@ -539,7 +536,7 @@ $(function() {
 : <a class="el" href="legato__state_8h.html#a81d5339db134e5128f2c4d3893407c0d">legato_state.h</a>
 </li>
 <li>leRotatedRectBounds()
-: <a class="el" href="legato__math_8h.html#a159be5a07a7c920b406c888639b25891">legato_math.h</a>
+: <a class="el" href="legato__math_8h.html#aa97347881b1ba0d4147a52a4ff7281f9">legato_math.h</a>
 </li>
 <li>leRotatePoint()
 : <a class="el" href="legato__math_8h.html#a74bd8aa8179412a74c2383660ab85e8c">legato_math.h</a>
@@ -550,8 +547,14 @@ $(function() {
 <li>leScaleIntegerSigned()
 : <a class="el" href="legato__math_8h.html#a1780cc3644fdb7be2cae8886a36d292b">legato_math.h</a>
 </li>
+<li>leScheme_GetColor()
+: <a class="el" href="legato__scheme_8h.html#ac016a1add4c468863450ce644dfaf6b1">legato_scheme.h</a>
+</li>
+<li>leScheme_GetRenderColor()
+: <a class="el" href="legato__scheme_8h.html#a7694cbdc72f53547d1028980d67cdb91">legato_scheme.h</a>
+</li>
 <li>leScheme_Initialize()
-: <a class="el" href="legato__scheme_8h.html#a4c40c9a80c6871f00c6e9015dd4eeab5">legato_scheme.h</a>
+: <a class="el" href="legato__scheme_8h.html#acde78be2722faffb14615101dd76e26d">legato_scheme.h</a>
 </li>
 <li>leSetEditWidget()
 : <a class="el" href="legato__state_8h.html#a776bd24e295a470b311dfd70a8b7ec81">legato_state.h</a>
@@ -561,6 +564,12 @@ $(function() {
 </li>
 <li>leSetLanguageChangedCallback()
 : <a class="el" href="legato__state_8h.html#a2026f4c31ffe5b0b6f76b487df92057a">legato_state.h</a>
+</li>
+<li>leSetLayerColorMode()
+: <a class="el" href="legato__state_8h.html#aa5f60ac215d6f1b180f49542d8abb569">legato_state.h</a>
+</li>
+<li>leSetLayerRenderHorizontal()
+: <a class="el" href="legato__state_8h.html#a6d0c37f8b852e53fd56165e45a99204b">legato_state.h</a>
 </li>
 <li>leSetStringLanguage()
 : <a class="el" href="legato__state_8h.html#a282dfc8323bda9d01dc611faa1c27ba5">legato_state.h</a>
@@ -667,11 +676,8 @@ $(function() {
 <li>leUtils_GetNextHighestWidget()
 : <a class="el" href="legato__utils_8h.html#aa467fab76bac89abd0fa020f59b7b8fb">legato_utils.h</a>
 </li>
-<li>leUtils_Pick()
-: <a class="el" href="legato__utils_8h.html#a2f63a404a4d84a797bf79dc27d9a62b0">legato_utils.h</a>
-</li>
 <li>leUtils_PickFromWidget()
-: <a class="el" href="legato__utils_8h.html#a565fd07a0142764d936c9bd540157f42">legato_utils.h</a>
+: <a class="el" href="legato__utils_8h.html#aec11d7a3c0d6b6a8fd0d40d0cadacaae">legato_utils.h</a>
 </li>
 <li>leUtils_PointScreenToLocalSpace()
 : <a class="el" href="legato__utils_8h.html#ad46d48a5cd5ee89cc3dbe756fc750754">legato_utils.h</a>
@@ -688,27 +694,6 @@ $(function() {
 <li>leUtils_RectToScreenSpace()
 : <a class="el" href="legato__utils_8h.html#acbf51abe41ee5fd4d77d6c0ef3e312e8">legato_utils.h</a>
 </li>
-<li>leVariableHeap_Alloc()
-: <a class="el" href="legato__variableheap_8h.html#a8e9167913bb9a5a0e36549e7f0eaac81">legato_variableheap.h</a>
-</li>
-<li>leVariableHeap_Contains()
-: <a class="el" href="legato__variableheap_8h.html#a6fb37c550d04f62d574c069da6ef78b1">legato_variableheap.h</a>
-</li>
-<li>leVariableHeap_Destroy()
-: <a class="el" href="legato__variableheap_8h.html#a1ce73cb81c5e48e62d97a0c45459acc9">legato_variableheap.h</a>
-</li>
-<li>leVariableHeap_Free()
-: <a class="el" href="legato__variableheap_8h.html#aa1924b7cc36b0e02966c09c8b25fc95b">legato_variableheap.h</a>
-</li>
-<li>leVariableHeap_Init()
-: <a class="el" href="legato__variableheap_8h.html#abf3134055e812c6dbb6c1ab7a4636f56">legato_variableheap.h</a>
-</li>
-<li>leVariableHeap_SizeOf()
-: <a class="el" href="legato__variableheap_8h.html#a26ad98faf4627232c187b777147b490e">legato_variableheap.h</a>
-</li>
-<li>leVariableHeap_Validate()
-: <a class="el" href="legato__variableheap_8h.html#a9811cb0a94c753461c5d41ee4202ca93">legato_variableheap.h</a>
-</li>
 <li>leWidget_Constructor()
 : <a class="el" href="legato__widget_8h.html#a4daffeeccf9a5bba0e522aa89d3262fe">legato_widget.h</a>
 </li>
@@ -719,7 +704,7 @@ $(function() {
 : <a class="el" href="legato__widget_8h.html#a1d19fac6041cf9a32d41661a2705d2bb">legato_widget.h</a>
 </li>
 <li>leWidgetIsInScene()
-: <a class="el" href="legato__state_8h.html#af2b010af93ec82d473068531e624650d">legato_state.h</a>
+: <a class="el" href="legato__state_8h.html#aae117be3102728e25e7b663166073148">legato_state.h</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -73,10 +73,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><ul><li class="level3"><a href="#autotoc_md26">Predecoded Images in DDR (RAW)</a></li>
-<li class="level3"><a href="#autotoc_md27">RAW Images</a></li>
-<li class="level3"><a href="#autotoc_md28">JPEG Images</a></li>
-<li class="level3"><a href="#autotoc_md29">Run-Length Encoded RAW Images</a></li>
+<ul><ul><ul><li class="level3"><a href="#autotoc_md50">Predecoded Images in DDR (RAW)</a></li>
+<li class="level3"><a href="#autotoc_md51">RAW Images</a></li>
+<li class="level3"><a href="#autotoc_md52">JPEG Images</a></li>
+<li class="level3"><a href="#autotoc_md53">Run-Length Encoded RAW Images</a></li>
 </ul>
 </ul>
 </ul>
@@ -91,24 +91,24 @@ $(function() {
 </ul>
 <p>The following table shows the relative rendering time and Flash memory requirements of the different image formats in the MPLAB Harmony Graphics Library. The rendering time includes decoding the image and drawing it to the screen. This information is helpful when optimizing a MPLAB Harmony graphics project for performance and Flash memory space. For example, as shown by the red highlighted text in the table, a 40x40 pixel 16-bit RAW image renders 2.38 times faster and uses 2.59 times more Flash space than a JPEG image.</p>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx/MHGC%20UG%20Decode%20Table.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md26"></a>
+<h3><a class="anchor" id="autotoc_md50"></a>
 Predecoded Images in DDR (RAW)</h3>
 <p>For PIC32MZ DA devices with DDR, the MHGC Image Asset Manager provides an option to predecode images from Flash and store them into DDR as RAW images. The GPU is used to render the decoded image from DDR to the frame buffer. This provides a faster render time than an equivalent RAW image in Flash memory, specifically for large images (up to 10 times faster for a 200x200 image). Conversely, predecoding small images 40x40 pixels or smaller in DDR may not render faster due to the additional overhead of setting up the GPU.</p>
 <p>Recommendations: </p><pre class="fragment">If there is adequate DDR memory available, consider predecoding images to DDR for best performance
 Using JPEG images and predecoding them into DDR can provide the best rendering performance and most Flash memory savings.
 </pre><p>Note:</p>
 <p>The images are decoded from Flash to DDR memory by the Graphics Library during initialization and may introduce delay at boot-up, depending on the number and size of the images.</p>
-<h3><a class="anchor" id="autotoc_md27"></a>
+<h3><a class="anchor" id="autotoc_md51"></a>
 RAW Images</h3>
 <p>RAW images provide fast rendering time, as there is no decoding needed. However, depending on image content, it can be two times larger than a Run-Length Encoded (RLE) image and about 3 to 10 times larger than a JPEG.</p>
 <p>Recommendation:</p>
 <p>For small images that are to be rendered frequently, consider using a RAW image for better performance</p>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md52"></a>
 JPEG Images</h3>
 <p>JPEG images provide the most Flash space savings, but are slower to render compared to RAW and RAW RLE.</p>
 <p>Recommendations: </p><pre class="fragment">If images are large and not used frequently, consider using the JPEG image format to save flash memory space
 If DDR memory is available, consider predecoding JPEG images in DDR for better rendering performance
-</pre><h3><a class="anchor" id="autotoc_md29"></a>
+</pre><h3><a class="anchor" id="autotoc_md53"></a>
 Run-Length Encoded RAW Images</h3>
 <p>In terms of rendering speed and size, RAW RLE images are in between RAW and other compressed formats like JPEG or PNG. Depending on the image contents, RAW RLE can be approximately 1.5 times faster than JPEG, but could be significantly larger in size for large images. Again, depending on the image content, RAW RLE can be about half the size and performance of a RAW image.</p>
 <p>Recommendation:</p>

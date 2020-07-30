@@ -80,22 +80,27 @@ Collaboration diagram for leRenderState:</div>
 <div class="dyncontent">
 <div class="center"><img src="structleRenderState__coll__graph.png" border="0" usemap="#leRenderState_coll__map" alt="Collaboration graph"/></div>
 <map name="leRenderState_coll__map" id="leRenderState_coll__map">
-<area shape="rect" title="This structs represents global state of the renderer." alt="" coords="736,256,840,283"/>
-<area shape="rect" href="structlePixelBuffer.html" title=" " alt="" coords="189,7,284,33"/>
-<area shape="rect" title=" " alt="" coords="16,217,60,244"/>
-<area shape="rect" href="structleArray.html" title="This struct represents a array." alt="" coords="205,260,268,287"/>
-<area shape="rect" href="structleWidgetEventFilter.html" title="Used to define widget touch event filter." alt="" coords="169,159,304,185"/>
-<area shape="rect" href="structgfxDisplayDriver.html" title="This struct represents the display driver interface." alt="" coords="445,440,560,467"/>
-<area shape="rect" href="structgfxPixelBuffer.html" title="This struct represents a pixel buffer." alt="" coords="186,391,287,417"/>
-<area shape="rect" href="structleStreamDescriptor.html" title="This struct represents a stream descriptor." alt="" coords="170,57,303,84"/>
-<area shape="rect" href="structleSize.html" title="This structure is used represents the size of an item." alt="" coords="9,7,67,33"/>
-<area shape="rect" href="structleWidget.html" title="Used to define a widget." alt="" coords="466,200,539,227"/>
-<area shape="rect" href="structleMargin.html" title="This struct represents the four margin settings for objects." alt="" coords="201,108,272,135"/>
-<area shape="rect" href="structleRect.html" title="This struct represents a rectangle." alt="" coords="207,335,266,361"/>
-<area shape="rect" href="structleRectArray.html" title="This struct represents a rectange array." alt="" coords="457,308,548,335"/>
-<area shape="rect" href="structleScheme.html" title="This struct represents style scheme components for objects." alt="" coords="197,209,277,236"/>
-<area shape="rect" href="structgfxSize.html" title="This struct represents a size." alt="" coords="5,492,71,519"/>
-<area shape="rect" href="structlePalette.html" title="This struct represents a palette asset." alt="" coords="466,96,539,123"/>
+<area shape="rect" title="This structs represents global state of the renderer." alt="" coords="840,397,944,424"/>
+<area shape="rect" href="structlePixelBuffer.html" title=" " alt="" coords="265,25,360,52"/>
+<area shape="rect" title=" " alt="" coords="54,255,98,281"/>
+<area shape="rect" href="structleArray.html" title="This struct represents a array." alt="" coords="281,228,344,255"/>
+<area shape="rect" href="structleWidgetEventFilter.html" title="Used to define widget touch event filter." alt="" coords="245,127,380,153"/>
+<area shape="rect" href="structgfxDisplayDriver.html" title="This struct represents the display driver interface." alt="" coords="574,397,689,424"/>
+<area shape="rect" href="structgfxPixelBuffer.html" title="This struct represents a pixel buffer." alt="" coords="262,407,363,433"/>
+<area shape="rect" href="structleStreamDescriptor.html" title="This struct represents a stream descriptor." alt="" coords="246,279,379,305"/>
+<area shape="rect" href="structleSize.html" title="This structure is used represents the size of an item." alt="" coords="47,5,105,32"/>
+<area shape="rect" href="structleWidget.html" title="Used to define a widget." alt="" coords="595,200,668,227"/>
+<area shape="rect" href="structleMargin.html" title="This struct represents the four margin settings for objects." alt="" coords="277,177,348,204"/>
+<area shape="rect" href="structleRect.html" title="This struct represents a rectangle." alt="" coords="47,571,105,597"/>
+<area shape="rect" href="structleRectArray.html" title="This struct represents a rectange array." alt="" coords="267,571,358,597"/>
+<area shape="rect" href="structleScheme.html" title=" " alt="" coords="273,76,353,103"/>
+<area shape="rect" href="unionleSchemeColorTable.html" title=" " alt="" coords="5,96,147,123"/>
+<area shape="rect" href="structgfxSize.html" title="This struct represents a size." alt="" coords="43,417,109,444"/>
+<area shape="rect" href="structgfxLayerState.html" title="This struct represents a layer state." alt="" coords="261,457,364,484"/>
+<area shape="rect" href="structgfxRect.html" title="This struct represents a rectangle." alt="" coords="43,468,109,495"/>
+<area shape="rect" href="structlePalette.html" title="This struct represents a palette asset." alt="" coords="595,321,668,348"/>
+<area shape="rect" href="structgfxGraphicsProcessor.html" title="This struct represents the graphics processor interface." alt="" coords="556,499,707,525"/>
+<area shape="rect" href="structleRenderLayerState.html" title=" " alt="" coords="563,448,699,475"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -104,30 +109,15 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ad3274aeaf9fdd044797d5b222f0369c7"><td class="memItemLeft" align="right" valign="top"><a id="ad3274aeaf9fdd044797d5b222f0369c7"></a>
 const <a class="el" href="structgfxDisplayDriver.html">gfxDisplayDriver</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dispDriver</b></td></tr>
 <tr class="separator:ad3274aeaf9fdd044797d5b222f0369c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60810bc5626e1465baba8b189e3e282"><td class="memItemLeft" align="right" valign="top"><a id="ae60810bc5626e1465baba8b189e3e282"></a>
+const <a class="el" href="structgfxGraphicsProcessor.html">gfxGraphicsProcessor</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gpuDriver</b></td></tr>
+<tr class="separator:ae60810bc5626e1465baba8b189e3e282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68603fbd1f22be7c4cd7167676bbc43e"><td class="memItemLeft" align="right" valign="top"><a id="a68603fbd1f22be7c4cd7167676bbc43e"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>layerIdx</b></td></tr>
 <tr class="separator:a68603fbd1f22be7c4cd7167676bbc43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54ec44556c6c2000501296f310c8d5df"><td class="memItemLeft" align="right" valign="top"><a id="a54ec44556c6c2000501296f310c8d5df"></a>
-<a class="el" href="structleRect.html">leRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>displayRect</b></td></tr>
-<tr class="separator:a54ec44556c6c2000501296f310c8d5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d04cbef75c57b7ed94ef036104ee7f"><td class="memItemLeft" align="right" valign="top"><a id="ab4d04cbef75c57b7ed94ef036104ee7f"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bufferCount</b></td></tr>
 <tr class="separator:ab4d04cbef75c57b7ed94ef036104ee7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c426d721ade6f76093a67ca0974ad3c"><td class="memItemLeft" align="right" valign="top"><a id="a0c426d721ade6f76093a67ca0974ad3c"></a>
-<a class="el" href="structleRectArray.html">leRectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prevDamageRects</b></td></tr>
-<tr class="separator:a0c426d721ade6f76093a67ca0974ad3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32ac8fafde4eaca970ef2e60fc87608e"><td class="memItemLeft" align="right" valign="top"><a id="a32ac8fafde4eaca970ef2e60fc87608e"></a>
-<a class="el" href="structleRectArray.html">leRectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentDamageRects</b></td></tr>
-<tr class="separator:a32ac8fafde4eaca970ef2e60fc87608e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59a7fbd18fc688d79283acbfdfe722e2"><td class="memItemLeft" align="right" valign="top"><a id="a59a7fbd18fc688d79283acbfdfe722e2"></a>
-<a class="el" href="structleRectArray.html">leRectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pendingDamageRects</b></td></tr>
-<tr class="separator:a59a7fbd18fc688d79283acbfdfe722e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa843ba61d106ee2bd7f3a7852affff4a"><td class="memItemLeft" align="right" valign="top"><a id="aa843ba61d106ee2bd7f3a7852affff4a"></a>
-<a class="el" href="structleRectArray.html">leRectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scratchRectList</b></td></tr>
-<tr class="separator:aa843ba61d106ee2bd7f3a7852affff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab13163c7faef5b729c95982e0955246a"><td class="memItemLeft" align="right" valign="top"><a id="ab13163c7faef5b729c95982e0955246a"></a>
-<a class="el" href="structleRectArray.html">leRectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>frameRectList</b></td></tr>
-<tr class="separator:ab13163c7faef5b729c95982e0955246a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b47c1bf15837809bfcfe126b4a2121f"><td class="memItemLeft" align="right" valign="top"><a id="a5b47c1bf15837809bfcfe126b4a2121f"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frameRectIdx</b></td></tr>
 <tr class="separator:a5b47c1bf15837809bfcfe126b4a2121f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,9 +127,9 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frameRectIdx</b><
 <tr class="memitem:a351cf3d86fa81d70165e50ebb7134c32"><td class="memItemLeft" align="right" valign="top"><a id="a351cf3d86fa81d70165e50ebb7134c32"></a>
 <a class="el" href="structleRect.html">leRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drawRect</b></td></tr>
 <tr class="separator:a351cf3d86fa81d70165e50ebb7134c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99899a1960f28800588dfb1abd1f419c"><td class="memItemLeft" align="right" valign="top"><a id="a99899a1960f28800588dfb1abd1f419c"></a>
-<a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drawingPrev</b></td></tr>
-<tr class="separator:a99899a1960f28800588dfb1abd1f419c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b4fabdd1e64996857478bf82c497e7"><td class="memItemLeft" align="right" valign="top"><a id="ac6b4fabdd1e64996857478bf82c497e7"></a>
+<a class="el" href="structleRenderLayerState.html">leRenderLayerState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>layerStates</b> [LE_LAYER_COUNT]</td></tr>
+<tr class="separator:ac6b4fabdd1e64996857478bf82c497e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b482414a52152e4bbf565e95aba1809"><td class="memItemLeft" align="right" valign="top"><a id="a6b482414a52152e4bbf565e95aba1809"></a>
 <a class="el" href="legato__renderer_8h.html#abbd66364d459d75aa0e83cc7f2834985">leFrameState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>frameState</b></td></tr>
 <tr class="separator:a6b482414a52152e4bbf565e95aba1809"><td class="memSeparator" colspan="2">&#160;</td></tr>

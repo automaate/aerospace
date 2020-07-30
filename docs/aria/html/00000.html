@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
 <head>
-<title>aria_flash</title>
+<title>aria_adventure</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="generator" content="Doc-O-Matic" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -18,7 +18,7 @@
 <!-- Begin Page Header -->
 <div class="Element710" id="areafixed">
 <div class="Element94">
-<a href="00410.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00545.html" target="topic">Examples and Demonstrations</a> &gt; <a href="00543.html" target="topic">Aria Applications</a> &gt; <a href="00000.html" target="topic">aria_flash</a></div>
+<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00727.html" target="topic">Examples and Demonstrations</a> &gt; <a href="00726.html" target="topic">Aria Applications</a> &gt; <a href="00000.html" target="topic">aria_adventure</a></div>
 <div class="Element92">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -26,15 +26,15 @@
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element2">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00410.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element90">
-<a href="00044.html" target="topic">Previous</a> | <a href="00543.html" target="topic">Up</a> | <a href="00008.html" target="topic">Next</a></div>
+<a href="00054.html" target="topic">Previous</a> | <a href="00726.html" target="topic">Up</a> | <a href="00001.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element96">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: APPS GFX aria_flash Topic Title: aria_flash)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: APPS GFX Aria_adventure Topic Title: aria_adventure)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table><div class="Element5">
-aria_flash</div>
+aria_adventure</div>
 </div>
 </div>
 
@@ -49,12 +49,16 @@ aria_flash</div>
 <a name="4465736372697074696F6E"></a><div class="Element11">
 <div class="Element10">
 <p class="Element10" style="text-align: center;">
-<img src="aria_fl_rta.png" border="0" alt="" title=""></p><p class="Element10">
-Applications that use large bitmap images or multiple page menu screens, which require several images or large or multiple font packages, etc., have a very large memory requirement for their graphics resources. In such applications, storing these graphics resources on-chip may result in insufficient memory or may be prohibitive to a possible cost benefit. A solution is to store the graphics resources to off-chip memory, such as non-volatile memory, thereby preserving the on-chip memory for program memory and allowing for more complex functional features.&nbsp;</p>
+<img src="APPS GFX aria_adventure demo main mode.png" border="0" alt="" title=""></p><p class="Element10">
+This application showcases how parallax and sprite animation can be achieved using the aria graphics library.&nbsp;</p>
 <p class="Element10">
-The application aria_external_resources in MPLAB Harmony needs to use preloaded images/fonts from SQI flash external non-volatile memory. This would require aria_flash to flash the required image and font resources onto the SQI flash. Refer to <span class="Element145">aria_external_resources</span> for usage model information.&nbsp;</p>
+The demonstration launches with a splash screen highlighting basic motion capability supported by the graphics library. When running the application, the user can interface with it via capacitive single-fingered touch and swiping gestures.&nbsp;</p>
 <p class="Element10">
-The aria_flash application flashes the <span class="Element146">.hex</span> file containing the binary data of the external graphics resources, in this case <span class="Element146">SQI.hex</span>, into the external non-volatile memory. The resource file is copied from the computer to a USB Flash drive or SD card, which has a FAT32 file system installed. The USB Flash drive/SD card is then plugged into the MEB II development board and the application scans the MSD for the resource file. The aria_flash application copies the resource file sector by sector and flashes the binary resource content onto the SQI Flash external memory.</p></div>
+The primary mode is presented in a mobile-game like style.&nbsp;</p>
+<p class="Element10">
+In addition, two other features demonstrated by this application includes the circular gauge widget and the ability to display updating text at a high update rate (showing the score count).&nbsp;</p>
+<p class="Element10">
+The lamb sprite character is animated using more than one hundred frames of animation and is blitted quickly using the GPU and the image preprocessing technique.</p></div>
 </div>
 <a name="546F70696373"></a><div class="Element14">
 Topics</div>
@@ -71,32 +75,34 @@ Name&nbsp;</div></td><td class="Element204" valign="top" width="65%">
 Description&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="35%">
 <div class="Element203">
-<a href="00008.html" target="topic">aria_fl_mzda_intddr_sk_meb2_tm4301b.X</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="00001.html" target="topic">Building the Application</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-This application runs on the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/DM320010');"><img src="indicator_external_link.gif" border="0" alt="" title="">PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit</a> attached to the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320005-5');"><img src="indicator_external_link.gif" border="0" alt="" title="">Multimedia Expansion Board II</a> using GLCD peripheral display controller to drive the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4');"><img src="indicator_external_link.gif" border="0" alt="" title="">High-Performance 4.3&quot; WQVGA Display Module with maXTouch® Technology</a>.&nbsp;</div></td></tr><tr>
+This sections describes how to build the application for the demonstration.&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="35%">
 <div class="Element203">
-<a href="00009.html" target="topic">aria_fl_mzef_cu_tm4301b.X</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="00002.html" target="topic">Configuring the Hardware</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-This application runs on the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320104');"><img src="indicator_external_link.gif" border="0" alt="" title="">Curiosity PIC32MZEF Development Board</a> using LCC software display controller to drive the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4');"><img src="indicator_external_link.gif" border="0" alt="" title="">High-Performance 4.3&quot; WQVGA Display Module with maXTouch® Technology</a>.&nbsp;</div></td></tr><tr>
+This section details how to configure the hardware for the demonstration.&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="35%">
 <div class="Element203">
-<a href="00007.html" target="topic">aria_fl_e70_xu_tm4301b.X</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="00003.html" target="topic">Running the Demonstration</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-This application runs on the <a href="#" onclick="openExternalLink('https://www.microchip.com/Developmenttools/ProductDetails/DM320113');"><img src="indicator_external_link.gif" border="0" alt="" title="">SAM E70 Xplained Ultra Evaluation Kit</a> using LCC software display controller to drive the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4');"><img src="indicator_external_link.gif" border="0" alt="" title="">High-Performance 4.3&quot; WQVGA Display Module with maXTouch® Technology</a>.&nbsp;</div></td></tr><tr>
+This section details how to run the demonstration.&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="35%">
 <div class="Element203">
-<a href="00010.html" target="topic">aria_fl_mzef_sk_meb2_tm4301b.X</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="00048.html" target="topic">aria_adv_mzda_intddr_sk_meb2_tm4301b.X</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-This application runs on the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/dm320007#utm_medium=Press-Release&amp;utm_term=PIC32MZEF%20Launch_PR_9-14-15&amp;utm_content=MCU32&amp;utm_campaign=FPU+Kit');"><img src="indicator_external_link.gif" border="0" alt="" title="">PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit</a> attached to the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320005-5');"><img src="indicator_external_link.gif" border="0" alt="" title="">Multimedia Expansion Board II</a> using LCC software display controller to drive the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4');"><img src="indicator_external_link.gif" border="0" alt="" title="">High-Performance 4.3&quot; WQVGA Display Module with maXTouch® Technology</a>.&nbsp;</div></td></tr></table></div></div>
+This application runs on the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/DM320010');"><img src="indicator_external_link.gif" border="0" alt="" title="">PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit</a> attached to the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320005-5');"><img src="indicator_external_link.gif" border="0" alt="" title="">Multimedia Expansion Board II</a> using GLCD peripheral controller to drive the <a href="#" onclick="openExternalLink('https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4');"><img src="indicator_external_link.gif" border="0" alt="" title="">High-Performance 4.3&quot; WQVGA Display Module with maXTouch® Technology</a>.&nbsp;</div></td></tr></table></div></div>
 </div>
 </div>
+<div class="Element62">
+Created with a commercial version of <a href="#" onclick="openExternalLink('http://www.doc-o-matic.com');"><img src="indicator_external_link.gif" border="0" alt="" title="">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="#" onclick="openExternalLink('mailto:support@toolsfactory.com');"><img src="indicator_external_link.gif" border="0" alt="" title="">support@toolsfactory.com</a>.</div>
 </div>
 <!-- End Page Content -->
 
 <!-- Begin Page Footer -->
 <div class="Element95">
-<a href="00410.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00545.html" target="topic">Examples and Demonstrations</a> &gt; <a href="00543.html" target="topic">Aria Applications</a> &gt; <a href="00000.html" target="topic">aria_flash</a></div>
+<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00727.html" target="topic">Examples and Demonstrations</a> &gt; <a href="00726.html" target="topic">Aria Applications</a> &gt; <a href="00000.html" target="topic">aria_adventure</a></div>
 <div class="Element93">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -104,13 +110,13 @@ This application runs on the <a href="#" onclick="openExternalLink('https://www.
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element4">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00410.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element91">
-<a href="00044.html" target="topic">Previous</a> | <a href="00543.html" target="topic">Up</a> | <a href="00008.html" target="topic">Next</a></div>
+<a href="00054.html" target="topic">Previous</a> | <a href="00726.html" target="topic">Up</a> | <a href="00001.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element97">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: APPS GFX aria_flash Topic Title: aria_flash)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: APPS GFX Aria_adventure Topic Title: aria_adventure)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table></div>
 
 <!-- End Page Footer -->

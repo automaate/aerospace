@@ -317,17 +317,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a49e056fe81085771c819159d5e26ef0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set input enabled status.  <a href="legato__input_8h.html#a49e056fe81085771c819159d5e26ef0f">More...</a><br /></td></tr>
 <tr class="separator:a49e056fe81085771c819159d5e26ef0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b1ee71be7424ab04699bdf4bf9c6a86"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">leInput_InjectTouchDown</a> (uint32_t id, int32_t x, int32_t y)</td></tr>
-<tr class="memdesc:a2b1ee71be7424ab04699bdf4bf9c6a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register and track the touch down events.  <a href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">More...</a><br /></td></tr>
+<tr class="memdesc:a2b1ee71be7424ab04699bdf4bf9c6a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject touch down event.  <a href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">More...</a><br /></td></tr>
 <tr class="separator:a2b1ee71be7424ab04699bdf4bf9c6a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a952c85e0ebb91354e2e2483d615b2ebb"><td class="memItemLeft" align="right" valign="top"><a id="a952c85e0ebb91354e2e2483d615b2ebb"></a>
-LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>leInput_InjectTouchUp</b> (uint32_t id, int32_t x, int32_t y)</td></tr>
+<tr class="memitem:a952c85e0ebb91354e2e2483d615b2ebb"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__input_8h.html#a952c85e0ebb91354e2e2483d615b2ebb">leInput_InjectTouchUp</a> (uint32_t id, int32_t x, int32_t y)</td></tr>
+<tr class="memdesc:a952c85e0ebb91354e2e2483d615b2ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject touch up event.  <a href="legato__input_8h.html#a952c85e0ebb91354e2e2483d615b2ebb">More...</a><br /></td></tr>
 <tr class="separator:a952c85e0ebb91354e2e2483d615b2ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5692c4065d22b46b94895c7191db253"><td class="memItemLeft" align="right" valign="top"><a id="ac5692c4065d22b46b94895c7191db253"></a>
-LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>leInput_InjectTouchMoved</b> (uint32_t id, int32_t x, int32_t y)</td></tr>
+<tr class="memitem:ac5692c4065d22b46b94895c7191db253"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__input_8h.html#ac5692c4065d22b46b94895c7191db253">leInput_InjectTouchMoved</a> (uint32_t id, int32_t x, int32_t y)</td></tr>
+<tr class="memdesc:ac5692c4065d22b46b94895c7191db253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject touch moved event.  <a href="legato__input_8h.html#ac5692c4065d22b46b94895c7191db253">More...</a><br /></td></tr>
 <tr class="separator:ac5692c4065d22b46b94895c7191db253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a150706c6cae5725334654ed8883129ac"><td class="memItemLeft" align="right" valign="top"><a id="a150706c6cae5725334654ed8883129ac"></a>
-<a class="el" href="legato__event_8h.html#a84695c83c68a6c3b6b8b5e0c36bc5460">leEventResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_leInput_HandleInputEvent</b> (<a class="el" href="structleEvent.html">leEvent</a> *evt)</td></tr>
-<tr class="separator:a150706c6cae5725334654ed8883129ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato input definitions. </p>
@@ -494,11 +491,11 @@ LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addc
 <p>Returns the input enabled status of the current context. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> status = <a class="code" href="legato__input_8h.html#adf5375a8f9e81edbe43feb6453ea5754">leInput_GetEnabled</a>();</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">param1</td><td>void. </td></tr>
+    <tr><td class="paramname">void.</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if input is enabled, otherwise false. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_TRUE if input is enabled, otherwise LE_FALSE. </dd></dl>
 
 </div>
 </div>
@@ -534,16 +531,112 @@ LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addc
       </table>
 </div><div class="memdoc">
 
-<p>Register and track the touch down events. </p>
-<p>Sets the input status of the current context to <span style="color: #820a32"><em>enable</em></span>. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> enable = <span class="keyword">true</span>;</div>
+<p>Inject touch down event. </p>
+<p>Injects a touch down event for <span class="param">id</span> at location <span class="param">x</span>, <span class="param">y</span>. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> enable = <span class="keyword">true</span>;</div>
 <div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">leInput_InjectTouchDown</a>(<span class="keywordtype">id</span>, x, y);</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">param1</td><td>id is the . </td></tr>
+    <tr><td class="paramname">id</td><td>is the touch input id. </td></tr>
+    <tr><td class="paramname">x</td><td>is the x coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>is the y coordinate. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>leResult. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
+
+</div>
+</div>
+<a id="ac5692c4065d22b46b94895c7191db253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5692c4065d22b46b94895c7191db253">&#9670;&nbsp;</a></span>leInput_InjectTouchMoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leInput_InjectTouchMoved </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inject touch moved event. </p>
+<p>Injects a touch moved event for <span class="param">id</span> at location <span class="param">x</span>, <span class="param">y</span>. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> enable = <span class="keyword">true</span>;</div>
+<div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">leInput_InjectTouchDown</a>(<span class="keywordtype">id</span>, x, y);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>is the touch input id. </td></tr>
+    <tr><td class="paramname">x</td><td>is the x coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>is the y coordinate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
+
+</div>
+</div>
+<a id="a952c85e0ebb91354e2e2483d615b2ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952c85e0ebb91354e2e2483d615b2ebb">&#9670;&nbsp;</a></span>leInput_InjectTouchUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leInput_InjectTouchUp </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inject touch up event. </p>
+<p>Injects a touch up event for <span class="param">id</span> at location <span class="param">x</span>, <span class="param">y</span>. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> enable = <span class="keyword">true</span>;</div>
+<div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">leInput_InjectTouchDown</a>(<span class="keywordtype">id</span>, x, y);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>is the touch input id. </td></tr>
+    <tr><td class="paramname">x</td><td>is the x coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>is the y coordinate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
 
 </div>
 </div>
@@ -564,15 +657,15 @@ LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addc
 </div><div class="memdoc">
 
 <p>Set input enabled status. </p>
-<p>Sets the input status of the current context to <span style="color: #820a32"><em>enable</em></span>. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> enable = <span class="keyword">true</span>;</div>
+<p>Sets the input status of the current context to <span class="param">enable</span>. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> enable = <span class="keyword">true</span>;</div>
 <div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__input_8h.html#a49e056fe81085771c819159d5e26ef0f">leInput_SetEnabled</a>(enable);</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">param1</td><td>leBool. </td></tr>
+    <tr><td class="paramname">enable</td><td>the new status. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>leResult. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
 
 </div>
 </div>
@@ -580,7 +673,7 @@ LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addc
 <div class="ttc" id="alegato__common_8h_html_af467b597a37f8d8851b61addcb8e2e0f"><div class="ttname"><a href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a></div><div class="ttdeci">leResult</div><div class="ttdoc">This enum represents function call results.</div><div class="ttdef"><b>Definition:</b> legato_common.h:134</div></div>
 <div class="ttc" id="alegato__common_8h_html_acd3365f0b79c37d8894559b5afed374b"><div class="ttname"><a href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a></div><div class="ttdeci">leBool</div><div class="ttdoc">This enum represents booleans.</div><div class="ttdef"><b>Definition:</b> legato_common.h:157</div></div>
 <div class="ttc" id="alegato__input_8h_html_a49e056fe81085771c819159d5e26ef0f"><div class="ttname"><a href="legato__input_8h.html#a49e056fe81085771c819159d5e26ef0f">leInput_SetEnabled</a></div><div class="ttdeci">LIB_EXPORT leResult leInput_SetEnabled(leBool enable)</div><div class="ttdoc">Set input enabled status.</div><div class="ttdef"><b>Definition:</b> legato_input.c:67</div></div>
-<div class="ttc" id="alegato__input_8h_html_a2b1ee71be7424ab04699bdf4bf9c6a86"><div class="ttname"><a href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">leInput_InjectTouchDown</a></div><div class="ttdeci">LIB_EXPORT leResult leInput_InjectTouchDown(uint32_t id, int32_t x, int32_t y)</div><div class="ttdoc">Register and track the touch down events.</div><div class="ttdef"><b>Definition:</b> legato_input.c:74</div></div>
+<div class="ttc" id="alegato__input_8h_html_a2b1ee71be7424ab04699bdf4bf9c6a86"><div class="ttname"><a href="legato__input_8h.html#a2b1ee71be7424ab04699bdf4bf9c6a86">leInput_InjectTouchDown</a></div><div class="ttdeci">LIB_EXPORT leResult leInput_InjectTouchDown(uint32_t id, int32_t x, int32_t y)</div><div class="ttdoc">Inject touch down event.</div><div class="ttdef"><b>Definition:</b> legato_input.c:74</div></div>
 <div class="ttc" id="alegato__input_8h_html_adf5375a8f9e81edbe43feb6453ea5754"><div class="ttname"><a href="legato__input_8h.html#adf5375a8f9e81edbe43feb6453ea5754">leInput_GetEnabled</a></div><div class="ttdeci">LIB_EXPORT leBool leInput_GetEnabled()</div><div class="ttdoc">Get input enabled status.</div><div class="ttdef"><b>Definition:</b> legato_input.c:62</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -358,47 +358,47 @@ $(function() {
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">  Returns:</span></div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="comment">    leResult - the result of the operation</span></div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;LIB_EXPORT <a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leDecodeCodePoint(<span class="keyword">const</span> <span class="keywordtype">char</span>* str,</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                                                          <span class="keyword">const</span> <a class="code" href="structleFont.html">leFont</a>* font,</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                                                          <span class="keyword">const</span> <a class="code" href="structlePoint.html">lePoint</a> pt,</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                                                          uint32_t* charIdx);</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160; </div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="comment">/* Function:</span></div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="comment">    leResult leDecodeCodePoint(uint32_t encoding,</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="comment">                               uint8_t* data,</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="comment">                               uint32_t max,</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="comment">                               uint32_t* codePoint,</span></div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="comment">                               uint32_t* offset)</span></div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment">     Given an encoded codepoint (ASCII, UTF-8, or UTF-16) returns the actual</span></div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="comment">     codepoint</span></div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="comment">     Given an encoded codepoint (ASCII, UTF-8, or UTF-16) returns the actual</span></div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<span class="comment">     codepoint</span></div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="comment">    uint32_t encoding - the encoding of the value</span></div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="comment">    uint8_t* data - the data to decode</span></div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="comment">    uint32_t max - the size of the data buffer</span></div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="comment">    uint32_t* codePoint - will contain the decoded code point</span></div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="comment">    uint32_t* offset - will contain the offset in the buffer after the decode</span></div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="comment">                       point</span></div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="comment">    leResult - the result of the operation</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;LIB_EXPORT <a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leDecodeCodePoint(uint32_t encoding,</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                                      uint8_t* data,</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                                      uint32_t max,</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                                      uint32_t* codePoint,</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                                      uint32_t* offset);</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LE_STRINGUTILS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;LIB_EXPORT <a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leStringUtils_GetCharIndexAtPointCStr(<span class="keyword">const</span> <span class="keywordtype">char</span>* str,</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                                                          <span class="keyword">const</span> <a class="code" href="structleFont.html">leFont</a>* font,</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                                                          <span class="keyword">const</span> <a class="code" href="structlePoint.html">lePoint</a> pt,</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                                                          uint32_t* charIdx);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="comment">/* Function:</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="comment">    leResult leDecodeCodePoint(uint32_t encoding,</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="comment">                               uint8_t* data,</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="comment">                               uint32_t max,</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="comment">                               uint32_t* codePoint,</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="comment">                               uint32_t* offset)</span></div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="comment">     Given an encoded codepoint (ASCII, UTF-8, or UTF-16) returns the actual</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment">     codepoint</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="comment">     Given an encoded codepoint (ASCII, UTF-8, or UTF-16) returns the actual</span></div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="comment">     codepoint</span></div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="comment">    uint32_t encoding - the encoding of the value</span></div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="comment">    uint8_t* data - the data to decode</span></div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="comment">    uint32_t max - the size of the data buffer</span></div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="comment">    uint32_t* codePoint - will contain the decoded code point</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="comment">    uint32_t* offset - will contain the offset in the buffer after the decode</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="comment">                       point</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="comment">    leResult - the result of the operation</span></div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;LIB_EXPORT <a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leDecodeCodePoint(uint32_t encoding,</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                                      uint8_t* data,</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                                      uint32_t max,</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                                      uint32_t* codePoint,</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                                      uint32_t* offset);</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160; </div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LE_STRINGUTILS_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="alegato__stringutils_8h_html_a6bd4fcef72e86489d7b4f75460c92d8b"><div class="ttname"><a href="legato__stringutils_8h.html#a6bd4fcef72e86489d7b4f75460c92d8b">leStringUtils_ToCStr</a></div><div class="ttdeci">LIB_EXPORT uint32_t leStringUtils_ToCStr(const leChar *str, uint32_t strSize, char *buf, uint32_t bufSize)</div><div class="ttdoc">Convert leChar buffer to C-style string.</div><div class="ttdef"><b>Definition:</b> legato_stringutils.c:58</div></div>
 <div class="ttc" id="alegato__common_8h_html_af467b597a37f8d8851b61addcb8e2e0f"><div class="ttname"><a href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a></div><div class="ttdeci">leResult</div><div class="ttdoc">This enum represents function call results.</div><div class="ttdef"><b>Definition:</b> legato_common.h:134</div></div>

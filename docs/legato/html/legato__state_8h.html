@@ -125,6 +125,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleLayerState.html">leLayerState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct describes the layer state for a layer.  <a href="structleLayerState.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleState.html">leState</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents the state of the library.  <a href="structleState.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,9 +143,9 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1467181552ce6400971058ea64ca68bd"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a1467181552ce6400971058ea64ca68bd">leInitialize</a> (const <a class="el" href="structgfxDisplayDriver.html">gfxDisplayDriver</a> *dispDriver)</td></tr>
-<tr class="memdesc:a1467181552ce6400971058ea64ca68bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Legato library.  <a href="legato__state_8h.html#a1467181552ce6400971058ea64ca68bd">More...</a><br /></td></tr>
-<tr class="separator:a1467181552ce6400971058ea64ca68bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88af1218e876364e090404b01f53a035"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a88af1218e876364e090404b01f53a035">leInitialize</a> (const <a class="el" href="structgfxDisplayDriver.html">gfxDisplayDriver</a> *dispDriver, const <a class="el" href="structgfxGraphicsProcessor.html">gfxGraphicsProcessor</a> *gpuDriver)</td></tr>
+<tr class="memdesc:a88af1218e876364e090404b01f53a035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Legato library.  <a href="legato__state_8h.html#a88af1218e876364e090404b01f53a035">More...</a><br /></td></tr>
+<tr class="separator:a88af1218e876364e090404b01f53a035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f6d0014d05bc0a9162b7a6cb8e98532"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a5f6d0014d05bc0a9162b7a6cb8e98532">leShutdown</a> ()</td></tr>
 <tr class="memdesc:a5f6d0014d05bc0a9162b7a6cb8e98532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Legato library.  <a href="legato__state_8h.html#a5f6d0014d05bc0a9162b7a6cb8e98532">More...</a><br /></td></tr>
 <tr class="separator:a5f6d0014d05bc0a9162b7a6cb8e98532"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,9 +155,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a58508d6a76ab9d561d31ec76a9ed8a3c"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a58508d6a76ab9d561d31ec76a9ed8a3c">leGetColorMode</a> ()</td></tr>
 <tr class="memdesc:a58508d6a76ab9d561d31ec76a9ed8a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color mode.  <a href="legato__state_8h.html#a58508d6a76ab9d561d31ec76a9ed8a3c">More...</a><br /></td></tr>
 <tr class="separator:a58508d6a76ab9d561d31ec76a9ed8a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d37a1507739e2dff0293e1ffe51bea"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="structleRect.html">leRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a53d37a1507739e2dff0293e1ffe51bea">leGetDisplayRect</a> ()</td></tr>
-<tr class="memdesc:a53d37a1507739e2dff0293e1ffe51bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get display rectangle.  <a href="legato__state_8h.html#a53d37a1507739e2dff0293e1ffe51bea">More...</a><br /></td></tr>
-<tr class="separator:a53d37a1507739e2dff0293e1ffe51bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1955a578acc97ff613b15544086bf9dd"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a1955a578acc97ff613b15544086bf9dd">leGetLayerColorMode</a> (uint32_t lyrIdx)</td></tr>
+<tr class="memdesc:a1955a578acc97ff613b15544086bf9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get layer color mode.  <a href="legato__state_8h.html#a1955a578acc97ff613b15544086bf9dd">More...</a><br /></td></tr>
+<tr class="separator:a1955a578acc97ff613b15544086bf9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f60ac215d6f1b180f49542d8abb569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#aa5f60ac215d6f1b180f49542d8abb569">leSetLayerColorMode</a> (uint32_t lyrIdx, <a class="el" href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a> mode)</td></tr>
+<tr class="memdesc:aa5f60ac215d6f1b180f49542d8abb569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set layer color mode.  <a href="legato__state_8h.html#aa5f60ac215d6f1b180f49542d8abb569">More...</a><br /></td></tr>
+<tr class="separator:aa5f60ac215d6f1b180f49542d8abb569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd64a1e60938af173f30096ac5969d16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#acd64a1e60938af173f30096ac5969d16">leGetLayerRenderHorizontal</a> (uint32_t lyrIdx)</td></tr>
+<tr class="memdesc:acd64a1e60938af173f30096ac5969d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get layer render direction.  <a href="legato__state_8h.html#acd64a1e60938af173f30096ac5969d16">More...</a><br /></td></tr>
+<tr class="separator:acd64a1e60938af173f30096ac5969d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0c37f8b852e53fd56165e45a99204b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a6d0c37f8b852e53fd56165e45a99204b">leSetLayerRenderHorizontal</a> (uint32_t lyrIdx, <a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> horz)</td></tr>
+<tr class="memdesc:a6d0c37f8b852e53fd56165e45a99204b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set layer render direction.  <a href="legato__state_8h.html#a6d0c37f8b852e53fd56165e45a99204b">More...</a><br /></td></tr>
+<tr class="separator:a6d0c37f8b852e53fd56165e45a99204b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae380fd8b518c2c57c8ad2cd485f53b97"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="structleStringTable.html">leStringTable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#ae380fd8b518c2c57c8ad2cd485f53b97">leGetStringTable</a> ()</td></tr>
 <tr class="memdesc:ae380fd8b518c2c57c8ad2cd485f53b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get string table.  <a href="legato__state_8h.html#ae380fd8b518c2c57c8ad2cd485f53b97">More...</a><br /></td></tr>
 <tr class="separator:ae380fd8b518c2c57c8ad2cd485f53b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,9 +209,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a81d5339db134e5128f2c4d3893407c0d"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a81d5339db134e5128f2c4d3893407c0d">leRemoveRootWidget</a> (<a class="el" href="structleWidget.html">leWidget</a> *wgt, uint32_t layer)</td></tr>
 <tr class="memdesc:a81d5339db134e5128f2c4d3893407c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove root widget to layer.  <a href="legato__state_8h.html#a81d5339db134e5128f2c4d3893407c0d">More...</a><br /></td></tr>
 <tr class="separator:a81d5339db134e5128f2c4d3893407c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2b010af93ec82d473068531e624650d"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#af2b010af93ec82d473068531e624650d">leWidgetIsInScene</a> (const <a class="el" href="structleWidget.html">leWidget</a> *wgt)</td></tr>
-<tr class="memdesc:af2b010af93ec82d473068531e624650d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether the widget is in the scene.  <a href="legato__state_8h.html#af2b010af93ec82d473068531e624650d">More...</a><br /></td></tr>
-<tr class="separator:af2b010af93ec82d473068531e624650d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae117be3102728e25e7b663166073148"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#aae117be3102728e25e7b663166073148">leWidgetIsInScene</a> (const <a class="el" href="structleWidget.html">leWidget</a> *wgt)</td></tr>
+<tr class="memdesc:aae117be3102728e25e7b663166073148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether the widget is in the scene.  <a href="legato__state_8h.html#aae117be3102728e25e7b663166073148">More...</a><br /></td></tr>
+<tr class="separator:aae117be3102728e25e7b663166073148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87891bd0d3c636e826eca3fa4a01851f"><td class="memItemLeft" align="right" valign="top"><a id="a87891bd0d3c636e826eca3fa4a01851f"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>leGetWidgetLayer</b> (const <a class="el" href="structleWidget.html">leWidget</a> *wgt)</td></tr>
+<tr class="separator:a87891bd0d3c636e826eca3fa4a01851f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c238e62e945ff1b955b31ed02a4260b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a9c238e62e945ff1b955b31ed02a4260b">leEdit_StartEdit</a> ()</td></tr>
 <tr class="memdesc:a9c238e62e945ff1b955b31ed02a4260b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send start edit command.  <a href="legato__state_8h.html#a9c238e62e945ff1b955b31ed02a4260b">More...</a><br /></td></tr>
 <tr class="separator:a9c238e62e945ff1b955b31ed02a4260b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,15 +236,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a6d9122220d6036daf4f6284a28c983d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__state_8h.html#a6d9122220d6036daf4f6284a28c983d0">leEdit_Backspace</a> ()</td></tr>
 <tr class="memdesc:a6d9122220d6036daf4f6284a28c983d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send backspace command.  <a href="legato__state_8h.html#a6d9122220d6036daf4f6284a28c983d0">More...</a><br /></td></tr>
 <tr class="separator:a6d9122220d6036daf4f6284a28c983d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4592c41d3d65ce520056e5a32bc55e28"><td class="memItemLeft" align="right" valign="top"><a id="a4592c41d3d65ce520056e5a32bc55e28"></a>
-leStreamManager *&#160;</td><td class="memItemRight" valign="bottom"><b>leGetActiveStream</b> ()</td></tr>
-<tr class="separator:a4592c41d3d65ce520056e5a32bc55e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73c9d0ff4593d40bfd758c3dbbd0c1ec"><td class="memItemLeft" align="right" valign="top"><a id="a73c9d0ff4593d40bfd758c3dbbd0c1ec"></a>
-<a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>leRunActiveStream</b> ()</td></tr>
-<tr class="separator:a73c9d0ff4593d40bfd758c3dbbd0c1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aa82ef43625bea50cf6ed27bb09e7cd"><td class="memItemLeft" align="right" valign="top"><a id="a4aa82ef43625bea50cf6ed27bb09e7cd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>leAbortActiveStream</b> ()</td></tr>
-<tr class="separator:a4aa82ef43625bea50cf6ed27bb09e7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"></div><h2 class="groupheader">Typedef Documentation</h2>
@@ -597,27 +603,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a53d37a1507739e2dff0293e1ffe51bea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53d37a1507739e2dff0293e1ffe51bea">&#9670;&nbsp;</a></span>leGetDisplayRect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LIB_EXPORT <a class="el" href="structleRect.html">leRect</a> leGetDisplayRect </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get display rectangle. </p>
-<p>Gets the display rectangles width height and upper left corner coordinates of the physical display. </p><div class="fragment"><div class="line"><a class="code" href="structleRect.html">leRect</a> rect = <a class="code" href="legato__state_8h.html#a53d37a1507739e2dff0293e1ffe51bea">leGetDisplayRect</a>();</div>
-</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>the display rectangle. </dd></dl>
-
-</div>
-</div>
 <a id="ad4db8bffda6606a9eb8bca6eb71c89ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4db8bffda6606a9eb8bca6eb71c89ae">&#9670;&nbsp;</a></span>leGetEditWidget()</h2>
 
@@ -687,6 +672,62 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a1955a578acc97ff613b15544086bf9dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1955a578acc97ff613b15544086bf9dd">&#9670;&nbsp;</a></span>leGetLayerColorMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LIB_EXPORT <a class="el" href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a> leGetLayerColorMode </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>lyrIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get layer color mode. </p>
+<p>Gets the the layer color mode </p><div class="fragment"><div class="line"><a class="code" href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a> mode = <a class="code" href="legato__state_8h.html#a1955a578acc97ff613b15544086bf9dd">leGetLayerColorMode</a>(0);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lyrIdx</td><td>is the index of the layer to query </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the color mode of layer. </dd></dl>
+
+</div>
+</div>
+<a id="acd64a1e60938af173f30096ac5969d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd64a1e60938af173f30096ac5969d16">&#9670;&nbsp;</a></span>leGetLayerRenderHorizontal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> leGetLayerRenderHorizontal </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>lyrIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get layer render direction. </p>
+<p>Gets the the layer render direction </p><div class="fragment"><div class="line"><span class="keywordtype">bool</span> horz = <a class="code" href="legato__state_8h.html#acd64a1e60938af173f30096ac5969d16">leGetLayerRenderHorizontal</a>(0);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lyrIdx</td><td>is the index of the layer to query </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the layer is set to render horizontally. </dd></dl>
+
+</div>
+</div>
 <a id="a0a5b1d26afc71db9027ab46e332a7849"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a5b1d26afc71db9027ab46e332a7849">&#9670;&nbsp;</a></span>leGetStringLanguage()</h2>
 
@@ -750,24 +791,34 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a1467181552ce6400971058ea64ca68bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1467181552ce6400971058ea64ca68bd">&#9670;&nbsp;</a></span>leInitialize()</h2>
+<a id="a88af1218e876364e090404b01f53a035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88af1218e876364e090404b01f53a035">&#9670;&nbsp;</a></span>leInitialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leInitialize </td>
+          <td class="memname"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leInitialize </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structgfxDisplayDriver.html">gfxDisplayDriver</a> *&#160;</td>
-          <td class="paramname"><em>dispDriver</em></td><td>)</td>
+          <td class="paramname"><em>dispDriver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structgfxGraphicsProcessor.html">gfxGraphicsProcessor</a> *&#160;</td>
+          <td class="paramname"><em>gpuDriver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Initialize Legato library. </p>
-<p>This function performs basic initialization of the Legato library state. It accepts and intializes a display controller driver specified by <span class="param">dispDriver</span> </p><dl class="section pre"><dt>Precondition</dt><dd>Must be called before any other library operations are performed. <div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__state_8h.html#a1467181552ce6400971058ea64ca68bd">leInitialize</a>(dispDriver);</div>
+<p>This function performs basic initialization of the Legato library state. It accepts and intializes a display controller driver specified by <span class="param">dispDriver</span> </p><dl class="section pre"><dt>Precondition</dt><dd>Must be called before any other library operations are performed. <div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__state_8h.html#a88af1218e876364e090404b01f53a035">leInitialize</a>(dispDriver);</div>
 </div><!-- fragment --> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -966,6 +1017,84 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="aa5f60ac215d6f1b180f49542d8abb569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f60ac215d6f1b180f49542d8abb569">&#9670;&nbsp;</a></span>leSetLayerColorMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leSetLayerColorMode </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>lyrIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set layer color mode. </p>
+<p>Sets the the layer color mode at index </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__state_8h.html#a1955a578acc97ff613b15544086bf9dd">leGetLayerColorMode</a>(0, LE_RGB_565);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lyrIdx</td><td>is the index of the layer to query </td></tr>
+    <tr><td class="paramname">mode</td><td>is the color mode to set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result. </dd></dl>
+
+</div>
+</div>
+<a id="a6d0c37f8b852e53fd56165e45a99204b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0c37f8b852e53fd56165e45a99204b">&#9670;&nbsp;</a></span>leSetLayerRenderHorizontal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leSetLayerRenderHorizontal </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>lyrIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a>&#160;</td>
+          <td class="paramname"><em>horz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set layer render direction. </p>
+<p>Sets the the layer render direction at index. By default a layer is rendered from top-down with dirty rectangles sliced favoring height. In horizontal mode layers are rendered from left to right with rectangles sliced favoring width. This can help reduce tearing for scenes that have horizontal movement. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__state_8h.html#a6d0c37f8b852e53fd56165e45a99204b">leSetLayerRenderHorizontal</a>(0, <span class="keyword">true</span>);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lyrIdx</td><td>is the index of the layer to modify </td></tr>
+    <tr><td class="paramname">true</td><td>if the layer should use horizontal mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result. </dd></dl>
+
+</div>
+</div>
 <a id="a282dfc8323bda9d01dc611faa1c27ba5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a282dfc8323bda9d01dc611faa1c27ba5">&#9670;&nbsp;</a></span>leSetStringLanguage()</h2>
 
@@ -1092,14 +1221,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="af2b010af93ec82d473068531e624650d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2b010af93ec82d473068531e624650d">&#9670;&nbsp;</a></span>leWidgetIsInScene()</h2>
+<a id="aae117be3102728e25e7b663166073148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae117be3102728e25e7b663166073148">&#9670;&nbsp;</a></span>leWidgetIsInScene()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">LIB_EXPORT <a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> leWidgetIsInScene </td>
+          <td class="memname"><a class="el" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> leWidgetIsInScene </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structleWidget.html">leWidget</a> *&#160;</td>
           <td class="paramname"><em>wgt</em></td><td>)</td>
@@ -1109,7 +1238,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Determines whether the widget is in the scene. </p>
-<p>Determines if <span class="param">wgt</span> is in he current scheme. Searches the active scene for a given widget. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> flag = <a class="code" href="legato__state_8h.html#af2b010af93ec82d473068531e624650d">leWidgetIsInScene</a>(wgt);</div>
+<p>Determines if <span class="param">wgt</span> is in he current scheme. Searches the active scene for a given widget. </p><div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a> flag = <a class="code" href="legato__state_8h.html#aae117be3102728e25e7b663166073148">leWidgetIsInScene</a>(wgt);</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">void.</td><td></td></tr>
@@ -1121,42 +1250,43 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="alegato__state_8h_html_a5f6d0014d05bc0a9162b7a6cb8e98532"><div class="ttname"><a href="legato__state_8h.html#a5f6d0014d05bc0a9162b7a6cb8e98532">leShutdown</a></div><div class="ttdeci">LIB_EXPORT void leShutdown()</div><div class="ttdoc">Shutdown Legato library.</div><div class="ttdef"><b>Definition:</b> legato_state.c:279</div></div>
+<div class="ttc" id="alegato__state_8h_html_a6d0c37f8b852e53fd56165e45a99204b"><div class="ttname"><a href="legato__state_8h.html#a6d0c37f8b852e53fd56165e45a99204b">leSetLayerRenderHorizontal</a></div><div class="ttdeci">leResult leSetLayerRenderHorizontal(uint32_t lyrIdx, leBool horz)</div><div class="ttdoc">Set layer render direction.</div><div class="ttdef"><b>Definition:</b> legato_state.c:421</div></div>
+<div class="ttc" id="alegato__state_8h_html_a5f6d0014d05bc0a9162b7a6cb8e98532"><div class="ttname"><a href="legato__state_8h.html#a5f6d0014d05bc0a9162b7a6cb8e98532">leShutdown</a></div><div class="ttdeci">LIB_EXPORT void leShutdown()</div><div class="ttdoc">Shutdown Legato library.</div><div class="ttdef"><b>Definition:</b> legato_state.c:289</div></div>
 <div class="ttc" id="astructleEditWidget_html"><div class="ttname"><a href="structleEditWidget.html">leEditWidget</a></div><div class="ttdef"><b>Definition:</b> legato_editwidget.h:91</div></div>
 <div class="ttc" id="alegato__common_8h_html_af467b597a37f8d8851b61addcb8e2e0f"><div class="ttname"><a href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a></div><div class="ttdeci">leResult</div><div class="ttdoc">This enum represents function call results.</div><div class="ttdef"><b>Definition:</b> legato_common.h:134</div></div>
 <div class="ttc" id="alegato__color_8h_html_a99a315210e3dcfc88bd239549745b140"><div class="ttname"><a href="legato__color_8h.html#a99a315210e3dcfc88bd239549745b140">leColorMode</a></div><div class="ttdeci">leColorMode</div><div class="ttdoc">This enum represents the supported RGB color formats.</div><div class="ttdef"><b>Definition:</b> legato_color.h:146</div></div>
-<div class="ttc" id="astructleRect_html"><div class="ttname"><a href="structleRect.html">leRect</a></div><div class="ttdoc">This struct represents a rectangle.</div><div class="ttdef"><b>Definition:</b> legato_common.h:405</div></div>
-<div class="ttc" id="alegato__state_8h_html_a53d37a1507739e2dff0293e1ffe51bea"><div class="ttname"><a href="legato__state_8h.html#a53d37a1507739e2dff0293e1ffe51bea">leGetDisplayRect</a></div><div class="ttdeci">LIB_EXPORT leRect leGetDisplayRect()</div><div class="ttdoc">Get display rectangle.</div><div class="ttdef"><b>Definition:</b> legato_state.c:366</div></div>
-<div class="ttc" id="alegato__state_8h_html_ae1fdbdd6f59bedfb5a7c1ad39ca934a8"><div class="ttname"><a href="legato__state_8h.html#ae1fdbdd6f59bedfb5a7c1ad39ca934a8">leAddRootWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leAddRootWidget(leWidget *wgt, uint32_t layer)</div><div class="ttdoc">Add root widget to layer.</div><div class="ttdef"><b>Definition:</b> legato_state.c:500</div></div>
-<div class="ttc" id="alegato__state_8h_html_a776bd24e295a470b311dfd70a8b7ec81"><div class="ttname"><a href="legato__state_8h.html#a776bd24e295a470b311dfd70a8b7ec81">leSetEditWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leSetEditWidget(leEditWidget *widget)</div><div class="ttdoc">Set edit widget.</div><div class="ttdef"><b>Definition:</b> legato_state.c:460</div></div>
-<div class="ttc" id="alegato__state_8h_html_ac96a9abe81f687cf59959c8dbebf5ca8"><div class="ttname"><a href="legato__state_8h.html#ac96a9abe81f687cf59959c8dbebf5ca8">leRedrawAll</a></div><div class="ttdeci">LIB_EXPORT void leRedrawAll()</div><div class="ttdoc">Redraw All.</div><div class="ttdef"><b>Definition:</b> legato_state.c:482</div></div>
-<div class="ttc" id="alegato__state_8h_html_a0e6f9902c4f65742fb7d425b41b99566"><div class="ttname"><a href="legato__state_8h.html#a0e6f9902c4f65742fb7d425b41b99566">leGetFocusWidget</a></div><div class="ttdeci">LIB_EXPORT leWidget * leGetFocusWidget()</div><div class="ttdoc">Get focus widget.</div><div class="ttdef"><b>Definition:</b> legato_state.c:424</div></div>
-<div class="ttc" id="alegato__state_8h_html_a03c09759336c483ba05855a26f71a72b"><div class="ttname"><a href="legato__state_8h.html#a03c09759336c483ba05855a26f71a72b">leEdit_Append</a></div><div class="ttdeci">void leEdit_Append(leString *str)</div><div class="ttdoc">Send start edit command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:654</div></div>
-<div class="ttc" id="alegato__state_8h_html_a6d9122220d6036daf4f6284a28c983d0"><div class="ttname"><a href="legato__state_8h.html#a6d9122220d6036daf4f6284a28c983d0">leEdit_Backspace</a></div><div class="ttdeci">void leEdit_Backspace()</div><div class="ttdoc">Send backspace command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:664</div></div>
-<div class="ttc" id="astructleString_html"><div class="ttname"><a href="structleString.html">leString</a></div><div class="ttdoc">This struct represents a string.</div><div class="ttdef"><b>Definition:</b> legato_string.h:109</div></div>
+<div class="ttc" id="alegato__state_8h_html_ae1fdbdd6f59bedfb5a7c1ad39ca934a8"><div class="ttname"><a href="legato__state_8h.html#ae1fdbdd6f59bedfb5a7c1ad39ca934a8">leAddRootWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leAddRootWidget(leWidget *wgt, uint32_t layer)</div><div class="ttdoc">Add root widget to layer.</div><div class="ttdef"><b>Definition:</b> legato_state.c:566</div></div>
+<div class="ttc" id="alegato__state_8h_html_a1955a578acc97ff613b15544086bf9dd"><div class="ttname"><a href="legato__state_8h.html#a1955a578acc97ff613b15544086bf9dd">leGetLayerColorMode</a></div><div class="ttdeci">LIB_EXPORT leColorMode leGetLayerColorMode(uint32_t lyrIdx)</div><div class="ttdoc">Get layer color mode.</div><div class="ttdef"><b>Definition:</b> legato_state.c:394</div></div>
+<div class="ttc" id="alegato__state_8h_html_a776bd24e295a470b311dfd70a8b7ec81"><div class="ttname"><a href="legato__state_8h.html#a776bd24e295a470b311dfd70a8b7ec81">leSetEditWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leSetEditWidget(leEditWidget *widget)</div><div class="ttdoc">Set edit widget.</div><div class="ttdef"><b>Definition:</b> legato_state.c:526</div></div>
+<div class="ttc" id="alegato__state_8h_html_ac96a9abe81f687cf59959c8dbebf5ca8"><div class="ttname"><a href="legato__state_8h.html#ac96a9abe81f687cf59959c8dbebf5ca8">leRedrawAll</a></div><div class="ttdeci">LIB_EXPORT void leRedrawAll()</div><div class="ttdoc">Redraw All.</div><div class="ttdef"><b>Definition:</b> legato_state.c:548</div></div>
+<div class="ttc" id="alegato__state_8h_html_a0e6f9902c4f65742fb7d425b41b99566"><div class="ttname"><a href="legato__state_8h.html#a0e6f9902c4f65742fb7d425b41b99566">leGetFocusWidget</a></div><div class="ttdeci">LIB_EXPORT leWidget * leGetFocusWidget()</div><div class="ttdoc">Get focus widget.</div><div class="ttdef"><b>Definition:</b> legato_state.c:490</div></div>
+<div class="ttc" id="alegato__state_8h_html_a03c09759336c483ba05855a26f71a72b"><div class="ttname"><a href="legato__state_8h.html#a03c09759336c483ba05855a26f71a72b">leEdit_Append</a></div><div class="ttdeci">void leEdit_Append(leString *str)</div><div class="ttdoc">Send start edit command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:725</div></div>
+<div class="ttc" id="alegato__state_8h_html_a6d9122220d6036daf4f6284a28c983d0"><div class="ttname"><a href="legato__state_8h.html#a6d9122220d6036daf4f6284a28c983d0">leEdit_Backspace</a></div><div class="ttdeci">void leEdit_Backspace()</div><div class="ttdoc">Send backspace command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:735</div></div>
+<div class="ttc" id="astructleString_html"><div class="ttname"><a href="structleString.html">leString</a></div><div class="ttdoc">This struct represents a string.</div><div class="ttdef"><b>Definition:</b> legato_string.h:108</div></div>
 <div class="ttc" id="alegato__common_8h_html_acd3365f0b79c37d8894559b5afed374b"><div class="ttname"><a href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374b">leBool</a></div><div class="ttdeci">leBool</div><div class="ttdoc">This enum represents booleans.</div><div class="ttdef"><b>Definition:</b> legato_common.h:157</div></div>
-<div class="ttc" id="alegato__state_8h_html_ad4db8bffda6606a9eb8bca6eb71c89ae"><div class="ttname"><a href="legato__state_8h.html#ad4db8bffda6606a9eb8bca6eb71c89ae">leGetEditWidget</a></div><div class="ttdeci">LIB_EXPORT leEditWidget * leGetEditWidget()</div><div class="ttdoc">Get edit widget.</div><div class="ttdef"><b>Definition:</b> legato_state.c:455</div></div>
-<div class="ttc" id="alegato__state_8h_html_ac4342d1cda52b61d7b426dfa1f6bcd26"><div class="ttname"><a href="legato__state_8h.html#ac4342d1cda52b61d7b426dfa1f6bcd26">leEdit_Accept</a></div><div class="ttdeci">void leEdit_Accept()</div><div class="ttdoc">Send accept command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:634</div></div>
-<div class="ttc" id="alegato__state_8h_html_a9c238e62e945ff1b955b31ed02a4260b"><div class="ttname"><a href="legato__state_8h.html#a9c238e62e945ff1b955b31ed02a4260b">leEdit_StartEdit</a></div><div class="ttdeci">leResult leEdit_StartEdit()</div><div class="ttdoc">Send start edit command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:604</div></div>
-<div class="ttc" id="alegato__state_8h_html_ae380fd8b518c2c57c8ad2cd485f53b97"><div class="ttname"><a href="legato__state_8h.html#ae380fd8b518c2c57c8ad2cd485f53b97">leGetStringTable</a></div><div class="ttdeci">LIB_EXPORT leStringTable * leGetStringTable()</div><div class="ttdoc">Get string table.</div><div class="ttdef"><b>Definition:</b> legato_state.c:371</div></div>
-<div class="ttc" id="alegato__state_8h_html_a81d5339db134e5128f2c4d3893407c0d"><div class="ttname"><a href="legato__state_8h.html#a81d5339db134e5128f2c4d3893407c0d">leRemoveRootWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leRemoveRootWidget(leWidget *wgt, uint32_t layer)</div><div class="ttdoc">Remove root widget to layer.</div><div class="ttdef"><b>Definition:</b> legato_state.c:511</div></div>
-<div class="ttc" id="alegato__state_8h_html_a7085f8a50f46ed84227bbd992b0fbb0f"><div class="ttname"><a href="legato__state_8h.html#a7085f8a50f46ed84227bbd992b0fbb0f">leIsDrawing</a></div><div class="ttdeci">LIB_EXPORT leBool leIsDrawing()</div><div class="ttdoc">Check active screen drawing state.</div><div class="ttdef"><b>Definition:</b> legato_state.c:495</div></div>
-<div class="ttc" id="alegato__state_8h_html_a0a5b1d26afc71db9027ab46e332a7849"><div class="ttname"><a href="legato__state_8h.html#a0a5b1d26afc71db9027ab46e332a7849">leGetStringLanguage</a></div><div class="ttdeci">LIB_EXPORT uint32_t leGetStringLanguage()</div><div class="ttdoc">Get language index.</div><div class="ttdef"><b>Definition:</b> legato_state.c:383</div></div>
-<div class="ttc" id="alegato__state_8h_html_a58508d6a76ab9d561d31ec76a9ed8a3c"><div class="ttname"><a href="legato__state_8h.html#a58508d6a76ab9d561d31ec76a9ed8a3c">leGetColorMode</a></div><div class="ttdeci">LIB_EXPORT leColorMode leGetColorMode()</div><div class="ttdoc">Get color mode.</div><div class="ttdef"><b>Definition:</b> legato_state.c:361</div></div>
-<div class="ttc" id="astructleWidget_html"><div class="ttname"><a href="structleWidget.html">leWidget</a></div><div class="ttdoc">Used to define a widget.</div><div class="ttdef"><b>Definition:</b> legato_widget.h:592</div></div>
-<div class="ttc" id="alegato__state_8h_html_a1467181552ce6400971058ea64ca68bd"><div class="ttname"><a href="legato__state_8h.html#a1467181552ce6400971058ea64ca68bd">leInitialize</a></div><div class="ttdeci">LIB_EXPORT leResult leInitialize(const gfxDisplayDriver *dispDriver)</div><div class="ttdoc">Initialize Legato library.</div><div class="ttdef"><b>Definition:</b> legato_state.c:228</div></div>
-<div class="ttc" id="alegato__state_8h_html_a517512922285657b521a2c104dc89f6f"><div class="ttname"><a href="legato__state_8h.html#a517512922285657b521a2c104dc89f6f">leEdit_Clear</a></div><div class="ttdeci">void leEdit_Clear()</div><div class="ttdoc">Send clear command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:624</div></div>
-<div class="ttc" id="alegato__state_8h_html_a282dfc8323bda9d01dc611faa1c27ba5"><div class="ttname"><a href="legato__state_8h.html#a282dfc8323bda9d01dc611faa1c27ba5">leSetStringLanguage</a></div><div class="ttdeci">LIB_EXPORT void leSetStringLanguage(uint32_t id)</div><div class="ttdoc">Get language by index.</div><div class="ttdef"><b>Definition:</b> legato_state.c:403</div></div>
-<div class="ttc" id="astructleScheme_html"><div class="ttname"><a href="structleScheme.html">leScheme</a></div><div class="ttdoc">This struct represents style scheme components for objects.</div><div class="ttdef"><b>Definition:</b> legato_scheme.h:73</div></div>
-<div class="ttc" id="alegato__state_8h_html_a317ab0ec83a8d50f1663dc7190b7b020"><div class="ttname"><a href="legato__state_8h.html#a317ab0ec83a8d50f1663dc7190b7b020">leSetStringTable</a></div><div class="ttdeci">LIB_EXPORT void leSetStringTable(const leStringTable *table)</div><div class="ttdoc">Set string table.</div><div class="ttdef"><b>Definition:</b> legato_state.c:376</div></div>
-<div class="ttc" id="alegato__state_8h_html_adde914336852313d1f6e12b3d09d9247"><div class="ttname"><a href="legato__state_8h.html#adde914336852313d1f6e12b3d09d9247">leEdit_EndEdit</a></div><div class="ttdeci">void leEdit_EndEdit()</div><div class="ttdoc">Send end edit command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:614</div></div>
-<div class="ttc" id="alegato__state_8h_html_aab6dcb18de4dcda36e3e55157addf155"><div class="ttname"><a href="legato__state_8h.html#aab6dcb18de4dcda36e3e55157addf155">leGetDefaultScheme</a></div><div class="ttdeci">LIB_EXPORT leScheme * leGetDefaultScheme()</div><div class="ttdoc">Get default scheme.</div><div class="ttdef"><b>Definition:</b> legato_state.c:419</div></div>
+<div class="ttc" id="alegato__state_8h_html_ad4db8bffda6606a9eb8bca6eb71c89ae"><div class="ttname"><a href="legato__state_8h.html#ad4db8bffda6606a9eb8bca6eb71c89ae">leGetEditWidget</a></div><div class="ttdeci">LIB_EXPORT leEditWidget * leGetEditWidget()</div><div class="ttdoc">Get edit widget.</div><div class="ttdef"><b>Definition:</b> legato_state.c:521</div></div>
+<div class="ttc" id="alegato__state_8h_html_ac4342d1cda52b61d7b426dfa1f6bcd26"><div class="ttname"><a href="legato__state_8h.html#ac4342d1cda52b61d7b426dfa1f6bcd26">leEdit_Accept</a></div><div class="ttdeci">void leEdit_Accept()</div><div class="ttdoc">Send accept command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:705</div></div>
+<div class="ttc" id="alegato__state_8h_html_a9c238e62e945ff1b955b31ed02a4260b"><div class="ttname"><a href="legato__state_8h.html#a9c238e62e945ff1b955b31ed02a4260b">leEdit_StartEdit</a></div><div class="ttdeci">leResult leEdit_StartEdit()</div><div class="ttdoc">Send start edit command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:675</div></div>
+<div class="ttc" id="alegato__state_8h_html_ae380fd8b518c2c57c8ad2cd485f53b97"><div class="ttname"><a href="legato__state_8h.html#ae380fd8b518c2c57c8ad2cd485f53b97">leGetStringTable</a></div><div class="ttdeci">LIB_EXPORT leStringTable * leGetStringTable()</div><div class="ttdoc">Get string table.</div><div class="ttdef"><b>Definition:</b> legato_state.c:437</div></div>
+<div class="ttc" id="alegato__state_8h_html_a81d5339db134e5128f2c4d3893407c0d"><div class="ttname"><a href="legato__state_8h.html#a81d5339db134e5128f2c4d3893407c0d">leRemoveRootWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leRemoveRootWidget(leWidget *wgt, uint32_t layer)</div><div class="ttdoc">Remove root widget to layer.</div><div class="ttdef"><b>Definition:</b> legato_state.c:577</div></div>
+<div class="ttc" id="alegato__state_8h_html_a7085f8a50f46ed84227bbd992b0fbb0f"><div class="ttname"><a href="legato__state_8h.html#a7085f8a50f46ed84227bbd992b0fbb0f">leIsDrawing</a></div><div class="ttdeci">LIB_EXPORT leBool leIsDrawing()</div><div class="ttdoc">Check active screen drawing state.</div><div class="ttdef"><b>Definition:</b> legato_state.c:561</div></div>
+<div class="ttc" id="alegato__state_8h_html_acd64a1e60938af173f30096ac5969d16"><div class="ttname"><a href="legato__state_8h.html#acd64a1e60938af173f30096ac5969d16">leGetLayerRenderHorizontal</a></div><div class="ttdeci">leBool leGetLayerRenderHorizontal(uint32_t lyrIdx)</div><div class="ttdoc">Get layer render direction.</div><div class="ttdef"><b>Definition:</b> legato_state.c:413</div></div>
+<div class="ttc" id="alegato__state_8h_html_aae117be3102728e25e7b663166073148"><div class="ttname"><a href="legato__state_8h.html#aae117be3102728e25e7b663166073148">leWidgetIsInScene</a></div><div class="ttdeci">leBool leWidgetIsInScene(const leWidget *wgt)</div><div class="ttdoc">Determines whether the widget is in the scene.</div><div class="ttdef"><b>Definition:</b> legato_state.c:596</div></div>
+<div class="ttc" id="alegato__state_8h_html_a0a5b1d26afc71db9027ab46e332a7849"><div class="ttname"><a href="legato__state_8h.html#a0a5b1d26afc71db9027ab46e332a7849">leGetStringLanguage</a></div><div class="ttdeci">LIB_EXPORT uint32_t leGetStringLanguage()</div><div class="ttdoc">Get language index.</div><div class="ttdef"><b>Definition:</b> legato_state.c:449</div></div>
+<div class="ttc" id="alegato__state_8h_html_a58508d6a76ab9d561d31ec76a9ed8a3c"><div class="ttname"><a href="legato__state_8h.html#a58508d6a76ab9d561d31ec76a9ed8a3c">leGetColorMode</a></div><div class="ttdeci">LIB_EXPORT leColorMode leGetColorMode()</div><div class="ttdoc">Get color mode.</div></div>
+<div class="ttc" id="astructleWidget_html"><div class="ttname"><a href="structleWidget.html">leWidget</a></div><div class="ttdoc">Used to define a widget.</div><div class="ttdef"><b>Definition:</b> legato_widget.h:623</div></div>
+<div class="ttc" id="alegato__state_8h_html_a517512922285657b521a2c104dc89f6f"><div class="ttname"><a href="legato__state_8h.html#a517512922285657b521a2c104dc89f6f">leEdit_Clear</a></div><div class="ttdeci">void leEdit_Clear()</div><div class="ttdoc">Send clear command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:695</div></div>
+<div class="ttc" id="alegato__state_8h_html_a282dfc8323bda9d01dc611faa1c27ba5"><div class="ttname"><a href="legato__state_8h.html#a282dfc8323bda9d01dc611faa1c27ba5">leSetStringLanguage</a></div><div class="ttdeci">LIB_EXPORT void leSetStringLanguage(uint32_t id)</div><div class="ttdoc">Get language by index.</div><div class="ttdef"><b>Definition:</b> legato_state.c:469</div></div>
+<div class="ttc" id="astructleScheme_html"><div class="ttname"><a href="structleScheme.html">leScheme</a></div><div class="ttdef"><b>Definition:</b> legato_scheme.h:154</div></div>
+<div class="ttc" id="alegato__state_8h_html_a317ab0ec83a8d50f1663dc7190b7b020"><div class="ttname"><a href="legato__state_8h.html#a317ab0ec83a8d50f1663dc7190b7b020">leSetStringTable</a></div><div class="ttdeci">LIB_EXPORT void leSetStringTable(const leStringTable *table)</div><div class="ttdoc">Set string table.</div><div class="ttdef"><b>Definition:</b> legato_state.c:442</div></div>
+<div class="ttc" id="alegato__state_8h_html_adde914336852313d1f6e12b3d09d9247"><div class="ttname"><a href="legato__state_8h.html#adde914336852313d1f6e12b3d09d9247">leEdit_EndEdit</a></div><div class="ttdeci">void leEdit_EndEdit()</div><div class="ttdoc">Send end edit command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:685</div></div>
+<div class="ttc" id="alegato__state_8h_html_aab6dcb18de4dcda36e3e55157addf155"><div class="ttname"><a href="legato__state_8h.html#aab6dcb18de4dcda36e3e55157addf155">leGetDefaultScheme</a></div><div class="ttdeci">LIB_EXPORT leScheme * leGetDefaultScheme()</div><div class="ttdoc">Get default scheme.</div><div class="ttdef"><b>Definition:</b> legato_state.c:485</div></div>
 <div class="ttc" id="astructleStringTable_html"><div class="ttname"><a href="structleStringTable.html">leStringTable</a></div><div class="ttdoc">This struct represents string a string table.</div><div class="ttdef"><b>Definition:</b> legato_stringtable.h:80</div></div>
-<div class="ttc" id="alegato__state_8h_html_a1632fd57a6a86bee4d68401160b9fd14"><div class="ttname"><a href="legato__state_8h.html#a1632fd57a6a86bee4d68401160b9fd14">leEdit_Set</a></div><div class="ttdeci">void leEdit_Set(leString *str)</div><div class="ttdoc">Send set command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:644</div></div>
+<div class="ttc" id="alegato__state_8h_html_a1632fd57a6a86bee4d68401160b9fd14"><div class="ttname"><a href="legato__state_8h.html#a1632fd57a6a86bee4d68401160b9fd14">leEdit_Set</a></div><div class="ttdeci">void leEdit_Set(leString *str)</div><div class="ttdoc">Send set command.</div><div class="ttdef"><b>Definition:</b> legato_state.c:715</div></div>
 <div class="ttc" id="alegato__state_8h_html_a2026f4c31ffe5b0b6f76b487df92057a"><div class="ttname"><a href="legato__state_8h.html#a2026f4c31ffe5b0b6f76b487df92057a">leSetLanguageChangedCallback</a></div><div class="ttdeci">LIB_EXPORT leResult leSetLanguageChangedCallback(leLanguageChangedCallback_FnPtr cb)</div><div class="ttdoc">Set language change callback.</div></div>
-<div class="ttc" id="alegato__state_8h_html_af2b010af93ec82d473068531e624650d"><div class="ttname"><a href="legato__state_8h.html#af2b010af93ec82d473068531e624650d">leWidgetIsInScene</a></div><div class="ttdeci">LIB_EXPORT leBool leWidgetIsInScene(const leWidget *wgt)</div><div class="ttdoc">Determines whether the widget is in the scene.</div><div class="ttdef"><b>Definition:</b> legato_state.c:530</div></div>
 <div class="ttc" id="alegato__state_8h_html_a0dcf5bbc7f1bea1a6bc7432b1f0494b5"><div class="ttname"><a href="legato__state_8h.html#a0dcf5bbc7f1bea1a6bc7432b1f0494b5">leLanguageChangedCallback_FnPtr</a></div><div class="ttdeci">void(* leLanguageChangedCallback_FnPtr)(uint32_t)</div><div class="ttdoc">This function pointer represents a language change callback.</div><div class="ttdef"><b>Definition:</b> legato_state.h:48</div></div>
-<div class="ttc" id="alegato__state_8h_html_a1ff4b485ee94fec5967ecc08619aa063"><div class="ttname"><a href="legato__state_8h.html#a1ff4b485ee94fec5967ecc08619aa063">leSetFocusWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leSetFocusWidget(leWidget *widget)</div><div class="ttdoc">Get language by index.</div><div class="ttdef"><b>Definition:</b> legato_state.c:429</div></div>
+<div class="ttc" id="alegato__state_8h_html_a1ff4b485ee94fec5967ecc08619aa063"><div class="ttname"><a href="legato__state_8h.html#a1ff4b485ee94fec5967ecc08619aa063">leSetFocusWidget</a></div><div class="ttdeci">LIB_EXPORT leResult leSetFocusWidget(leWidget *widget)</div><div class="ttdoc">Get language by index.</div><div class="ttdef"><b>Definition:</b> legato_state.c:495</div></div>
+<div class="ttc" id="alegato__state_8h_html_a88af1218e876364e090404b01f53a035"><div class="ttname"><a href="legato__state_8h.html#a88af1218e876364e090404b01f53a035">leInitialize</a></div><div class="ttdeci">leResult leInitialize(const gfxDisplayDriver *dispDriver, const gfxGraphicsProcessor *gpuDriver)</div><div class="ttdoc">Initialize Legato library.</div><div class="ttdef"><b>Definition:</b> legato_state.c:228</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -70,6 +70,9 @@ $(function() {
 <li>GFX_Disp_Intf_Callback
 : <a class="el" href="drv__gfx__disp__intf_8h.html#af36249bd431be8397a1be68e7c5aae52">drv_gfx_disp_intf.h</a>
 </li>
+<li>gfxAlpha
+: <a class="el" href="gfx__driver_8h_8ftl.html#a3903e00822d1ef13f32b6cf487c0094f">gfx_driver.h.ftl</a>
+</li>
 <li>gfxBitsPerPixel
 : <a class="el" href="gfx__driver_8h_8ftl.html#a3acf795a7b7a698ea1299aa478720562">gfx_driver.h.ftl</a>
 </li>
@@ -97,6 +100,9 @@ $(function() {
 <li>gfxGraphicsProcessor
 : <a class="el" href="gfx__driver_8h_8ftl.html#a510e2dfd655666b4271933face4e3e5f">gfx_driver.h.ftl</a>
 </li>
+<li>gfxLayerState
+: <a class="el" href="gfx__driver_8h_8ftl.html#a2b1e2f2254f7ee842e220f9b38a3c2b4">gfx_driver.h.ftl</a>
+</li>
 <li>gfxPixelBuffer
 : <a class="el" href="gfx__driver_8h_8ftl.html#a514dd30ea2566a22948ff40c96f879a3">gfx_driver.h.ftl</a>
 </li>
@@ -111,6 +117,9 @@ $(function() {
 </li>
 <li>gfxSize
 : <a class="el" href="gfx__driver_8h_8ftl.html#a348db157037450082824bd230a5ee657">gfx_driver.h.ftl</a>
+</li>
+<li>gfxTransparency
+: <a class="el" href="gfx__driver_8h_8ftl.html#a2af824876cfaa18fe8ce2bb30b544160">gfx_driver.h.ftl</a>
 </li>
 </ul>
 
@@ -176,9 +185,6 @@ $(function() {
 <li>leEventState
 : <a class="el" href="legato__event_8h.html#a296ee4b0a6688960d0237f7ecfe200e0">legato_event.h</a>
 </li>
-<li>leFixedHeapUsageReport
-: <a class="el" href="legato__memory_8h.html#a9853e12b511a9d8747c79b5e14b987a6">legato_memory.h</a>
-</li>
 <li>leFixedString
 : <a class="el" href="legato__fixedstring_8h.html#aa983e57d621e7df6ffa51a0d112a62c4">legato_fixedstring.h</a>
 </li>
@@ -199,9 +205,6 @@ $(function() {
 </li>
 <li>leGestureID
 : <a class="el" href="legato__input_8h.html#a41c391d3b46b291bef434fb57a654419">legato_input.h</a>
-</li>
-<li>leImage
-: <a class="el" href="legato__image_8h.html#a4a996cf3819eaad8ffa819bdf94f5707">legato_image.h</a>
 </li>
 <li>leImageDecoder
 : <a class="el" href="legato__image_8h.html#a30aa0386ed1f3b6c9971992e6f9624be">legato_image.h</a>
@@ -236,9 +239,6 @@ $(function() {
 <li>leMargin
 : <a class="el" href="legato__common_8h.html#aa999c92973890c40c9a0e0fd195de8ef">legato_common.h</a>
 </li>
-<li>leMemoryStatusReport
-: <a class="el" href="legato__memory_8h.html#a7a1fbd601cc0419f164158cb2e5ec165">legato_memory.h</a>
-</li>
 <li>leMouseButton
 : <a class="el" href="legato__input_8h.html#a719eaa5e4af291d2064b6a71bbd03663">legato_input.h</a>
 </li>
@@ -268,9 +268,6 @@ $(function() {
 </li>
 <li>leRotationDirection
 : <a class="el" href="legato__common_8h.html#a3c65eb2b9ac49d088acb5191fab6ca6d">legato_common.h</a>
-</li>
-<li>leScheme
-: <a class="el" href="legato__scheme_8h.html#a7dd6045cb50cd8e7f3cb4d36bc70c47b">legato_scheme.h</a>
 </li>
 <li>leSize
 : <a class="el" href="legato__common_8h.html#a105b858254effe6359d4de41bbbc0f68">legato_common.h</a>
@@ -302,14 +299,9 @@ $(function() {
 <li>leUStringRenderRequest
 : <a class="el" href="legato__string__renderer_8h.html#a81109a1d386fed18c1c6185fcb2e6410">legato_string_renderer.h</a>
 </li>
-<li>leVariableHeap
-: <a class="el" href="legato__variableheap_8h.html#a08ddeaf8ef11ded66284901571a76298">legato_variableheap.h</a>
-</li>
-<li>leVariableHeapUsageReport
-: <a class="el" href="legato__memory_8h.html#a1edf74b14c337fbef56cdd62e193e26c">legato_memory.h</a>
-</li>
 <li>leWidget
-: <a class="el" href="legato__widget_8h.html#a1dad264a6f2d2701bc8a247670abaf82">legato_widget.h</a>
+: <a class="el" href="legato__utils_8h.html#a1dad264a6f2d2701bc8a247670abaf82">legato_utils.h</a>
+, <a class="el" href="legato__widget_8h.html#a1dad264a6f2d2701bc8a247670abaf82">legato_widget.h</a>
 </li>
 <li>leWidget_MoveEvent
 : <a class="el" href="legato__widget_8h.html#a3fc89fcf9c7dfb80c0c61c5d84592174">legato_widget.h</a>
@@ -337,43 +329,6 @@ $(function() {
 </li>
 <li>leWidgetType
 : <a class="el" href="legato__widget_8h.html#abf82ae790528207efacc789381645b99">legato_widget.h</a>
-</li>
-</ul>
-
-
-<h3><a id="index_n"></a>- n -</h3><ul>
-<li>n2d_blend_t
-: <a class="el" href="libnano2d__ftl_8h.html#ab25276a41ce6287d75556034e338a76f">libnano2d_ftl.h</a>
-</li>
-<li>n2d_buffer_format_t
-: <a class="el" href="libnano2d__ftl_8h.html#af8f60b4b9ea312fbcf60ac788bdd87a3">libnano2d_ftl.h</a>
-</li>
-<li>n2d_buffer_t
-: <a class="el" href="libnano2d__ftl_8h.html#af1bd69b7c187379991874df9baebcefc">libnano2d_ftl.h</a>
-</li>
-<li>n2d_color_t
-: <a class="el" href="libnano2d__ftl_8h.html#a3becb23e1bd84d48518bdfcb966818d7">libnano2d_ftl.h</a>
-</li>
-<li>n2d_error_t
-: <a class="el" href="libnano2d__ftl_8h.html#ad0034a28a970012a6fff712e7652d287">libnano2d_ftl.h</a>
-</li>
-<li>n2d_global_alpha_t
-: <a class="el" href="libnano2d__ftl_8h.html#afc6fcb65f60c945b2e9ec8835e65034e">libnano2d_ftl.h</a>
-</li>
-<li>n2d_module_parameters_t
-: <a class="el" href="libnano2d__ftl_8h.html#a2dfe8c7b67d4aa5b9e46b7a2a3c3b180">libnano2d_ftl.h</a>
-</li>
-<li>n2d_orientation_t
-: <a class="el" href="libnano2d__ftl_8h.html#a5aff7713c66b246725bb6f943d1c2bb0">libnano2d_ftl.h</a>
-</li>
-<li>n2d_point_t
-: <a class="el" href="libnano2d__ftl_8h.html#adfa889dd94b7928e5820efd98bb43963">libnano2d_ftl.h</a>
-</li>
-<li>n2d_rectangle_t
-: <a class="el" href="libnano2d__ftl_8h.html#a99dc2259fa80ce03c25fcff263bb3d4c">libnano2d_ftl.h</a>
-</li>
-<li>n2d_transparency_t
-: <a class="el" href="libnano2d__ftl_8h.html#a36aac26efdfe3be873c6417931923446">libnano2d_ftl.h</a>
 </li>
 </ul>
 </div><!-- contents -->

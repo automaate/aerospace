@@ -69,11 +69,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">legato_memory.h File Reference</div>  </div>
 </div><!--header-->
@@ -82,13 +78,15 @@ $(function() {
 <p>Memory functions and definitions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="legato__common_8h_source.html">gfx/legato/common/legato_common.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for legato_memory.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="legato__memory_8h__incl.png" border="0" usemap="#C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2memory_2legato__memory_8h" alt=""/></div>
 <map name="C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2memory_2legato__memory_8h" id="C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2memory_2legato__memory_8h">
-<area shape="rect" title="Memory functions and definitions." alt="" coords="218,5,434,61"/>
+<area shape="rect" title="Memory functions and definitions." alt="" coords="289,5,505,61"/>
 <area shape="rect" href="legato__common_8h.html" title="Common macros and definitions used by Legato." alt="" coords="241,109,411,151"/>
+<area shape="rect" title=" " alt="" coords="435,117,499,143"/>
 <area shape="rect" title=" " alt="" coords="5,199,175,225"/>
 <area shape="rect" title=" " alt="" coords="199,199,267,225"/>
 <area shape="rect" title=" " alt="" coords="291,199,361,225"/>
@@ -108,320 +106,22 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="legato__memory_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleVariableHeapUsageReport.html">leVariableHeapUsageReport</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents a variable heap usage report.  <a href="structleVariableHeapUsageReport.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleFixedHeapUsageReport.html">leFixedHeapUsageReport</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents a fixed heap usage report.  <a href="structleFixedHeapUsageReport.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structleMemoryStatusReport.html">leMemoryStatusReport</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents fixed and variable heap reports.  <a href="structleMemoryStatusReport.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a7e07b46970e08764227d883e59509476"><td class="memItemLeft" align="right" valign="top"><a id="a7e07b46970e08764227d883e59509476"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LE_FIXED_HEAP_COUNT</b>&#160;&#160;&#160;7</td></tr>
-<tr class="separator:a7e07b46970e08764227d883e59509476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a36386e32f3e211d6428ab680409eee"><td class="memItemLeft" align="right" valign="top"><a id="a7a36386e32f3e211d6428ab680409eee"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LE_MALLOC</b>(size)&#160;&#160;&#160;<a class="el" href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">leMalloc</a>(size)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LE_MALLOC</b>(size)&#160;&#160;&#160;malloc(size)</td></tr>
 <tr class="separator:a7a36386e32f3e211d6428ab680409eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd3d067835d26a9c76f6a190e55ef193"><td class="memItemLeft" align="right" valign="top"><a id="acd3d067835d26a9c76f6a190e55ef193"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LE_REALLOC</b>(ptr,  size)&#160;&#160;&#160;<a class="el" href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">leRealloc</a>(ptr, size)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LE_REALLOC</b>(ptr,  size)&#160;&#160;&#160;realloc(ptr, size)</td></tr>
 <tr class="separator:acd3d067835d26a9c76f6a190e55ef193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20119cf530bda9d042a3c9b13484c9b1"><td class="memItemLeft" align="right" valign="top"><a id="a20119cf530bda9d042a3c9b13484c9b1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LE_FREE</b>(ptr)&#160;&#160;&#160;<a class="el" href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">leFree</a>(ptr)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LE_FREE</b>(ptr)&#160;&#160;&#160;free(ptr)</td></tr>
 <tr class="separator:a20119cf530bda9d042a3c9b13484c9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a1edf74b14c337fbef56cdd62e193e26c"><td class="memItemLeft" align="right" valign="top"><a id="a1edf74b14c337fbef56cdd62e193e26c"></a>
-typedef struct <a class="el" href="structleVariableHeapUsageReport.html">leVariableHeapUsageReport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#a1edf74b14c337fbef56cdd62e193e26c">leVariableHeapUsageReport</a></td></tr>
-<tr class="memdesc:a1edf74b14c337fbef56cdd62e193e26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents a variable heap usage report. <br /></td></tr>
-<tr class="separator:a1edf74b14c337fbef56cdd62e193e26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9853e12b511a9d8747c79b5e14b987a6"><td class="memItemLeft" align="right" valign="top"><a id="a9853e12b511a9d8747c79b5e14b987a6"></a>
-typedef struct <a class="el" href="structleFixedHeapUsageReport.html">leFixedHeapUsageReport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#a9853e12b511a9d8747c79b5e14b987a6">leFixedHeapUsageReport</a></td></tr>
-<tr class="memdesc:a9853e12b511a9d8747c79b5e14b987a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents a fixed heap usage report. <br /></td></tr>
-<tr class="separator:a9853e12b511a9d8747c79b5e14b987a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a1fbd601cc0419f164158cb2e5ec165"><td class="memItemLeft" align="right" valign="top"><a id="a7a1fbd601cc0419f164158cb2e5ec165"></a>
-typedef struct <a class="el" href="structleMemoryStatusReport.html">leMemoryStatusReport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#a7a1fbd601cc0419f164158cb2e5ec165">leMemoryStatusReport</a></td></tr>
-<tr class="memdesc:a7a1fbd601cc0419f164158cb2e5ec165"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents fixed and variable heap reports. <br /></td></tr>
-<tr class="separator:a7a1fbd601cc0419f164158cb2e5ec165"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a909def18d2973a9bc3c7da867d59da9d"><td class="memItemLeft" align="right" valign="top"><a id="a909def18d2973a9bc3c7da867d59da9d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#a909def18d2973a9bc3c7da867d59da9d">leFixedHeapSize</a> { <br />
-&#160;&#160;<b>FH_16</b>, 
-<b>FH_32</b>, 
-<b>FH_64</b>, 
-<b>FH_128</b>, 
-<br />
-&#160;&#160;<b>FH_196</b>, 
-<b>FH_256</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a909def18d2973a9bc3c7da867d59da9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enum represents a fixed heap sizes support. <br /></td></tr>
-<tr class="separator:a909def18d2973a9bc3c7da867d59da9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ac38c0f1de3cbbd9241ea502463708e95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#ac38c0f1de3cbbd9241ea502463708e95">leMemory_Init</a> ()</td></tr>
-<tr class="memdesc:ac38c0f1de3cbbd9241ea502463708e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory Init.  <a href="legato__memory_8h.html#ac38c0f1de3cbbd9241ea502463708e95">More...</a><br /></td></tr>
-<tr class="separator:ac38c0f1de3cbbd9241ea502463708e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade65fc8c21fd8519f63b01848a92dd88"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">leMalloc</a> (size_t size)</td></tr>
-<tr class="memdesc:ade65fc8c21fd8519f63b01848a92dd88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Malloc Memory.  <a href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">More...</a><br /></td></tr>
-<tr class="separator:ade65fc8c21fd8519f63b01848a92dd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51bf085075cd105a0960cbe4e606659e"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">leRealloc</a> (void *ptr, size_t size)</td></tr>
-<tr class="memdesc:a51bf085075cd105a0960cbe4e606659e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realloc Memory.  <a href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">More...</a><br /></td></tr>
-<tr class="separator:a51bf085075cd105a0960cbe4e606659e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9647f390df3a639e02ffdd5566d1721c"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">leFree</a> (void *ptr)</td></tr>
-<tr class="memdesc:a9647f390df3a639e02ffdd5566d1721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free Memory.  <a href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">More...</a><br /></td></tr>
-<tr class="separator:a9647f390df3a639e02ffdd5566d1721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18e99e3de406051641d6ebfc39d012ed"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#a18e99e3de406051641d6ebfc39d012ed">leMemoryGetUsageReport</a> (<a class="el" href="structleMemoryStatusReport.html">leMemoryStatusReport</a> *rpt)</td></tr>
-<tr class="memdesc:a18e99e3de406051641d6ebfc39d012ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Usage Report.  <a href="legato__memory_8h.html#a18e99e3de406051641d6ebfc39d012ed">More...</a><br /></td></tr>
-<tr class="separator:a18e99e3de406051641d6ebfc39d012ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25b9c94f320a6a7592022cd03a1c8a9"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__memory_8h.html#ad25b9c94f320a6a7592022cd03a1c8a9">leMemoryValidateHeaps</a> ()</td></tr>
-<tr class="memdesc:ad25b9c94f320a6a7592022cd03a1c8a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate Memory Heaps.  <a href="legato__memory_8h.html#ad25b9c94f320a6a7592022cd03a1c8a9">More...</a><br /></td></tr>
-<tr class="separator:ad25b9c94f320a6a7592022cd03a1c8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory functions and definitions. </p>
 <p>File containing various memory-related constructs. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a9647f390df3a639e02ffdd5566d1721c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9647f390df3a639e02ffdd5566d1721c">&#9670;&nbsp;</a></span>leFree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LIB_EXPORT void leFree </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Free Memory. </p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span>* ptr;</div>
-<div class="line"><a class="code" href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">leFree</a>(ptr);</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="legato__memory_8h_a9647f390df3a639e02ffdd5566d1721c_cgraph.png" border="0" usemap="#legato__memory_8h_a9647f390df3a639e02ffdd5566d1721c_cgraph" alt=""/></div>
-<map name="legato__memory_8h_a9647f390df3a639e02ffdd5566d1721c_cgraph" id="legato__memory_8h_a9647f390df3a639e02ffdd5566d1721c_cgraph">
-<area shape="rect" title="Free Memory." alt="" coords="5,5,64,32"/>
-<area shape="rect" href="legato__variableheap_8h.html#aa1924b7cc36b0e02966c09c8b25fc95b" title="Free a block." alt="" coords="112,5,255,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ade65fc8c21fd8519f63b01848a92dd88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade65fc8c21fd8519f63b01848a92dd88">&#9670;&nbsp;</a></span>leMalloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LIB_EXPORT void* leMalloc </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Malloc Memory. </p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span>* mem = <a class="code" href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">leMalloc</a>();</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="legato__memory_8h_ade65fc8c21fd8519f63b01848a92dd88_icgraph.png" border="0" usemap="#legato__memory_8h_ade65fc8c21fd8519f63b01848a92dd88_icgraph" alt=""/></div>
-<map name="legato__memory_8h_ade65fc8c21fd8519f63b01848a92dd88_icgraph" id="legato__memory_8h_ade65fc8c21fd8519f63b01848a92dd88_icgraph">
-<area shape="rect" title="Malloc Memory." alt="" coords="128,5,199,32"/>
-<area shape="rect" href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e" title="Realloc Memory." alt="" coords="5,5,80,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac38c0f1de3cbbd9241ea502463708e95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac38c0f1de3cbbd9241ea502463708e95">&#9670;&nbsp;</a></span>leMemory_Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leMemory_Init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Memory Init. </p>
-<div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__memory_8h.html#ac38c0f1de3cbbd9241ea502463708e95">leMemory_Init</a>()</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="legato__memory_8h_ac38c0f1de3cbbd9241ea502463708e95_cgraph.png" border="0" usemap="#legato__memory_8h_ac38c0f1de3cbbd9241ea502463708e95_cgraph" alt=""/></div>
-<map name="legato__memory_8h_ac38c0f1de3cbbd9241ea502463708e95_cgraph" id="legato__memory_8h_ac38c0f1de3cbbd9241ea502463708e95_cgraph">
-<area shape="rect" title="Memory Init." alt="" coords="5,5,108,32"/>
-<area shape="rect" href="legato__variableheap_8h.html#abf3134055e812c6dbb6c1ab7a4636f56" title="Initialize Heap." alt="" coords="156,5,289,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a18e99e3de406051641d6ebfc39d012ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18e99e3de406051641d6ebfc39d012ed">&#9670;&nbsp;</a></span>leMemoryGetUsageReport()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LIB_EXPORT void leMemoryGetUsageReport </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structleMemoryStatusReport.html">leMemoryStatusReport</a> *&#160;</td>
-          <td class="paramname"><em>rpt</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get Usage Report. </p>
-<div class="fragment"><div class="line"><a class="code" href="legato__memory_8h.html#a18e99e3de406051641d6ebfc39d012ed">leMemoryGetUsageReport</a>(rpt)</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rpt.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void. </dd></dl>
-
-</div>
-</div>
-<a id="ad25b9c94f320a6a7592022cd03a1c8a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad25b9c94f320a6a7592022cd03a1c8a9">&#9670;&nbsp;</a></span>leMemoryValidateHeaps()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leMemoryValidateHeaps </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Validate Memory Heaps. </p>
-<div class="fragment"><div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__memory_8h.html#ad25b9c94f320a6a7592022cd03a1c8a9">leMemoryValidateHeaps</a>()</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="legato__memory_8h_ad25b9c94f320a6a7592022cd03a1c8a9_cgraph.png" border="0" usemap="#legato__memory_8h_ad25b9c94f320a6a7592022cd03a1c8a9_cgraph" alt=""/></div>
-<map name="legato__memory_8h_ad25b9c94f320a6a7592022cd03a1c8a9_cgraph" id="legato__memory_8h_ad25b9c94f320a6a7592022cd03a1c8a9_cgraph">
-<area shape="rect" title="Validate Memory Heaps." alt="" coords="5,5,168,32"/>
-<area shape="rect" href="legato__variableheap_8h.html#a9811cb0a94c753461c5d41ee4202ca93" title="Validate heap." alt="" coords="216,5,379,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a51bf085075cd105a0960cbe4e606659e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51bf085075cd105a0960cbe4e606659e">&#9670;&nbsp;</a></span>leRealloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LIB_EXPORT void* leRealloc </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Realloc Memory. </p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span>* mem = <a class="code" href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">leRealloc</a>(ptr, size);</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr.</td><td></td></tr>
-    <tr><td class="paramname">size.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS if set, otherwise LE_FAILURE. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="legato__memory_8h_a51bf085075cd105a0960cbe4e606659e_cgraph.png" border="0" usemap="#legato__memory_8h_a51bf085075cd105a0960cbe4e606659e_cgraph" alt=""/></div>
-<map name="legato__memory_8h_a51bf085075cd105a0960cbe4e606659e_cgraph" id="legato__memory_8h_a51bf085075cd105a0960cbe4e606659e_cgraph">
-<area shape="rect" title="Realloc Memory." alt="" coords="5,31,80,57"/>
-<area shape="rect" href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88" title="Malloc Memory." alt="" coords="170,5,241,32"/>
-<area shape="rect" href="legato__variableheap_8h.html#a26ad98faf4627232c187b777147b490e" title="Get size of allocated pointer." alt="" coords="128,56,283,83"/>
-</map>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
-<div class="ttc" id="alegato__memory_8h_html_ade65fc8c21fd8519f63b01848a92dd88"><div class="ttname"><a href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">leMalloc</a></div><div class="ttdeci">LIB_EXPORT void * leMalloc(size_t size)</div><div class="ttdoc">Malloc Memory.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:106</div></div>
-<div class="ttc" id="alegato__common_8h_html_af467b597a37f8d8851b61addcb8e2e0f"><div class="ttname"><a href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a></div><div class="ttdeci">leResult</div><div class="ttdoc">This enum represents function call results.</div><div class="ttdef"><b>Definition:</b> legato_common.h:134</div></div>
-<div class="ttc" id="alegato__memory_8h_html_ac38c0f1de3cbbd9241ea502463708e95"><div class="ttname"><a href="legato__memory_8h.html#ac38c0f1de3cbbd9241ea502463708e95">leMemory_Init</a></div><div class="ttdeci">leResult leMemory_Init()</div><div class="ttdoc">Memory Init.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:72</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a9647f390df3a639e02ffdd5566d1721c"><div class="ttname"><a href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">leFree</a></div><div class="ttdeci">LIB_EXPORT void leFree(void *ptr)</div><div class="ttdoc">Free Memory.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:251</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a51bf085075cd105a0960cbe4e606659e"><div class="ttname"><a href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">leRealloc</a></div><div class="ttdeci">LIB_EXPORT void * leRealloc(void *ptr, size_t size)</div><div class="ttdoc">Realloc Memory.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:178</div></div>
-<div class="ttc" id="alegato__memory_8h_html_ad25b9c94f320a6a7592022cd03a1c8a9"><div class="ttname"><a href="legato__memory_8h.html#ad25b9c94f320a6a7592022cd03a1c8a9">leMemoryValidateHeaps</a></div><div class="ttdeci">LIB_EXPORT leResult leMemoryValidateHeaps()</div><div class="ttdoc">Validate Memory Heaps.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:318</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a18e99e3de406051641d6ebfc39d012ed"><div class="ttname"><a href="legato__memory_8h.html#a18e99e3de406051641d6ebfc39d012ed">leMemoryGetUsageReport</a></div><div class="ttdeci">LIB_EXPORT void leMemoryGetUsageReport(leMemoryStatusReport *rpt)</div><div class="ttdoc">Get Usage Report.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:280</div></div>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

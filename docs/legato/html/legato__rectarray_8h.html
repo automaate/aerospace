@@ -99,10 +99,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="legato__rectarray_8h__dep__incl.png" border="0" usemap="#C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2datastructure_2legato__rectarray_8hdep" alt=""/></div>
 <map name="C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2datastructure_2legato__rectarray_8hdep" id="C_1_2Harmony3_2gfx_2middleware_2legato_2library_2src_2gfx_2legato_2datastructure_2legato__rectarray_8hdep">
-<area shape="rect" title="An array implementation for storing rectangles for the Legato user interface library." alt="" coords="111,5,299,76"/>
-<area shape="rect" href="legato__renderer_8h.html" title=" " alt="" coords="97,124,313,180"/>
+<area shape="rect" title="An array implementation for storing rectangles for the Legato user interface library." alt="" coords="219,5,407,76"/>
+<area shape="rect" href="legato__renderer_8h.html" title=" " alt="" coords="205,124,421,180"/>
 <area shape="rect" href="legato_8h.html" title="The header file joins all header files used in the graphics object library." alt="" coords="5,235,193,291"/>
-<area shape="rect" href="legato__widget__skin__classic__common_8h_source.html" title=" " alt="" coords="217,228,405,299"/>
+<area shape="rect" href="legato__gpu_8h.html" title="Defines wrapper for interfacing with Harmony GPU interface." alt="" coords="217,235,408,291"/>
+<area shape="rect" href="legato__widget__skin__classic__common_8h_source.html" title=" " alt="" coords="432,228,620,299"/>
 </map>
 </div>
 </div>
@@ -177,9 +178,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a4afa7945ee58ea2a9a01d93890634af4"><td class="memItemLeft" align="right" valign="top">LIB_EXPORT <a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__rectarray_8h.html#a4afa7945ee58ea2a9a01d93890634af4">leRectArray_CropToArea</a> (<a class="el" href="structleRectArray.html">leRectArray</a> *arr, uint32_t width, uint32_t height)</td></tr>
 <tr class="memdesc:a4afa7945ee58ea2a9a01d93890634af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crops rectange by width and height.  <a href="legato__rectarray_8h.html#a4afa7945ee58ea2a9a01d93890634af4">More...</a><br /></td></tr>
 <tr class="separator:a4afa7945ee58ea2a9a01d93890634af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43b2719e4dd692ea0f9f273251cbe52a"><td class="memItemLeft" align="right" valign="top"><a id="a43b2719e4dd692ea0f9f273251cbe52a"></a>
-<a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>leRectArray_CropToSize</b> (<a class="el" href="structleRectArray.html">leRectArray</a> *arr, uint32_t size)</td></tr>
-<tr class="separator:a43b2719e4dd692ea0f9f273251cbe52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8fee395776196c079c7256ba450f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__rectarray_8h.html#a9e8fee395776196c079c7256ba450f0b">leRectArray_CropToSizeY</a> (<a class="el" href="structleRectArray.html">leRectArray</a> *arr, uint32_t size)</td></tr>
+<tr class="memdesc:a9e8fee395776196c079c7256ba450f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slices an array of rectangles to a given pixel count.  <a href="legato__rectarray_8h.html#a9e8fee395776196c079c7256ba450f0b">More...</a><br /></td></tr>
+<tr class="separator:a9e8fee395776196c079c7256ba450f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86adfae7f151280270ce80fb8f7ac4ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="legato__rectarray_8h.html#a86adfae7f151280270ce80fb8f7ac4ec">leRectArray_CropToSizeX</a> (<a class="el" href="structleRectArray.html">leRectArray</a> *arr, uint32_t size)</td></tr>
+<tr class="memdesc:a86adfae7f151280270ce80fb8f7ac4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slices an array of rectangles to a given pixel count.  <a href="legato__rectarray_8h.html#a86adfae7f151280270ce80fb8f7ac4ec">More...</a><br /></td></tr>
+<tr class="separator:a86adfae7f151280270ce80fb8f7ac4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An array implementation for storing rectangles for the Legato user interface library. </p>
@@ -341,6 +345,88 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="legato__rect_8h.html#a63557bcfff01c0a7663b43444a004cbf" title="Determines if two rectangles are intersecting." alt="" coords="424,56,540,83"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a86adfae7f151280270ce80fb8f7ac4ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86adfae7f151280270ce80fb8f7ac4ec">&#9670;&nbsp;</a></span>leRectArray_CropToSizeX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leRectArray_CropToSizeX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structleRectArray.html">leRectArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Slices an array of rectangles to a given pixel count. </p>
+<p>Crops <span class="param">arr</span> to given <span class="param">width</span> and <span class="param">size</span>. This method attempts to keep the rectangle slices as tall as possible. </p><div class="fragment"><div class="line"><a class="code" href="structleRectArray.html">leRectArray</a>* arr;</div>
+<div class="line">uint32_t size;</div>
+<div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__rectarray_8h.html#a86adfae7f151280270ce80fb8f7ac4ec">leRectArray_CropToSizeX</a>(arr, size);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>the array to modify. </td></tr>
+    <tr><td class="paramname">size</td><td>the number of pixels to crop to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS , otherwise LE_FAILURE. </dd></dl>
+
+</div>
+</div>
+<a id="a9e8fee395776196c079c7256ba450f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8fee395776196c079c7256ba450f0b">&#9670;&nbsp;</a></span>leRectArray_CropToSizeY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leRectArray_CropToSizeY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structleRectArray.html">leRectArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Slices an array of rectangles to a given pixel count. </p>
+<p>Crops <span class="param">arr</span> to given <span class="param">width</span> and <span class="param">size</span>. This method attempts to keep the rectangle slices as wide as possible. </p><div class="fragment"><div class="line"><a class="code" href="structleRectArray.html">leRectArray</a>* arr;</div>
+<div class="line">uint32_t size;</div>
+<div class="line"><a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> res = <a class="code" href="legato__rectarray_8h.html#a9e8fee395776196c079c7256ba450f0b">leRectArray_CropToSizeY</a>(arr, size);</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>the array to modify. </td></tr>
+    <tr><td class="paramname">size</td><td>the number of pixels to crop to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_SUCCESS , otherwise LE_FAILURE. </dd></dl>
 
 </div>
 </div>
@@ -886,10 +972,12 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="alegato__rectarray_8h_html_aaf850fb71f50d95a0edd055680594136"><div class="ttname"><a href="legato__rectarray_8h.html#aaf850fb71f50d95a0edd055680594136">leRectArray_SortByX</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_SortByX(leRectArray *arr)</div><div class="ttdoc">Sort array by X coordinate.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:311</div></div>
 <div class="ttc" id="alegato__rectarray_8h_html_a39d1de4075ef16962e025d3cca14f30b"><div class="ttname"><a href="legato__rectarray_8h.html#a39d1de4075ef16962e025d3cca14f30b">leRectArray_SortByY</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_SortByY(leRectArray *arr)</div><div class="ttdoc">Sort array by Y coordinate.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:341</div></div>
 <div class="ttc" id="alegato__rectarray_8h_html_afc556f36297620c3121f263c5214721d"><div class="ttname"><a href="legato__rectarray_8h.html#afc556f36297620c3121f263c5214721d">leRectArray_Clear</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_Clear(leRectArray *arr)</div><div class="ttdoc">Removes all values from a given array.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:230</div></div>
+<div class="ttc" id="alegato__rectarray_8h_html_a86adfae7f151280270ce80fb8f7ac4ec"><div class="ttname"><a href="legato__rectarray_8h.html#a86adfae7f151280270ce80fb8f7ac4ec">leRectArray_CropToSizeX</a></div><div class="ttdeci">leResult leRectArray_CropToSizeX(leRectArray *arr, uint32_t size)</div><div class="ttdoc">Slices an array of rectangles to a given pixel count.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:487</div></div>
 <div class="ttc" id="alegato__rectarray_8h_html_a2a10dfbed9232971218050c5c4240a37"><div class="ttname"><a href="legato__rectarray_8h.html#a2a10dfbed9232971218050c5c4240a37">leRectArray_InsertAt</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_InsertAt(leRectArray *arr, uint32_t idx, const leRect *rect)</div><div class="ttdoc">Inserts a rectangle into an array at a given index.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:176</div></div>
 <div class="ttc" id="alegato__rectarray_8h_html_a33f61f9916fead1f2bdf6067206ac015"><div class="ttname"><a href="legato__rectarray_8h.html#a33f61f9916fead1f2bdf6067206ac015">leRectArray_PushFront</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_PushFront(leRectArray *arr, const leRect *rect)</div><div class="ttdoc">Pushes a new rectangle onto the front of the array.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:121</div></div>
 <div class="ttc" id="alegato__rectarray_8h_html_a75b4d143c7def973f9d50207cf5c3397"><div class="ttname"><a href="legato__rectarray_8h.html#a75b4d143c7def973f9d50207cf5c3397">leRectArray_SortBySize</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_SortBySize(leRectArray *arr)</div><div class="ttdoc">Sorts a given array.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:281</div></div>
 <div class="ttc" id="alegato__rectarray_8h_html_a5af019611d4316c2edcff6843d3971ad"><div class="ttname"><a href="legato__rectarray_8h.html#a5af019611d4316c2edcff6843d3971ad">leRectArray_PushBack</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_PushBack(leRectArray *arr, const leRect *rect)</div><div class="ttdoc">Push value on back.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:149</div></div>
+<div class="ttc" id="alegato__rectarray_8h_html_a9e8fee395776196c079c7256ba450f0b"><div class="ttname"><a href="legato__rectarray_8h.html#a9e8fee395776196c079c7256ba450f0b">leRectArray_CropToSizeY</a></div><div class="ttdeci">leResult leRectArray_CropToSizeY(leRectArray *arr, uint32_t size)</div><div class="ttdoc">Slices an array of rectangles to a given pixel count.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:447</div></div>
 <div class="ttc" id="alegato__rectarray_8h_html_a3135db416d1d4d842cfa3c5f367fea0b"><div class="ttname"><a href="legato__rectarray_8h.html#a3135db416d1d4d842cfa3c5f367fea0b">leRectArray_Copy</a></div><div class="ttdeci">LIB_EXPORT leResult leRectArray_Copy(leRectArray *src, leRectArray *dest)</div><div class="ttdoc">Copy array.</div><div class="ttdef"><b>Definition:</b> legato_rectarray.c:209</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

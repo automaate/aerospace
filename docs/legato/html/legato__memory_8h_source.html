@@ -72,155 +72,142 @@ $(function() {
 <div class="title">legato_memory.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="legato__memory_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// DOM-IGNORE-BEGIN</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries.</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">* Subject to your compliance with these terms, you may use Microchip software</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">* and any derivatives exclusively with Microchip products. It is your</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">* responsibility to comply with third party license terms applicable to your</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">* use of third party software (including open source software) that may</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">* accompany Microchip software.</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">* THIS SOFTWARE IS SUPPLIED BY MICROCHIP &quot;AS IS&quot;. NO WARRANTIES, WHETHER</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">* EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">* WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">* PARTICULAR PURPOSE.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">* IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">* INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">* WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">* BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">* FULLEST EXTENT ALLOWED BY LAW, MICROCHIP&#39;S TOTAL LIABILITY ON ALL CLAIMS IN</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">* ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">* THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// DOM-IGNORE-END</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> Module for Microchip Graphics Library - Legato User Interface Library</span></div>
+<a href="legato__memory_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">* Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* Subject to your compliance with these terms, you may use Microchip software</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">* and any derivatives exclusively with Microchip products. It is your</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">* responsibility to comply with third party license terms applicable to your</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">* use of third party software (including open source software) that may</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">* accompany Microchip software.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">* THIS SOFTWARE IS SUPPLIED BY MICROCHIP &quot;AS IS&quot;. NO WARRANTIES, WHETHER</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">* EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">* WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">* PARTICULAR PURPOSE.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">* IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">* INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">* WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">* BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">* FULLEST EXTENT ALLOWED BY LAW, MICROCHIP&#39;S TOTAL LIABILITY ON ALL CLAIMS IN</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">* ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">* THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> Module for Microchip Graphics Library - Legato User Interface Library</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  Company:</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    Microchip Technology Inc.</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">  Company:</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    Microchip Technology Inc.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">  File Name:</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    legato_memory.h</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  File Name:</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    legato_memory.h</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">  Summary:</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    File containing various memory-related constructs.</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifndef LEGATO_MEMORY_H</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define LEGATO_MEMORY_H</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="legato__common_8h.html">gfx/legato/common/legato_common.h</a>&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define LE_FIXED_HEAP_COUNT 7</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structleVariableHeapUsageReport.html">   54</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structleVariableHeapUsageReport.html">leVariableHeapUsageReport</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structleVariableHeapUsageReport.html#a854352f53b148adc24983a58a1866d66">   56</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structleVariableHeapUsageReport.html#a854352f53b148adc24983a58a1866d66">size</a>;        </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structleVariableHeapUsageReport.html#a5b808771795df7f2674f6e0b4d87af47">   57</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structleVariableHeapUsageReport.html#a5b808771795df7f2674f6e0b4d87af47">maxUsage</a>;    </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structleVariableHeapUsageReport.html#ae8cc011bf3ee2d3c19743095ffc0f7a5">   58</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structleVariableHeapUsageReport.html#ae8cc011bf3ee2d3c19743095ffc0f7a5">used</a>;        </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="legato__memory_8h.html#a1edf74b14c337fbef56cdd62e193e26c">   59</a></span>&#160;} <a class="code" href="legato__memory_8h.html#a1edf74b14c337fbef56cdd62e193e26c">leVariableHeapUsageReport</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="legato__memory_8h.html#a909def18d2973a9bc3c7da867d59da9d">   64</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="legato__memory_8h.html#a909def18d2973a9bc3c7da867d59da9d">leFixedHeapSize</a></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    FH_16,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    FH_32,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    FH_64,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    FH_128,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    FH_196,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    FH_256</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structleFixedHeapUsageReport.html">   77</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structleFixedHeapUsageReport.html">leFixedHeapUsageReport</a></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">size_t</span> logicalSize;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">size_t</span> numElements;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">size_t</span> currentCapacity;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">size_t</span> maxUsage;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="legato__memory_8h.html#a9853e12b511a9d8747c79b5e14b987a6">   83</a></span>&#160;} <a class="code" href="legato__memory_8h.html#a9853e12b511a9d8747c79b5e14b987a6">leFixedHeapUsageReport</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structleMemoryStatusReport.html">   88</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structleMemoryStatusReport.html">leMemoryStatusReport</a></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="structleVariableHeapUsageReport.html">leVariableHeapUsageReport</a> variableHeapReport;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="structleFixedHeapUsageReport.html">leFixedHeapUsageReport</a> fixedHeapReport[LE_FIXED_HEAP_COUNT - 1];</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="legato__memory_8h.html#a7a1fbd601cc0419f164158cb2e5ec165">   92</a></span>&#160;} <a class="code" href="legato__memory_8h.html#a7a1fbd601cc0419f164158cb2e5ec165">leMemoryStatusReport</a>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> <a class="code" href="legato__memory_8h.html#ac38c0f1de3cbbd9241ea502463708e95">leMemory_Init</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#if LE_USE_DEBUG_ALLOCATOR == 1</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define LE_MALLOC(size) leMalloc(size, __LINE__, __FUNCTION__, __FILE__)</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define LE_REALLOC(ptr, size) leRealloc(ptr, size, __LINE__, __FUNCTION__, __FILE__)</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define LE_MALLOC(size) leMalloc(size)</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#define LE_REALLOC(ptr, size) leRealloc(ptr, size)</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#define LE_FREE(ptr) leFree(ptr)</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#if LE_USE_DEBUG_ALLOCATOR == 1</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* <a class="code" href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">leMalloc</a>(<span class="keywordtype">size_t</span> size,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                          <span class="keywordtype">size_t</span> line,</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">char</span>* func,</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">char</span>* file);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* <a class="code" href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">leRealloc</a>(<span class="keywordtype">void</span>* ptr,</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                           <span class="keywordtype">size_t</span> size,</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                           <span class="keywordtype">size_t</span> line,</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                           <span class="keyword">const</span> <span class="keywordtype">char</span>* func,</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                           <span class="keyword">const</span> <span class="keywordtype">char</span>* file);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> <a class="code" href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">leFree</a>(<span class="keywordtype">void</span>* ptr);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* <a class="code" href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">leMalloc</a>(<span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* <a class="code" href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">leRealloc</a>(<span class="keywordtype">void</span>* ptr,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                           <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> <a class="code" href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">leFree</a>(<span class="keywordtype">void</span>* ptr);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> <a class="code" href="legato__memory_8h.html#a18e99e3de406051641d6ebfc39d012ed">leMemoryGetUsageReport</a>(<a class="code" href="structleMemoryStatusReport.html">leMemoryStatusReport</a>* rpt);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> leMemoryDumpAllocations();</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;LIB_EXPORT <a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> <a class="code" href="legato__memory_8h.html#ad25b9c94f320a6a7592022cd03a1c8a9">leMemoryValidateHeaps</a>();</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LEGATO_MEMORY_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  Summary:</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    File containing various memory-related constructs.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifndef LEGATO_MEMORY_H</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define LEGATO_MEMORY_H</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="legato__common_8h.html">gfx/legato/common/legato_common.h</a>&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#if LE_MEMORY_MANAGER_ENABLE == 1</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define LE_FIXED_HEAP_COUNT 7</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>leVariableHeapUsageReport</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">size_t</span> size;        </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">size_t</span> maxUsage;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">size_t</span> used;        </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} leVariableHeapUsageReport;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">enum</span> leFixedHeapSize</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    FH_16,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    FH_32,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    FH_64,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    FH_128,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    FH_196,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    FH_256</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>leFixedHeapUsageReport</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">size_t</span> logicalSize;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">size_t</span> numElements;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">size_t</span> currentCapacity;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">size_t</span> maxUsage;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} leFixedHeapUsageReport;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>leMemoryStatusReport</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    leVariableHeapUsageReport variableHeapReport;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    leFixedHeapUsageReport fixedHeapReport[LE_FIXED_HEAP_COUNT - 1];</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} leMemoryStatusReport;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leMemory_Init();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#if LE_USE_DEBUG_ALLOCATOR == 1</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define LE_MALLOC(size) leMalloc(size, __LINE__, __FUNCTION__, __FILE__)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define LE_REALLOC(ptr, size) leRealloc(ptr, size, __LINE__, __FUNCTION__, __FILE__)</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#define LE_MALLOC(size) leMalloc(size)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define LE_REALLOC(ptr, size) leRealloc(ptr, size)</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define LE_FREE(ptr) leFree(ptr)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#if LE_USE_DEBUG_ALLOCATOR == 1</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* leMalloc(<span class="keywordtype">size_t</span> size,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                          <span class="keywordtype">size_t</span> line,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">char</span>* func,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">char</span>* file);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* leRealloc(<span class="keywordtype">void</span>* ptr,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                           <span class="keywordtype">size_t</span> size,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                           <span class="keywordtype">size_t</span> line,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                           <span class="keyword">const</span> <span class="keywordtype">char</span>* func,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                           <span class="keyword">const</span> <span class="keywordtype">char</span>* file);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> leFree(<span class="keywordtype">void</span>* ptr);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* leMalloc(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;LIB_EXPORT <span class="keywordtype">void</span>* leRealloc(<span class="keywordtype">void</span>* ptr,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                           <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> leFree(<span class="keywordtype">void</span>* ptr);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> leMemoryGetUsageReport(leMemoryStatusReport* rpt);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;LIB_EXPORT <span class="keywordtype">void</span> leMemoryDumpAllocations();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;LIB_EXPORT <a class="code" href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a> leMemoryValidateHeaps();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#define LE_MALLOC(size) malloc(size)</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">#define LE_REALLOC(ptr, size) realloc(ptr, size)</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#define LE_FREE(ptr) free(ptr)</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#endif // LE_MEMORY_MANAGER_ENABLE</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LEGATO_MEMORY_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="alegato__memory_8h_html_ade65fc8c21fd8519f63b01848a92dd88"><div class="ttname"><a href="legato__memory_8h.html#ade65fc8c21fd8519f63b01848a92dd88">leMalloc</a></div><div class="ttdeci">LIB_EXPORT void * leMalloc(size_t size)</div><div class="ttdoc">Malloc Memory.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:106</div></div>
 <div class="ttc" id="alegato__error_8h_html"><div class="ttname"><a href="legato__error_8h.html">legato_error.h</a></div><div class="ttdoc">Error functions, macros and definitions.</div></div>
-<div class="ttc" id="astructleVariableHeapUsageReport_html_a854352f53b148adc24983a58a1866d66"><div class="ttname"><a href="structleVariableHeapUsageReport.html#a854352f53b148adc24983a58a1866d66">leVariableHeapUsageReport::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> legato_memory.h:56</div></div>
 <div class="ttc" id="alegato__common_8h_html_af467b597a37f8d8851b61addcb8e2e0f"><div class="ttname"><a href="legato__common_8h.html#af467b597a37f8d8851b61addcb8e2e0f">leResult</a></div><div class="ttdeci">leResult</div><div class="ttdoc">This enum represents function call results.</div><div class="ttdef"><b>Definition:</b> legato_common.h:134</div></div>
 <div class="ttc" id="alegato__variableheap_8h_html"><div class="ttname"><a href="legato__variableheap_8h.html">legato_variableheap.h</a></div><div class="ttdoc">Variable heap functions and definitions.</div></div>
 <div class="ttc" id="alegato__memory_8h_html"><div class="ttname"><a href="legato__memory_8h.html">legato_memory.h</a></div><div class="ttdoc">Memory functions and definitions.</div></div>
-<div class="ttc" id="astructleMemoryStatusReport_html"><div class="ttname"><a href="structleMemoryStatusReport.html">leMemoryStatusReport</a></div><div class="ttdoc">This struct represents fixed and variable heap reports.</div><div class="ttdef"><b>Definition:</b> legato_memory.h:89</div></div>
-<div class="ttc" id="alegato__memory_8h_html_ac38c0f1de3cbbd9241ea502463708e95"><div class="ttname"><a href="legato__memory_8h.html#ac38c0f1de3cbbd9241ea502463708e95">leMemory_Init</a></div><div class="ttdeci">leResult leMemory_Init()</div><div class="ttdoc">Memory Init.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:72</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a9647f390df3a639e02ffdd5566d1721c"><div class="ttname"><a href="legato__memory_8h.html#a9647f390df3a639e02ffdd5566d1721c">leFree</a></div><div class="ttdeci">LIB_EXPORT void leFree(void *ptr)</div><div class="ttdoc">Free Memory.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:251</div></div>
-<div class="ttc" id="astructleVariableHeapUsageReport_html"><div class="ttname"><a href="structleVariableHeapUsageReport.html">leVariableHeapUsageReport</a></div><div class="ttdoc">This struct represents a variable heap usage report.</div><div class="ttdef"><b>Definition:</b> legato_memory.h:55</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a7a1fbd601cc0419f164158cb2e5ec165"><div class="ttname"><a href="legato__memory_8h.html#a7a1fbd601cc0419f164158cb2e5ec165">leMemoryStatusReport</a></div><div class="ttdeci">struct leMemoryStatusReport leMemoryStatusReport</div><div class="ttdoc">This struct represents fixed and variable heap reports.</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a9853e12b511a9d8747c79b5e14b987a6"><div class="ttname"><a href="legato__memory_8h.html#a9853e12b511a9d8747c79b5e14b987a6">leFixedHeapUsageReport</a></div><div class="ttdeci">struct leFixedHeapUsageReport leFixedHeapUsageReport</div><div class="ttdoc">This struct represents a fixed heap usage report.</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a1edf74b14c337fbef56cdd62e193e26c"><div class="ttname"><a href="legato__memory_8h.html#a1edf74b14c337fbef56cdd62e193e26c">leVariableHeapUsageReport</a></div><div class="ttdeci">struct leVariableHeapUsageReport leVariableHeapUsageReport</div><div class="ttdoc">This struct represents a variable heap usage report.</div></div>
-<div class="ttc" id="alegato__variableheap_8h_html_abf3134055e812c6dbb6c1ab7a4636f56"><div class="ttname"><a href="legato__variableheap_8h.html#abf3134055e812c6dbb6c1ab7a4636f56">leVariableHeap_Init</a></div><div class="ttdeci">leResult leVariableHeap_Init(leVariableHeap *heap, void *data, uint32_t size)</div><div class="ttdoc">Initialize Heap.</div><div class="ttdef"><b>Definition:</b> legato_variableheap.c:426</div></div>
-<div class="ttc" id="alegato__variableheap_8h_html_a26ad98faf4627232c187b777147b490e"><div class="ttname"><a href="legato__variableheap_8h.html#a26ad98faf4627232c187b777147b490e">leVariableHeap_SizeOf</a></div><div class="ttdeci">uint32_t leVariableHeap_SizeOf(leVariableHeap *heap, void *ptr)</div><div class="ttdoc">Get size of allocated pointer.</div><div class="ttdef"><b>Definition:</b> legato_variableheap.c:730</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a51bf085075cd105a0960cbe4e606659e"><div class="ttname"><a href="legato__memory_8h.html#a51bf085075cd105a0960cbe4e606659e">leRealloc</a></div><div class="ttdeci">LIB_EXPORT void * leRealloc(void *ptr, size_t size)</div><div class="ttdoc">Realloc Memory.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:178</div></div>
-<div class="ttc" id="alegato__memory_8h_html_ad25b9c94f320a6a7592022cd03a1c8a9"><div class="ttname"><a href="legato__memory_8h.html#ad25b9c94f320a6a7592022cd03a1c8a9">leMemoryValidateHeaps</a></div><div class="ttdeci">LIB_EXPORT leResult leMemoryValidateHeaps()</div><div class="ttdoc">Validate Memory Heaps.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:318</div></div>
-<div class="ttc" id="astructleVariableHeap_html"><div class="ttname"><a href="structleVariableHeap.html">leVariableHeap</a></div><div class="ttdoc">This struct represents a variable heap.</div><div class="ttdef"><b>Definition:</b> legato_variableheap.h:62</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a909def18d2973a9bc3c7da867d59da9d"><div class="ttname"><a href="legato__memory_8h.html#a909def18d2973a9bc3c7da867d59da9d">leFixedHeapSize</a></div><div class="ttdeci">leFixedHeapSize</div><div class="ttdoc">This enum represents a fixed heap sizes support.</div><div class="ttdef"><b>Definition:</b> legato_memory.h:65</div></div>
-<div class="ttc" id="alegato__variableheap_8h_html_a9811cb0a94c753461c5d41ee4202ca93"><div class="ttname"><a href="legato__variableheap_8h.html#a9811cb0a94c753461c5d41ee4202ca93">leVariableHeap_Validate</a></div><div class="ttdeci">leResult leVariableHeap_Validate(leVariableHeap *heap)</div><div class="ttdoc">Validate heap.</div><div class="ttdef"><b>Definition:</b> legato_variableheap.c:737</div></div>
-<div class="ttc" id="alegato__variableheap_8h_html_aa1924b7cc36b0e02966c09c8b25fc95b"><div class="ttname"><a href="legato__variableheap_8h.html#aa1924b7cc36b0e02966c09c8b25fc95b">leVariableHeap_Free</a></div><div class="ttdeci">void leVariableHeap_Free(leVariableHeap *heap, void *ptr)</div><div class="ttdoc">Free a block.</div><div class="ttdef"><b>Definition:</b> legato_variableheap.c:621</div></div>
-<div class="ttc" id="astructleVariableHeapUsageReport_html_a5b808771795df7f2674f6e0b4d87af47"><div class="ttname"><a href="structleVariableHeapUsageReport.html#a5b808771795df7f2674f6e0b4d87af47">leVariableHeapUsageReport::maxUsage</a></div><div class="ttdeci">size_t maxUsage</div><div class="ttdef"><b>Definition:</b> legato_memory.h:57</div></div>
-<div class="ttc" id="alegato__variableheap_8h_html_a8e9167913bb9a5a0e36549e7f0eaac81"><div class="ttname"><a href="legato__variableheap_8h.html#a8e9167913bb9a5a0e36549e7f0eaac81">leVariableHeap_Alloc</a></div><div class="ttdeci">void * leVariableHeap_Alloc(leVariableHeap *heap, uint32_t size)</div><div class="ttdoc">Allocate a block.</div><div class="ttdef"><b>Definition:</b> legato_variableheap.c:484</div></div>
-<div class="ttc" id="astructleVariableHeapUsageReport_html_ae8cc011bf3ee2d3c19743095ffc0f7a5"><div class="ttname"><a href="structleVariableHeapUsageReport.html#ae8cc011bf3ee2d3c19743095ffc0f7a5">leVariableHeapUsageReport::used</a></div><div class="ttdeci">size_t used</div><div class="ttdef"><b>Definition:</b> legato_memory.h:58</div></div>
-<div class="ttc" id="alegato__memory_8h_html_a18e99e3de406051641d6ebfc39d012ed"><div class="ttname"><a href="legato__memory_8h.html#a18e99e3de406051641d6ebfc39d012ed">leMemoryGetUsageReport</a></div><div class="ttdeci">LIB_EXPORT void leMemoryGetUsageReport(leMemoryStatusReport *rpt)</div><div class="ttdoc">Get Usage Report.</div><div class="ttdef"><b>Definition:</b> legato_memory.c:280</div></div>
+<div class="ttc" id="alegato__common_8h_html_acd3365f0b79c37d8894559b5afed374ba4c0b054924a260bd75cb267c59a46014"><div class="ttname"><a href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374ba4c0b054924a260bd75cb267c59a46014">LE_FALSE</a></div><div class="ttdeci">@ LE_FALSE</div><div class="ttdef"><b>Definition:</b> legato_common.h:158</div></div>
 <div class="ttc" id="alegato__common_8h_html_acd3365f0b79c37d8894559b5afed374ba1657003cf978c872cb6396fefaa710d1"><div class="ttname"><a href="legato__common_8h.html#acd3365f0b79c37d8894559b5afed374ba1657003cf978c872cb6396fefaa710d1">LE_TRUE</a></div><div class="ttdeci">@ LE_TRUE</div><div class="ttdef"><b>Definition:</b> legato_common.h:159</div></div>
 <div class="ttc" id="alegato__common_8h_html"><div class="ttname"><a href="legato__common_8h.html">legato_common.h</a></div><div class="ttdoc">Common macros and definitions used by Legato.</div></div>
-<div class="ttc" id="astructleFixedHeapUsageReport_html"><div class="ttname"><a href="structleFixedHeapUsageReport.html">leFixedHeapUsageReport</a></div><div class="ttdoc">This struct represents a fixed heap usage report.</div><div class="ttdef"><b>Definition:</b> legato_memory.h:78</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
