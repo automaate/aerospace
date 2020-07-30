@@ -60,9 +60,15 @@ The performance improved graphics for MPLAB Harmony Graphics Suite. Supports Mic
 
 | Category | Item | Description | Release Type |
 | --- | --- | ---- |---- |
-|  apps | legato_flash | Legato UI library quickstart flash writer example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|    | legato_quickstart | Legato UI library quickstart example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|      |  legato_quickstart_ext_res | Legato UI library external resource example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic)|
+|  apps | legato_adventure | Parallax and sprite animation example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | legato_benchmark | Performance utility example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | legato_cooker | Vehicle dashboard example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | legato_dashboard | Vehicle dashboard example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | legato_flash |  Flash writer example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | legato_monitor | Health monitor example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | legato_quickstart | Legato UI library quickstart example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | legato_quickstart_ext_res | Legato UI library external resource example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic)|
+|     | legato_showcase | Widgets and advance capabilities example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
 | drivers|  external_controller | User generate-able external display driver | ![app-beta](https://img.shields.io/badge/driver-beta-orange?style=plastic) |
 |      |   glcd | Driver for the GLCD display controller peripheral | ![app-beta](https://img.shields.io/badge/driver-beta-orange?style=plastic) |
 |      |   2dgpu | Driver for the 2DGPU graphics processor |![app-beta](https://img.shields.io/badge/driver-beta-orange?style=plastic) |
@@ -86,9 +92,21 @@ The legacy graphics facilities for MPLAB Harmony Graphics Suite. Supports Microc
 
 | Category | Item | Description | Release Type |
 | --- | --- | ---- |---- |
-|  apps | aria_flash | Aria UI library quickstart flash writer example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
-|       | aria_quickstart | Aria UI library quickstart example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
-|       | aria_quickstart_ext_res | Aria UI library external resource example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic)|
+|  apps | aria_legato_adventure | Parallax and sprite animation example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_benchmark | Performance utility  | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_dashboard | Vehicle dashboard example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_flash | Aria flash writer utility  | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_image_viewer | Aria image viewer example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_infotainment | Aria info/entertainment example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_mxt_configure | Aria maXtouch configuration example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_oven_controller | Aria oven controller example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_radial_menu | Aria radial menu example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_quickstart | Aria UI library quickstart reference | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_quickstart_ext_res | Aria UI library external resource utility | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic)|
+|       | aria_showcase | Aria showcase of widgets example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_showcase_reloaded | Aria showcase of cicular widgets example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_thermostat | Aria thermostat menu example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
+|       | aria_weather_forecast | Aria weather menu example | ![app-production](https://img.shields.io/badge/application-production-blue?style=plastic) |
 | drivers|  external_controller | User generate-able external display driver | ![app-production](https://img.shields.io/badge/driver-production-blue?style=plastic) |
 |      |   glcd | Driver for the GLCD display controller peripheral | ![app-production](https://img.shields.io/badge/driver-production-blue?style=plastic) |
 |      |   2dgpu | Driver for the 2DGPU graphics processor |![app-production](https://img.shields.io/badge/driver-production-blue?style=plastic) |
