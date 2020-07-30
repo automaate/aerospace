@@ -15,11 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 
 name: Microchip Technology
-title: Microchip MPLAB Harmony Aerospace help
+title: Microchip MPLAB Harmony Graphics help
 lang: en-US
 timezone: America/Phoenix
 
-description: Harmony 3 Aerospace package
+description: Harmony 3 Graphics package
 url: "https://automaate.github.io/"
 baseurl: "/aerospace"
 remote_theme: "Microchip-MPLAB-Harmony/just-the-docs@mchp-harmony"
