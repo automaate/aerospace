@@ -22,7 +22,7 @@ Find multiple graphics application examples in the [gfx_apps](https://github.com
  - [MPLAB® Harmony License](mplab_harmony_license.md)
  - [MPLAB® Harmony 3 Graphics Wiki](https://github.com/Microchip-MPLAB-Harmony/gfx/wiki)
  - [MPLAB® Harmony 3 Graphics Videos](https://www.youtube.com/playlist?list=PL9B4edd-p2ag5xsIIHhja-caKYY7AKPxe)
- - [MPLAB® Harmony 3 Graphics Suite Documentation](https://automaate.github.io/aerospace)
+ - [MPLAB® Harmony 3 Graphics Suite Documentation](https://automaate.github.io/aerospace/documentation.html)
 
 # Features
 
