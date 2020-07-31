@@ -13,12 +13,12 @@ nav_order: 99
 
 * **Development kit and demo application support** - The following table provides number of applications available for different development kits
 
-| Development Kits     | Application|
+| Development Kits     | Applications |
 | ---  | --- |
 | [SAM A5D2 Xplained Ultra](https://www.microchip.com/developmenttools/ProductDetails/atsama5d2c-xult)      | [legato_quickstart](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstart.html)  |
 | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)           | [legato_quickstart](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstart.html)  |
-| [PIC32MZ DA Curiosity](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAME70-XPLD)    | [legato_quickstart](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstart.html) [legato_dashboard](https://automaate.github.io/aerospace/docs/legato/html/LegatoDashboard.html) [legato_climate_control](https://automaate.github.io/aerospace/docs/legato/html/LegatoClimateControl.html) |
-| [Curiosity PIC32MZ EF 2.0](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)            | [legato_quickstart](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstart.html)  [legato_quickstart_external_resource](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstartExtRes.html) [legato_flash](https://automaate.github.io/aerospace/docs/legato/html/LegatoFlash.html) |
+| [PIC32MZ DA Curiosity](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAME70-XPLD)    | [legato_quickstart](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstart.html), [legato_dashboard](https://automaate.github.io/aerospace/docs/legato/html/LegatoDashboard.html), [legato_climate_control](https://automaate.github.io/aerospace/docs/legato/html/LegatoClimateControl.html) |
+| [Curiosity PIC32MZ EF 2.0](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)            | [legato_quickstart](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstart.html),  [legato_quickstart_external_resource](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstartExtRes.html), [legato_flash](https://automaate.github.io/aerospace/docs/legato/html/LegatoFlash.html) |
 | [SAM E70 Xplained Ultra](https://www.microchip.com/developmenttools/ProductDetails/PartNO/ATSAME70-XPLD)  | [legato_flash](https://automaate.github.io/aerospace/docs/legato/html/LegatoFlash.html) |
 
 
