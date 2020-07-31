@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['radius_1257',['radius',['../structleArcWidget.html#a717462214d2d8f1d768bccfb01a63d08',1,'leArcWidget']]],
-  ['rects_1258',['rects',['../structleRectArray.html#aadc261088163bd7d347f0a3475c47d15',1,'leRectArray']]],
-  ['right_1259',['right',['../structleMargin.html#a61938d8fca0e953d39df2d9e06f55b10',1,'leMargin']]],
-  ['rootwidget_1260',['rootWidget',['../structleState.html#ab1eed9fe79ab88d8375ac3a014f042e0',1,'leState']]],
-  ['roundedge_1261',['roundEdge',['../structleArcWidget.html#a19dda259505c00e9a0b27f6b22b0947b',1,'leArcWidget']]]
+  ['size_1168',['size',['../structleColorModeInfo.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'leColorModeInfo::size()'],['../structleStreamDescriptor.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'leStreamDescriptor::size()'],['../structleArray.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'leArray::size()'],['../structleList.html#a854352f53b148adc24983a58a1866d66',1,'leList::size()'],['../structleRectArray.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'leRectArray::size()']]],
+  ['startangle_1169',['startAngle',['../structleArcWidget.html#a9955df53e11cd767651fa1b9c703bf45',1,'leArcWidget']]],
+  ['stringtable_1170',['stringTable',['../structleState.html#a9b5fb1a36ceceb0f944ebe6b621385bc',1,'leState']]]
 ];

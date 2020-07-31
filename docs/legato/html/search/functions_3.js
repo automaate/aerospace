@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['destructor_931',['destructor',['../legato__string_8h.html#a2bd88ae3167a95ab656259ba3d47044d',1,'legato_string.h']]],
-  ['drv_5flcc_5fblitbuffer_932',['DRV_LCC_BlitBuffer',['../drv__gfx__lcc_8h_8ftl.html#a911b520bcacbfd5bc0a04048ae2ef848',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetactivelayer_933',['DRV_LCC_GetActiveLayer',['../drv__gfx__lcc_8h_8ftl.html#adfacd71abd5f8c78c0efdc69d448b901',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetbuffercount_934',['DRV_LCC_GetBufferCount',['../drv__gfx__lcc_8h_8ftl.html#ad8bfdc92960ae51fcd40cf5e8b07beaa',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetcolormode_935',['DRV_LCC_GetColorMode',['../drv__gfx__lcc_8h_8ftl.html#ac163255fa5d76c1d83068014c0411370',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetdisplayheight_936',['DRV_LCC_GetDisplayHeight',['../drv__gfx__lcc_8h_8ftl.html#ad9a7f7715c2c0d71d9b4f7cb588751db',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetdisplaywidth_937',['DRV_LCC_GetDisplayWidth',['../drv__gfx__lcc_8h_8ftl.html#a1ccd3c1598f5b4f50547426e2bff66b8',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetframebuffer_938',['DRV_LCC_GetFrameBuffer',['../drv__gfx__lcc_8h_8ftl.html#ac41ae8f16db2718e2ec147e13c6bd609',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetlayercount_939',['DRV_LCC_GetLayerCount',['../drv__gfx__lcc_8h_8ftl.html#ac6fe19014f02a7b74de7ba8ed181e0d5',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetlayerstate_940',['DRV_LCC_GetLayerState',['../drv__gfx__lcc_8h_8ftl.html#ad3ef166a021f32bdc6df959c00e75aa9',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fgetvsynccount_941',['DRV_LCC_GetVSYNCCount',['../drv__gfx__lcc_8h_8ftl.html#a0b7cb2cf25259407505d64fd2168b947',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5finitialize_942',['DRV_LCC_Initialize',['../drv__gfx__lcc_8h_8ftl.html#a185feb0e9b58a6dc1dc771ad19e8015d',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fsetactivelayer_943',['DRV_LCC_SetActiveLayer',['../drv__gfx__lcc_8h_8ftl.html#ad41c19b48882aadd5258755f1030d646',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fsetpalette_944',['DRV_LCC_SetPalette',['../drv__gfx__lcc_8h_8ftl.html#af45a38a6c76bc1db5d392311816fa950',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fswap_945',['DRV_LCC_Swap',['../drv__gfx__lcc_8h_8ftl.html#aceabc769c60e586f370fc27dcd878f32',1,'drv_gfx_lcc.h.ftl']]],
-  ['drv_5flcc_5fupdate_946',['DRV_LCC_Update',['../drv__gfx__lcc_8h_8ftl.html#aafe76112061562cd6e18ac703b3f4f47',1,'drv_gfx_lcc.h.ftl']]]
+  ['destructor_866',['destructor',['../legato__string_8h.html#a2bd88ae3167a95ab656259ba3d47044d',1,'legato_string.h']]]
 ];

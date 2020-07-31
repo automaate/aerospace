@@ -105,7 +105,6 @@ var menudata={children:[
 {text:"l",url:"globals_type.html#index_l"}]},
 {text:"Enumerations",url:"globals_enum.html",children:[
 {text:"b",url:"globals_enum.html#index_b"},
-{text:"c",url:"globals_enum.html#index_c"},
 {text:"g",url:"globals_enum.html#index_g"},
 {text:"l",url:"globals_enum.html#index_l"}]},
 {text:"Enumerator",url:"globals_eval.html",children:[
