@@ -1,0 +1,11 @@
+digraph "C:/Harmony3/gfx/middleware/legato/library/src/gfx/legato/widget/label" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7e06156a3e1f5a20cddadcb49c448a41 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="widget" fontname="Helvetica", fontsize="10", URL="dir_7e06156a3e1f5a20cddadcb49c448a41.html"]
+  dir_4f4cfb5539a31ca6857e7f223eca7895 [shape=box, label="label", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4f4cfb5539a31ca6857e7f223eca7895.html"];
+  }
+  dir_fa88ddc64ba904bf53a6551717c775a1 [shape=box label="common" URL="dir_fa88ddc64ba904bf53a6551717c775a1.html"];
+  dir_4f4cfb5539a31ca6857e7f223eca7895->dir_fa88ddc64ba904bf53a6551717c775a1 [headlabel="1", labeldistance=1.5 headhref="dir_000078_000051.html"];
+}

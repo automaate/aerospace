@@ -1,0 +1,20 @@
+digraph "C:/Harmony3/gfx/middleware/legato/library/src/gfx/legato/font" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_35ffb77fc2d7021c49b72bf388ac031b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="legato" fontname="Helvetica", fontsize="10", URL="dir_35ffb77fc2d7021c49b72bf388ac031b.html"]
+  dir_7b8562278051ff0d6709fd5943d20fd2 [shape=box, label="font", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_7b8562278051ff0d6709fd5943d20fd2.html"];
+  }
+  dir_4c60f47fe0f5da8efc76de03351e9412 [shape=box label="renderer" URL="dir_4c60f47fe0f5da8efc76de03351e9412.html"];
+  dir_fa88ddc64ba904bf53a6551717c775a1 [shape=box label="common" URL="dir_fa88ddc64ba904bf53a6551717c775a1.html"];
+  dir_aae68ab1def1d247cf35ee27b39d146a [shape=box label="core" URL="dir_aae68ab1def1d247cf35ee27b39d146a.html"];
+  dir_4c60f47fe0f5da8efc76de03351e9412->dir_fa88ddc64ba904bf53a6551717c775a1 [headlabel="10", labeldistance=1.5 headhref="dir_000060_000051.html"];
+  dir_4c60f47fe0f5da8efc76de03351e9412->dir_aae68ab1def1d247cf35ee27b39d146a [headlabel="1", labeldistance=1.5 headhref="dir_000060_000052.html"];
+  dir_fa88ddc64ba904bf53a6551717c775a1->dir_4c60f47fe0f5da8efc76de03351e9412 [headlabel="1", labeldistance=1.5 headhref="dir_000051_000060.html"];
+  dir_aae68ab1def1d247cf35ee27b39d146a->dir_4c60f47fe0f5da8efc76de03351e9412 [headlabel="3", labeldistance=1.5 headhref="dir_000052_000060.html"];
+  dir_aae68ab1def1d247cf35ee27b39d146a->dir_fa88ddc64ba904bf53a6551717c775a1 [headlabel="7", labeldistance=1.5 headhref="dir_000052_000051.html"];
+  dir_7b8562278051ff0d6709fd5943d20fd2->dir_4c60f47fe0f5da8efc76de03351e9412 [headlabel="2", labeldistance=1.5 headhref="dir_000054_000060.html"];
+  dir_7b8562278051ff0d6709fd5943d20fd2->dir_fa88ddc64ba904bf53a6551717c775a1 [headlabel="4", labeldistance=1.5 headhref="dir_000054_000051.html"];
+  dir_7b8562278051ff0d6709fd5943d20fd2->dir_aae68ab1def1d247cf35ee27b39d146a [headlabel="1", labeldistance=1.5 headhref="dir_000054_000052.html"];
+}

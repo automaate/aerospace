@@ -1,0 +1,10 @@
+digraph "C:/Harmony3/gfx/middleware" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f382573a88a6eedb79e240e7ead9d11a {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f382573a88a6eedb79e240e7ead9d11a.html"];
+    dir_f382573a88a6eedb79e240e7ead9d11a [shape=plaintext label="middleware"];
+    dir_f5ee2340437b1749dd3328b717e91d6c [shape=box label="legato" color="red" fillcolor="white" style="filled" URL="dir_f5ee2340437b1749dd3328b717e91d6c.html"];
+  }
+}

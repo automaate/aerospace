@@ -1,0 +1,14 @@
+digraph "C:/Harmony3/gfx/middleware/legato/library/src/gfx/legato/widget/circulargauge" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7e06156a3e1f5a20cddadcb49c448a41 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="widget" fontname="Helvetica", fontsize="10", URL="dir_7e06156a3e1f5a20cddadcb49c448a41.html"]
+  dir_b0fff322fe2edec030dfcfe2a651c180 [shape=box, label="circulargauge", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b0fff322fe2edec030dfcfe2a651c180.html"];
+  }
+  dir_f07d66a1d1c2d5981c4d517597d58aef [shape=box label="arc" URL="dir_f07d66a1d1c2d5981c4d517597d58aef.html"];
+  dir_fa88ddc64ba904bf53a6551717c775a1 [shape=box label="common" URL="dir_fa88ddc64ba904bf53a6551717c775a1.html"];
+  dir_f07d66a1d1c2d5981c4d517597d58aef->dir_fa88ddc64ba904bf53a6551717c775a1 [headlabel="5", labeldistance=1.5 headhref="dir_000063_000051.html"];
+  dir_b0fff322fe2edec030dfcfe2a651c180->dir_f07d66a1d1c2d5981c4d517597d58aef [headlabel="1", labeldistance=1.5 headhref="dir_000068_000063.html"];
+  dir_b0fff322fe2edec030dfcfe2a651c180->dir_fa88ddc64ba904bf53a6551717c775a1 [headlabel="1", labeldistance=1.5 headhref="dir_000068_000051.html"];
+}

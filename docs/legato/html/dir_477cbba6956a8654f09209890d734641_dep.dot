@@ -1,0 +1,16 @@
+digraph "C:/Harmony3/gfx/middleware/legato/driver/controller/interface" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_94cdac228c110941920278e4fc00be5b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="controller" fontname="Helvetica", fontsize="10", URL="dir_94cdac228c110941920278e4fc00be5b.html"]
+  subgraph clusterdir_477cbba6956a8654f09209890d734641 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_477cbba6956a8654f09209890d734641.html"];
+    dir_477cbba6956a8654f09209890d734641 [shape=plaintext label="interface"];
+    dir_fe3cde271fa8c4b3bb68f32b2c0459e9 [shape=box label="parallel_ebi" color="red" fillcolor="white" style="filled" URL="dir_fe3cde271fa8c4b3bb68f32b2c0459e9.html"];
+    dir_b7aab104721a0854a315e2494330be77 [shape=box label="parallel_portgroup" color="red" fillcolor="white" style="filled" URL="dir_b7aab104721a0854a315e2494330be77.html"];
+    dir_6bc620d63908199d4128a1f75bd7f9de [shape=box label="parallel_smc" color="red" fillcolor="white" style="filled" URL="dir_6bc620d63908199d4128a1f75bd7f9de.html"];
+    dir_e1a0ff1072129417be65554c8f2a85c1 [shape=box label="spi" color="red" fillcolor="white" style="filled" URL="dir_e1a0ff1072129417be65554c8f2a85c1.html"];
+  }
+  }
+}

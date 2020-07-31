@@ -1,0 +1,13 @@
+digraph "C:/Harmony3/gfx/middleware/legato/driver/controller/interface/spi" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_477cbba6956a8654f09209890d734641 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="interface" fontname="Helvetica", fontsize="10", URL="dir_477cbba6956a8654f09209890d734641.html"]
+  subgraph clusterdir_e1a0ff1072129417be65554c8f2a85c1 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e1a0ff1072129417be65554c8f2a85c1.html"];
+    dir_e1a0ff1072129417be65554c8f2a85c1 [shape=plaintext label="spi"];
+    dir_4be3c31dc2919fd4075949c8df9b5267 [shape=box label="config" color="black" fillcolor="white" style="filled" URL="dir_4be3c31dc2919fd4075949c8df9b5267.html"];
+  }
+  }
+}
