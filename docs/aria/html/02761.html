@@ -183,8 +183,6 @@ For a touch event, the Input System Service task calls the laInput_SendTouchDown
 <p class="Element10">
 If the application updates a widget, say to move its position using <a href="02612.html" target="topic">laWidget_Translate</a>(), it needs to call <a href="01194.html" target="topic">laContext_RefreshActiveScreen_Ext_RTOS</a>() that sends a dummy event to unblock the Aria Task so it can process the event and update the widget and screen. The Aria Task repeats this process while there are events in its events list or while the counting semaphore has a non-zero value. The Aria task blocks again when the counting semaphore is back to zero.</p></div>
 </div>
-<div class="Element62">
-Created with a commercial version of <a href="#" onclick="openExternalLink('http://www.doc-o-matic.com');"><img src="indicator_external_link.gif" border="0" alt="" title="">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="#" onclick="openExternalLink('mailto:support@toolsfactory.com');"><img src="indicator_external_link.gif" border="0" alt="" title="">support@toolsfactory.com</a>.</div>
 </div>
 <!-- End Page Content -->
 
