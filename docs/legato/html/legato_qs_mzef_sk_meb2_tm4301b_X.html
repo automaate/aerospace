@@ -85,7 +85,7 @@ $(function() {
 </div>
 <div class="textblock"><h2><a class="anchor" id="autotoc_md237"></a>
 Defining the Architecture</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_mzef_sk_meb2_tm4301b.X_arch.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_mzef_sk_meb2_tm4301b_arch.png" alt="" class="inline"/></p>
 <p>This configuration runs on the PIC32MZ EF Starter Kit with MEBII and WQVGA display. A 16-bit RGB565 frame buffer is stored in the internal SRAM, and the Low Cost Controller-less (LCC) display driver is used to manage the DMA that transfers the framebuffer contents to the display.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
 <h3><a class="anchor" id="autotoc_md238"></a>
@@ -121,19 +121,19 @@ Building the Application</h2>
 </blockquote>
 <h2><a class="anchor" id="autotoc_md241"></a>
 Configuring the Hardware</h2>
-<p>The final setup should be:</p>
 <p>On the MEB II, the EBIWE and LCD_PCLK (J9) must be jumpered to use the internal SRAM for graphics frame buffer. The J9 jumper is located on the bottom of the MEB II board, beneath where the starter kit is plugged into the board. Refer to the following figure for the exact location.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/lcc_rgb565_mxt_mzef_sk_cf1.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_mzef_sk_meb2_tm4301b_conf1.png" alt="" class="inline"/></p>
 <p>Connect the PIC32MZ EF Starter Kit to the MEB II board.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/lcc_rgb565_mxt_mzef_sk_cf2.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_mzef_sk_meb2_tm4301b_conf2.png" alt="" class="inline"/></p>
 <p>Power up the board by connecting the power adapter to J3 power connector on the MEB II board or a powered USB cable to the USB DEBUG port on the Starter Kit board</p>
 <p>The final hardware set-up should be:</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/aria_qs_final_hardware.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_mzef_sk_meb2_tm4301b_conf3.png" alt="" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md242"></a>
 Running the Demonstration</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/aria_quickstart_screen.png" alt="" class="inline"/></p>
+<p>When power-on is successful, the demonstration will display a similar menu to that shown in the following figure (different configurations may have slight variation in the screen aspect ratio):</p>
+<p><img src="legato_qs_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>
 <p>When Make changes. Generate. Run. is touched, the button will toggle with each individual touch.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/aria_quickstart_screen_pressed.png" alt="" class="inline"/> </p>
+<p><img src="legato_qs_e70_xu_tm4301b_run2.png" alt="" class="inline"/> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

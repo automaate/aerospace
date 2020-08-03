@@ -100,7 +100,7 @@ Demonstration Features</h3>
 </ul>
 <h2><a class="anchor" id="autotoc_md149"></a>
 Creating the Project Graph</h2>
-<p><img src="legato_db_pg.png" alt="" width="480" height="272" class="inline"/></p>
+<p><img src="legato_qs_mzda_cu_wvga_pg.png" alt="" class="inline"/></p>
 <p>Adding the “PIC32MZ DA TM5000” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display.</p>
 <p>The Graphics Canvas component is added between the GLCD and the Legato Graphics library to enable the use of the GLCD layers to overlay multiple layers, frames and to perform the sprite animation of the needle images. Inside the Canvas component, six canvas objects are configured to manage the overlay of the background, splash screen logo, left needle, right needle and the information page frame.</p>
 <p>The OCMP1 and TMR2 components are added to enable brightness controller of the display backlight using PWM. The corresponding backlight control pin on the PIC32MZ DA is also configured to OCMP1 instead of GPIO.</p>
@@ -137,7 +137,11 @@ Building the Application</h2>
 <h2><a class="anchor" id="autotoc_md151"></a>
 Configuring the Hardware</h2>
 <p>The final setup should be:</p>
-<p>Configure the hardware as follows: • Attach the RGB565 GFX Interface Card to the J601 connector on the PIC32MZ EF Curiosity 2.0 board. • Connect the ribbon cable from the WQVGA display to the J2 connector on the RGB565 GFX Interface card. • Connect a USB cable from the host computer to the DEBUG USB port on the PIC32MZ EF Curiosity 2.0 board. This USB connection is used for power, code download and debugging. The final hardware setup should be:</p>
+<p>Configure the hardware as follows: •* Attach the RGB565 GFX Interface Card to the J601 connector on the PIC32MZ EF Curiosity 2.0 board.</p><ul>
+<li>Connect the ribbon cable from the WQVGA display to the J2 connector on the RGB565 GFX Interface card.</li>
+<li>Connect a USB cable from the host computer to the DEBUG USB port on the PIC32MZ EF Curiosity 2.0 board. This USB connection is used for power, code download and debugging.</li>
+</ul>
+<p>The final hardware setup should be:</p>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/lcc_rgb565_mxt_mzef_cu_cf1.png" alt="" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md152"></a>
 Running the Demonstration</h2>

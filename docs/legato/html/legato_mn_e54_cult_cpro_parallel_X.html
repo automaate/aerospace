@@ -84,7 +84,7 @@ $(function() {
 </div>
 <div class="textblock"><h2><a class="anchor" id="autotoc_md171"></a>
 Defining the Architecture</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_e54_cult_xpro_parallel-arch.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The application features user touch input through the integrated touch screen on the display panel. Touch input from the touch controller goes through the I2C port, and the Input System Service acquires the touch input information from the Touch and I2C drivers. The Input System Service sends touch events to the Graphics Library, which processes these events and updates the frame data accordingly.</p>
 <p>This configuration runs on the SAM E54 Curiosity Ultra board with a 24-bit passthrough GFX interface card and a maXTouch Curiosity Pro display. The maXTouch Curiosity Pro display has an ILI9488 display controller that is connected to the SAM E54 thru the port/GPIO peripheral using an 8-bit 8080/Parallel interface, boosted with a combination of DMA and CCL peripherals. The Legato graphics library draws the updated sections of the frame to an internal scratch buffer which is used by the ILI9488 display driver to update the ILI9488 display controller.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service. <br  />
@@ -104,19 +104,18 @@ Demonstration Features</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md173"></a>
 Creating the Project Graph</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_pj.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
 <p>This will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
 <p>For the DMA-CCL boosted setup, components TC4, CCL needs to be added.</p>
 <p>Additional components to support File System, MSD Client Driver, USB Full Speed Driver, USB Host Layer, SDMMC, SDHC1, QSPI and SST26 needs to be added and connected manually.</p>
 <p>Some of these components are fine with default settings, while other require some changes. The following is a list of all the components that required custom settings.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf1.png" alt="" class="inline"/></p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf1.png" alt="" class="inline"/></p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf2.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg1.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg2.png" alt="" width="800" height="480" class="inline"/></p>
 <p>To setup the CCL to clock the pixel data, make sure PB09 is set to CCL_OUT2</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf5.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf6.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" width="800" height="480" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md174"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx_apps/legato_monitor. To build this application, use MPLAB X IDE to open the gfx_apps/legato_monitor/firmware/legato_mn_e54_cult_xpro_parallel.X project file.</p>
@@ -142,7 +141,7 @@ Configuring the Hardware</h2>
 </li>
 </ul>
 <p>The final hardware setup should be:</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_ck_e54_cult_cpro_parallel.X_hd.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_conf1.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Power up the board by connecting the power adapter to power connector or a powered USB cable to the DEBUG USB port on the board.</p>
 <h2><a class="anchor" id="autotoc_md176"></a>
 Running the Demonstration</h2>

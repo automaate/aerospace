@@ -84,7 +84,7 @@ $(function() {
 </div>
 <div class="textblock"><h2><a class="anchor" id="autotoc_md243"></a>
 Defining the Architecture</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_arch.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_x_r_e54_cult_cpro_parallel_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The legato_quickstart_external_resources (external flash reader) application uses the reads previously programmed binary data from the external non-volatile QSPI memory. The Graphics Library is used to render graphics to the scratch buffer. Via the ILI9488 Display Driver, boosted with a combination of DMA and CCL peripherals, scratch buffer data is transferred out to the ILI9488 controller via 8-bit parallel in 8080 mode.</p>
 <p>The application also features user touch input through the integrated touch screen on the display panel. Touch input from the touch controller goes through the I2C port, and the Input System Service acquires the touch input information from the Touch and I2C drivers. The Input System Service sends touch events to the Graphics Library, which processes these events and updates the frame data accordingly.</p>
 <p>This configuration runs on the SAM E54 Curiosity Ultra with maXTouch Curiosity Pro Display.</p>
@@ -105,21 +105,20 @@ Demonstration Features</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md245"></a>
 Creating the Project Graph</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_pj.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_x_r_e54_cult_cpro_parallel_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
 <p>This will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
 <p>For the DMA-CCL boosted setup, components TC4, CCL needs to be added.</p>
 <p>Additional components to support File System, MSD Client Driver, USB Full Speed Driver, USB Host Layer, SDMMC, SDHC1, QSPI and SST26 needs to be added and connected manually.</p>
 <p>Some of these components are fine with default settings, while other require some changes. The following is a list of all the components that required custom settings.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf1.png" alt="" class="inline"/></p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf1.png" alt="" class="inline"/></p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf2.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg1.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg2.png" alt="" class="inline"/></p>
 <p>For QSPI access, make sure all 7 pins for QSPI is mapped.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf4.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_x_r_e54_cult_cpro_parallel_pg3.png" alt="" class="inline"/></p>
 <p>To setup the CCL to clock the pixel data, make sure PB09 is set to CCL_OUT2</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf5.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf6.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md246"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_quickstart_ext_res. To build this application, use MPLABX to open the gfx/apps/legato_quickstart_ext_res/firmware/legato_qs_x_r_e54_cult_cpro_parallel.X project file.</p>
@@ -145,16 +144,16 @@ Configuring the Hardware</h2>
 <li>Connect 5.5V power supply to the SAM E54 Curiosity Ultra board is optional</li>
 </ul>
 <p>For media stored on USB device:</p>
-<p>• Connect the USB MSD device to the ‘Target USB’ USB micro port. This can be connected before or at any point after the application is powered-on.</p>
+<p>•Connect the USB MSD device to the ‘Target USB’ USB micro port. This can be connected before or at any point after the application is powered-on.</p>
 <p>The final hardware setup should be:</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf7.png" alt="" class="inline"/></p>
+<p><img src="legato_fl_e54_cult_cpro_parallel.X_conf7.png" alt="" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md248"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, the following screen will appear on the display</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/aria_quickstart_x_r_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_x_r_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>
 <p>Pressing the button will cause the application to load a new image. The image cycles in order from Uncompressed RAW with Direct Blit, Uncompressed RAW, Run-Length Encoded (RLE) RAW, to JPEG.</p>
 <p>The MPLAB Harmony Graphics Suite logo is also a button. Pressing the logo will toggle the application between English and Simplified Chinese.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/aria_quickstart_x_r_e70_xu_tm4301b_run2.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_x_r_e70_xu_tm4301b_run2.png" alt="" class="inline"/></p>
 <p>Note that all images and glyphs are retrieved from external NVM via QSPI. The application is purposely setup in single-buffer configuration to allow visual inspection of the data retrieval speed of the various images and glyphs </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

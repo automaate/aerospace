@@ -84,7 +84,7 @@ $(function() {
 </div>
 <div class="textblock"><h2><a class="anchor" id="autotoc_md123"></a>
 Defining the Architecture</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_e54_cult_xpro_parallel-arch.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The application continuously uses the graphics library to render text, fill areas, and draw images to the screen. Once a layer is completely rendered to, the graphics library increments a layer swap counter. The application periodically (at 1 second intervals) samples the layer swap counter and calculates the difference from the previous sample. This difference is shown as the Frame Update Rate (Hz).</p>
 <p>The block diagrams below show the various software and hardware blocks used in this application.</p>
 <p>This configuration runs on the SAM E54 Curiosity Ultra board with a 24-bit passthrough GFX interface card and a maXTouch Curiosity Pro display. The maXTouch Curiosity Pro display has an ILI9488 display controller that is connected to the SAM E54 thru the port/GPIO peripheral using an 8-bit 8080/Parallel interface. The Legato graphics library draws the updated sections of the frame to an internal scratch buffer which is used by the ILI9488 display driver to update the ILI9488 display controller.</p>
@@ -103,7 +103,7 @@ Demonstration Features</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md125"></a>
 Creating the Project Graph</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_qs_e54_cult_xpro_parallel-pg.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
 <p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
 <p>This will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
@@ -111,13 +111,12 @@ Creating the Project Graph</h2>
 <p>Additional components to support QSPI and SST26 needs to be added and connected manually.</p>
 <p>Some of these components are fine with default settings, while other require some changes. The following is a list of all the components that required custom settings. <br  />
 </p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf1.png" alt="" class="inline"/></p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf1.png" alt="" class="inline"/></p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_qs_x_r_e54_cult_cpro_parallel.X_conf2.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg1.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg2.png" alt="" width="800" height="480" class="inline"/></p>
 <p>To setup the CCL to clock the pixel data, make sure PB09 is set to CCL_OUT2</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf5.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf6.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" width="800" height="480" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md126"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_flash. To build this application, use MPLAB X IDE to open the gfx/apps/legato_flash/firmware/legato_fl_e54_cult_cpro_parallel.X project file.</p>
@@ -143,23 +142,22 @@ Configuring the Hardware</h2>
 <li>Connect 5.5V power supply to the SAM E54 Curiosity Ultra board is optional</li>
 </ul>
 <p>The final hardware setup should be:</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx/legato_fl_e54_cult_cpro_parallel.X_conf7.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_conf1.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Power up the board by connecting the power adapter to power connector or a powered USB cable to the DEBUG USB port on the board</p>
 <h2><a class="anchor" id="autotoc_md128"></a>
 Running the Demonstration</h2>
 <p>On start-up, the application will display a splash screen.</p>
 <p>After the splash-screen completes, the String Update benchmark screen is shown. In this screen, a counter is incremented at every application cycle. The screen demonstrates the rate at which the graphics library renders a string on the screen. This involves a fill operation that clears the background, lookup of the glyphs from the string library, and the drawing of the glyphs on the frame buffer.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/APPS%20GFX%20aria_benchmark%20string%20update%20screen_H3.png" alt="" class="inline"/></p>
+<p><img src="legato_benchmark.png" alt="" class="inline"/></p>
 <p>The “Frame Update (Hz)” field shows the current or instantaneous rate at which the graphics library updates the label widget that shows the counter value. Touching the Frame Update value switches between the current value (curr) and the average (avg) value across 10 samples.</p>
 <p>Touching the “+” and “-“ buttons increases and decreases the size of the string, respectively.</p>
 <p>Touching the “Next” button switches to the Motion and Fill benchmark screen. In this screen, squares are showing moving across the screen. The Frame Update value is the rate at which the graphics library is able to render all the squares on the screen at their new positions. This involves a fill operation of the background color at the old location of the squares and a fill of the squares’ colors at the new position</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/APPS%20GFX%20aria_benchmark%20motion%20fill%20screen.png" alt="" class="inline"/></p>
+<p><img src="legato_bm_e70_xu_tm4301b_run2.png" alt="" class="inline"/></p>
 <p>The number and size of the squares can be increased and decreased using the “+“ and “-“ buttons. If the maximum or minimum size is reached, touching “+” or “-“, respectively, will switch to a full screen fill of alternating colors.</p>
 <p>Touching the “Next” button transitions to the Image Decode and Rendering screen. In this screen, two images of the same size are alternately rendered between application cycles. This involves a fill of the background color, decode and conversion of the image to the frame buffer format, and the drawing of the image to the frame buffer. The Frame Update value is the rate at which the graphics library is able to render an image on the screen.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/APPS%20GFX%20aria_benchmark%20image%20rendering_H3.png" alt="" class="inline"/></p>
+<p><img src="legato_bm_e70_xu_tm4301b_run3.png" alt="" class="inline"/></p>
 <p>The size of the images can be increased and decreased using the “+“ and “-“ buttons.</p>
-<p>Touching the “&lt;” and “&gt;” buttons switches between the various image formats. The formats that are supported are PNG, RAW RLE 16-bit, RAW 16-bit and JPG 24-bit.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/APPS%20GFX%20aria_benchmark%20string%20update%20screen_H3.png" alt="" class="inline"/> </p>
+<p>Touching the “&lt;” and “&gt;” buttons switches between the various image formats. The formats that are supported are PNG, RAW RLE 16-bit, RAW 16-bit and JPG 24-bit. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
