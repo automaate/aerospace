@@ -107,7 +107,7 @@ Demonstration Features</h2>
 <h2><a class="anchor" id="autotoc_md155"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_fl_e54_cult_cpro_parallel_pg.png" alt="" class="inline"/></p>
-<p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
+<p>Adding the <b>SAM E54 Curiosity Ultra BSP</b> and <b>Legato Graphics w/ MXT Curiosity Pro Display</b> Graphics Template component into the project graph.</p>
 <p>This will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
 <p>For the DMA-CCL boosted setup, components TC4, CCL needs to be added.</p>
 <p>Additional components to support File System, MSD Client Driver, USB Full Speed Driver, USB Host Layer, SDMMC, SDHC1, QSPI and SST26 needs to be added and connected manually.</p>
@@ -146,17 +146,17 @@ Configuring the Hardware</h2>
 <li>Connect 5.5V power supply to the SAM E54 Curiosity Ultra board is optional</li>
 </ul>
 <p>For media stored on USB device:</p>
-<p>• Connect the USB MSD device to the ‘Target USB’ USB micro port. This can be connected before or at any point after the application is powered-on.</p>
+<p>• Connect the USB MSD device to the <b>Target USB</b> USB micro port. This can be connected before or at any point after the application is powered-on.</p>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel.X_conf7.png" alt="" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md158"></a>
 Running the Demonstration</h2>
-<p>When power-on is successful, without a USB MSD device or SD MMC device attached to the ‘Target USB’ port the demonstration will display a screen with the message “No valid storage mediums found. Please insert a USB device or SD Card”:</p>
+<p>When power-on is successful, without a USB MSD device or SD MMC device attached to the <b>Target USB</b> port the demonstration will display a screen with the message <b>No valid storage mediums found. Please insert a USB device or SD Card</b>:</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel_run1.png" alt="" class="inline"/></p>
 <p>If a valid USB MSD device is connected, the display will a USB button. LED1 (red) will light up also.</p>
 <p>If a valid SDMMC device is connected, the display will a SD button. LED2 (yellow) will light up also.</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel_run2.png" alt="" class="inline"/></p>
-<p>Make sure the USB MSD device or the SD MMC device has FAT32 file system format and a valid external resources file named precisely ‘SQI.hex’ is copied inside.</p>
+<p>Make sure the USB MSD device or the SD MMC device has FAT32 file system format and a valid external resources file named precisely <b>SQI.hex</b> is copied inside.</p>
 <p>Press and release the SD button or the USB button on-screen. The application will initiate the data transfer on release of the button. Depending on the size of SQI.hex file (greater than 500 kilobytes), the application may freeze with no visual feedback, upwards of 30 seconds. It will then display a progress bar to indicate the transfer. The transfer completes when the progress bar is filled. The application will then display a button with ‘OK’.</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel_run3.png" alt="" class="inline"/> </p>
 </div></div><!-- contents -->

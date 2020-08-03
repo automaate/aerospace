@@ -104,17 +104,17 @@ Demonstration Features</h2>
 <h2><a class="anchor" id="autotoc_md263"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_e54_cult_cpro_parallel_pg.png" alt="" width="800" height="480" class="inline"/></p>
-<p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
+<p>Adding the <b>SAM E54 Curiosity Ultra BSP</b> and <b>Legato Graphics w/ MXT Curiosity Pro Display</b> Graphics Template component into the project graph.</p>
 <p>This will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
 <p>For the DMA-CCL boosted setup, components TC4, CCL needs to be added.</p>
 <p>Additional components to support File System, MSD Client Driver, USB Full Speed Driver, USB Host Layer, SDMMC, SDHC1, QSPI and SST26 needs to be added and connected manually.</p>
 <p>Some of these components are fine with default settings, while other require some changes. The following is a list of all the components that required custom settings.</p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg1.png" alt="" width="800" height="480" class="inline"/></p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg2.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg1.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg2.png" alt="" class="inline"/></p>
 <p>To setup the CCL to clock the pixel data, make sure PB09 is set to CCL_OUT2</p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md264"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx_apps/legato_showcase. To build this application, use MPLAB X IDE to open the gfx_apps/legato_showcase/firmware/legato_sc_e54_cult_xpro_parallel.X project file.</p>
@@ -144,21 +144,21 @@ Configuring the Hardware</h2>
 <h2><a class="anchor" id="autotoc_md266"></a>
 Running the Demonstration</h2>
 <p>The app first boots to the animation Splash Screen. Once the Splash Screen animation completes, the Home Screen is shown:</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running1.png" alt="" class="inline"/></p>
+<p><img src="legato_sc_e54_cult_xpro_parallel-run1.png" alt="" class="inline"/></p>
 <p>Touching the (?) icon opens a Help Screen that describes the functions of the buttons in the Home Screen.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running2.png" alt="" class="inline"/></p>
+<p><img src="legato_sc_e54_cult_xpro_parallel-run2.png" alt="" class="inline"/></p>
 <p>Touching (X) closes the Help Screen and returns to the Home Screen.</p>
 <p>The List Wheel Widget Demo Screen shows an example on how the list wheel widget can be used to provide UI controls for changing the time. The list wheel widget supports momentum where the user can ‘flick’ on the widget to quickly go through the list.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running3.png" alt="" class="inline"/></p>
+<p><img src="legato_sc_e54_cult_xpro_parallel-run3.png" alt="" class="inline"/></p>
 <p>The Touch Test Widget Demo Screen shows the Touch Test Widget, and how it can be used to verify touch screen functionality during product development.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running4.png" alt="" class="inline"/></p>
+<p><img src="legato_sc_e54_cult_xpro_parallel-run4.png" alt="" class="inline"/></p>
 <p>When the white active area of the Touch Test Widget is touched, intersecting horizontal and vertical lines indicate the touch points.</p>
 <p>The Keypad Widget Demo Screen shows how the keypad and text entry widgets can be used to provide an interface for users to input text.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running5.png" alt="" class="inline"/></p>
+<p><img src="legato_sc_e54_cult_xpro_parallel-run5.png" alt="" class="inline"/></p>
 <p>The Alpha Blending Demo screen shows the alpha blending capabilities of the Legato Graphics library. The demo features two JPEG images that are alpha blended on top of each other. The (+) and (-) buttons and the slider widget on the right side of the images provides a way to change the alpha amounts.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running6.png" alt="" class="inline"/></p>
+<p><img src="legato_sc_e54_cult_xpro_parallel-run6.png" alt="" class="inline"/></p>
 <p>The Slide Show Demo Screen features the slide show widget being used to transition between several images using the available controls.</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_sc_e54_cult_xpro_parallel-running7.png" alt="" class="inline"/></p>
+<p><img src="legato_sc_e54_cult_xpro_parallel-run7.png" alt="" class="inline"/></p>
 <p>Touching the LEFT (&lt;) and RIGHT (&gt;) buttons manually transitions through the list of images. Touching the PLAY (|&gt;) and FAST-FORWARD (|&gt;&gt;) buttons will automatically transition the images at 2s and 500ms intervals, respectively. The transitions are triggered using events from the system timer service.</p>
 <p>Help information for the demo screens can be accessed by touching the (?) button on the lower left corner of each screen. Touching the HOME button on the lower right corner takes the application back to the Home Screen. </p>
 </div></div><!-- contents -->

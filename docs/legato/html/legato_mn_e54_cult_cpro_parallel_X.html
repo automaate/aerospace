@@ -105,17 +105,17 @@ Demonstration Features</h2>
 <h2><a class="anchor" id="autotoc_md173"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_e54_cult_cpro_parallel_pg.png" alt="" width="800" height="480" class="inline"/></p>
-<p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
+<p>Adding the <b>SAM E54 Curiosity Ultra BSP</b> and <b>Legato Graphics w/ MXT Curiosity Pro Display</b> Graphics Template component into the project graph.</p>
 <p>This will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
 <p>For the DMA-CCL boosted setup, components TC4, CCL needs to be added.</p>
 <p>Additional components to support File System, MSD Client Driver, USB Full Speed Driver, USB Host Layer, SDMMC, SDHC1, QSPI and SST26 needs to be added and connected manually.</p>
 <p>Some of these components are fine with default settings, while other require some changes. The following is a list of all the components that required custom settings.</p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg1.png" alt="" width="800" height="480" class="inline"/></p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg2.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg1.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg2.png" alt="" class="inline"/></p>
 <p>To setup the CCL to clock the pixel data, make sure PB09 is set to CCL_OUT2</p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md174"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx_apps/legato_monitor. To build this application, use MPLAB X IDE to open the gfx_apps/legato_monitor/firmware/legato_mn_e54_cult_xpro_parallel.X project file.</p>
@@ -135,21 +135,21 @@ Configuring the Hardware</h2>
 <ul>
 <li>Attach the 24-bit pass through card to the GFX Connector on the SAM E54 Curiosity Ultra board.</li>
 <li>Connect the ribbon cable from the maXTouch Curiosity Pro Display to the ribbon connector on the 24-bit pass through card. Make sure that the S1 switch on the 24-bit pass through card is set to 2.</li>
-<li>On the backside of the maXTouch Curiosity Pro display, set the IM[2:0] switches to ‘011’ for 8-bit MCU mode.</li>
+<li>On the backside of the maXTouch Curiosity Pro display, set the IM[2:0] switches to <b>011</b> for 8-bit MCU mode.</li>
 <li>Connect a USB cable from the host computer to the DEBUG USB port on the SAM E54 Curiosity Ultra board. This USB connection is used for power, code download and debugging.</li>
 <li>Connect 5.5V power supply to the SAM E54 Curiosity Ultra board is optional <br  />
 </li>
 </ul>
 <p>The final hardware setup should be:</p>
-<p><img src="legato_qs_e54_cult_cpro_parallel_conf1.png" alt="" width="800" height="480" class="inline"/></p>
+<p><img src="legato_qs_e54_cult_cpro_parallel_conf1.png" alt="" class="inline"/></p>
 <p>Power up the board by connecting the power adapter to power connector or a powered USB cable to the DEBUG USB port on the board.</p>
 <h2><a class="anchor" id="autotoc_md176"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, the demonstration will first boot to a splash screen. After the splash screen, the main screen will be shown. If there is no touch input, the app will be in idle state and the main screen will show a running clock, and the rest of the labels will be blank (&mdash;).</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_mn_e54_cult_xpro_parallel-running1.png" alt="" class="inline"/></p>
+<p><img src="legato_mn_e54_cult_xpro_parallel-run1.png" alt="" class="inline"/></p>
 <p>When the touched, simulated values for the blood pressure and pulse will be shown. <br  />
 </p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/legato_mn_e54_cult_xpro_parallel-running2.png" alt="" class="inline"/> </p>
+<p><img src="legato_mn_e54_cult_xpro_parallel-run2.png" alt="" class="inline"/> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

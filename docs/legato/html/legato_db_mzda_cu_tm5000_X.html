@@ -95,13 +95,13 @@ Demonstration Features</h3>
 <li>Signature application for the PIC32MZ DAR/DAS devices with Internal DDR</li>
 <li>24-bit color, multi-layer, WVGA (800x480) screen design</li>
 <li>16-bit RGB565 color depth support (65535 unique colors)</li>
-<li>Graphics Acceleration using integrated display controller (GLCD) and 2D GPU</li>
+<li>Graphics Acceleration using integrated display controller (GLCD)</li>
 <li>Uses pre-rotated need images and GLCD layers to accelerate needle animation</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md149"></a>
 Creating the Project Graph</h2>
-<p><img src="legato_qs_mzda_cu_wvga_pg.png" alt="" class="inline"/></p>
-<p>Adding the “PIC32MZ DA TM5000” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display.</p>
+<p><img src="legato_qs_mzda_cu_tm5000_pg.png" alt="" class="inline"/></p>
+<p>Adding the <b>PIC32MZ DA TM5000</b> and <b>Legato Graphics w/ MXT Curiosity Pro Display</b> Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display.</p>
 <p>The Graphics Canvas component is added between the GLCD and the Legato Graphics library to enable the use of the GLCD layers to overlay multiple layers, frames and to perform the sprite animation of the needle images. Inside the Canvas component, six canvas objects are configured to manage the overlay of the background, splash screen logo, left needle, right needle and the information page frame.</p>
 <p>The OCMP1 and TMR2 components are added to enable brightness controller of the display backlight using PWM. The corresponding backlight control pin on the PIC32MZ DA is also configured to OCMP1 instead of GPIO.</p>
 <p><b>Graphics Canvas</b> <img src="legato_db_conf_1.png" alt="" width="480" height="272" class="inline"/></p>
@@ -129,7 +129,7 @@ Building the Application</h2>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Project Name </th><th class="markdownTableHeadNone">BSP Used </th><th class="markdownTableHeadNone">Graphics Template Used </th><th class="markdownTableHeadNone">Description  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">legato_db_mzda_cu_tm5000_X </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 </td><td class="markdownTableBodyNone">Legato Graphics w/ PDA TM5000 Display </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 with RGBA8888 GFX Interface and 5” WVGA PCAP Touch display  </td></tr>
+<td class="markdownTableBodyNone">legato_db_mzda_cu_tm5000_X </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 </td><td class="markdownTableBodyNone">Legato Graphics w/ PDA TM5000 Display </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 with RGBA8888 GFX Interface and 5in WVGA PCAP Touch display  </td></tr>
 </table>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
@@ -137,18 +137,20 @@ Building the Application</h2>
 <h2><a class="anchor" id="autotoc_md151"></a>
 Configuring the Hardware</h2>
 <p>The final setup should be:</p>
-<p>Configure the hardware as follows: •* Attach the RGB565 GFX Interface Card to the J601 connector on the PIC32MZ EF Curiosity 2.0 board.</p><ul>
+<p>Configure the hardware as follows:</p>
+<ul>
+<li>Attach the RGB565 GFX Interface Card to the J601 connector on the PIC32MZ EF Curiosity 2.0 board.</li>
 <li>Connect the ribbon cable from the WQVGA display to the J2 connector on the RGB565 GFX Interface card.</li>
 <li>Connect a USB cable from the host computer to the DEBUG USB port on the PIC32MZ EF Curiosity 2.0 board. This USB connection is used for power, code download and debugging.</li>
 </ul>
 <p>The final hardware setup should be:</p>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/lcc_rgb565_mxt_mzef_cu_cf1.png" alt="" class="inline"/></p>
+<p><img src="legato_qs_mzda_cu_tm5000_conf1.png" alt="" width="480" height="272" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md152"></a>
 Running the Demonstration</h2>
 <p><img src="legato_db_splash_screen.png" alt="" width="480" height="272" class="inline"/></p>
 <p>The demo first boots to a splash screen. While the splash screen is shown, the application pre-processes the needle images to DDR and renders the dashboard screens.</p>
 <p><img src="legato_dashboard.png" alt="" width="480" height="272" class="inline"/>)</p>
-<p>The primary dashboard screen is displayed with an ‘Information Page’ overlaid on top. Touch the Information Page to dismiss.</p>
+<p>The primary dashboard screen is displayed with an <b>Information Page</b> overlaid on top. Touch the Information Page to dismiss.</p>
 <p>Touching the screen to animate the needles. When idle the backlight will dim, and then run Self-Demonstration mode after more idle period.</p>
 <p>Swiping down from top will show the information page. Swiping left or right from the edge will switch between the Primary and Secondary screens </p>
 </div></div><!-- contents -->
