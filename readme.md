@@ -60,15 +60,15 @@ The performance improved graphics for MPLAB Harmony Graphics Suite. Supports Mic
 
 | Category | Item | Description | Release Type |
 | --- | --- | ---- |---- |
-|  apps | legato_adventure | Parallax and sprite animation example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | legato_benchmark | Performance utility example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | legato_cooker | Vehicle dashboard example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | legato_dashboard | Vehicle dashboard example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | legato_flash |  Flash writer example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | legato_monitor | Health monitor example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | legato_quickstart | Legato UI library quickstart example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | legato_quickstart_ext_res | Legato UI library external resource example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic)|
-|     | legato_showcase | Widgets and advance capabilities example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|  apps | [legato_adventure](https://automaate.github.io/aerospace/docs/legato/html/LegatoAdventure.html) | Parallax and sprite animation example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_benchmark](https://automaate.github.io/aerospace/docs/legato/html/LegatoBenchmark.html) | Performance utility example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_cooker](https://automaate.github.io/aerospace/docs/legato/html/LegatoCooker.html) | Appliance cooker UI example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_dashboard](https://automaate.github.io/aerospace/docs/legato/html/LegatoDashboard.html) | Vehicle dashboard example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_flash](https://automaate.github.io/aerospace/docs/legato/html/LegatoFlash.html) |  Flash writer example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_monitor](https://automaate.github.io/aerospace/docs/legato/html/LegatoMonitor.html) | Health monitor example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_quickstart](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstart.html) | Legato UI library quickstart example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_quickstart_ext_res](https://automaate.github.io/aerospace/docs/legato/html/LegatoQuickstartExtRes.html) | Legato UI library external resource example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic)|
+|     | [legato_showcase](https://automaate.github.io/aerospace/docs/legato/html/LegatoShowcase.html) | Widgets and advance capabilities example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
 | drivers|  external_controller | User generate-able external display driver | ![app-beta](https://img.shields.io/badge/driver-beta-orange?style=plastic) |
 |      |   glcd | Driver for the GLCD display controller peripheral | ![app-beta](https://img.shields.io/badge/driver-beta-orange?style=plastic) |
 |      |   2dgpu | Driver for the 2DGPU graphics processor |![app-beta](https://img.shields.io/badge/driver-beta-orange?style=plastic) |
@@ -128,7 +128,7 @@ The legacy graphics facilities for MPLAB Harmony Graphics Suite. Supports Microc
 
 | Category | Item | Description | Release Type |
 | --- | --- | ---- |---- |
-| apps | blank_quickstart | Blank UI-less library quickstart example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+| apps | [blank_quickstart](https://automaate.github.io/aerospace/docs/legato/html/BlankApplications.html) | Blank UI-less library quickstart example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
 
 ____
 
