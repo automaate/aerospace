@@ -72,9 +72,31 @@ $(function() {
 <div class="title">Flash </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><ul><li class="level2"><a href="#autotoc_md171">Description</a></li>
+</ul>
+</ul>
+</div>
 <div class="textblock"><p><a class="el" href="legato_fl_e54_cult_cpro_parallel_X.html">legato_fl_e54_cult_cpro_parallel.X</a> <a class="el" href="legato_fl_e70_xu_tm4301b_X.html">legato_fl_e70_xu_tm4301b.X</a> <a class="el" href="legato_fl_mzef_cu_tm4301b_X.html">legato_fl_mzef_cu_tm4301b.X</a></p>
 <p><img src="legato_flash.png" alt="" width="480" height="272" class="inline"/></p>
-<p>The legato_flash demonstration application serves as an external memory programmer to flash the off-chip non-volatile memory. </p>
+<p>The legato_flash demonstration application serves as an external memory programmer to flash the off-chip non-volatile memory.</p>
+<p>The legato_flash demonstration application serves as an external memory programmer to flash the off-chip non-volatile memory with the resources held on an Memory Storage Device (MSD), such as a USB or a SD card, which can then be accessed by other applications saving on-chip memory for other programs and resources.</p>
+<p>The application legato_quickstart_external_resources in MPLAB Harmony needs to use preloaded images/fonts from QSPI flash external non-volatile memory. This would require legato_flash to flash the required image and font resources onto the QSPI flash. Refer to legato_quickstart_external_resources for usage model information.</p>
+<p>This demonstration runs on:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">MPLABX Configuration </th><th class="markdownTableHeadNone">Board Configuration  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="legato_fl_e54_cult_cpro_parallel_X.html">legato_fl_e54_cult_cpro_parallel.X</a> </td><td class="markdownTableBodyNone"><a href="https://www.microchip.com/Developmenttools/ProductDetails/DM320210">SAM E54 Curiosity Ultra Development Board</a> using external ILI9488 controller to drive the <a href="https://www.microchip.com/Developmenttools/ProductDetails/AC320007">maXTouch® Curiosity Pro Board</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">[legato_fl_e70_xu_tm4301b.X](legato_fl_e70_xu_tm4301b_X.html </td><td class="markdownTableBodyNone"><a href="https://www.microchip.com/Developmenttools/ProductDetails/DM320113">SAM E70 Xplained Ultra Evaluation Kit</a> using LCC software display controller to drive the <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4">High-Performance 4.3" WQVGA Display Module with maXTouch® Technology</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="legato_fl_mzef_cu_tm4301b_X.html">legato_fl_mzef_cu_tm4301b.X</a> </td><td class="markdownTableBodyNone"><a href="https://www.microchip.com/Developmenttools/ProductDetails/DM320209">Curiosity PIC32MZ EF 2.0 Development Board</a> using LCC software display controller to drive the <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4">High-Performance 4.3" WQVGA Display Module with maXTouch® Technology</a>  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md171"></a>
+Description</h2>
+<p>Applications that use large images or multiple page menu screens, which require several images or large or multiple font packages, etc., have a very large memory requirement for their graphics resources. In such applications, storing these graphics resources on-chip may result in insufficient memory or may be prohibitive to a possible cost benefit. A solution is to store the graphics resources to off-chip memory, such as non-volatile memory, thereby preserving the on-chip memory for program memory and allowing for more complex functional features.</p>
+<p>The legato_flash application flashes the .hex file containing the binary data of the external graphics resources, in this case QSPI.hex, into the external non-volatile memory. The resource file is copied from the computer to a USB Flash drive, which has a FAT32 file system installed. The USB Flash drive is then plugged into SAM E70 Curiosity Ultra development board and the application scans the MSD for the resource file. The legato_flash application copies the resource file sector by sector and flashes the binary resource content onto the QSPI Flash external memory. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

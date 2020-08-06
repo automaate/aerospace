@@ -73,24 +73,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md183">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md184">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md184">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md185">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md185">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md186">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md187">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md188">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md186">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md187">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md188">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md189">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md183"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md184"></a>
 Defining the Architecture</h2>
 <p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/APPS GFX a5d2 arch.png" alt="" class="inline"/></p>
 <p>The project uses a draw surface widget as a container to draw the gauge needle using lines. When the user touches the screen, a touch event is sent to the application. The application updates the values of the tachometer, speedometer and fuel gauge. The needle is cleared and redrawn every time the tachometer value changes. The speed, distance and fuel gauge are also updated. Label widgets are used to show the speed and distance, while image widgets are used to show the indicators and fuel gauge.</p>
 <p>The application uses the 3 layers in the LCDC display controller to compose the final screen. Each layer uses double-buffering to eliminate tearing. When the screen needs to be updated, the graphics library updates the frame on the write buffer while the LCDC display controller sends the read buffer content to the display panel. When the graphics library is done updating, the write buffer is swapped with the read buffer and its contents are pushed out to the display controller.</p>
 <p>Each frame buffer uses 32-bit per pixel, and each pixel has its own alpha channel. This allows the sections of the upper layers to be transparent and show the contents of the layers underneath.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
-<h3><a class="anchor" id="autotoc_md184"></a>
+<h3><a class="anchor" id="autotoc_md185"></a>
 Demonstration Features</h3>
 <ul>
 <li>LCDC display controller with multiple HW layers</li>
@@ -101,12 +101,12 @@ Demonstration Features</h3>
 <li>Draw surface, image, label widgets</li>
 <li>Backlight PWM control</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md185"></a>
+<h2><a class="anchor" id="autotoc_md186"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_a5d2_xu_tm5000_pg.png" alt="" class="inline"/></p>
 <p>The Project Graph diagram below shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
 <p>First, add the “SAM A5D2 XPlained Ultra BSP” into the project. Then, add “Aria Graphics w/ PDA TM4301B Display” Graphics Template component to the project if using a 4.3” WQVGA TM4301b display or the “Aria Graphics w/ PDA TM4301B Display” Graphics Template component to the project if using a 5” or 7” WVGA TM4301b display. The template will automatically add the components needed for a graphics project and resolve their dependencies and configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
-<h2><a class="anchor" id="autotoc_md186"></a>
+<h2><a class="anchor" id="autotoc_md187"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/aria_dashboard. To build this application, open the IAR project at: gfx/apps/aria_dashboard/firmware/aria_db_a5d2_xu_tm5000.X.</p>
 <p>For more building information, see: Getting started with Harmony 3 on the SAMA5D2.</p>
@@ -120,11 +120,11 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md187"></a>
+<h2><a class="anchor" id="autotoc_md188"></a>
 Configuring the Hardware</h2>
 <p>Connect the ribbon cable from the display to the J16 connector on the back of the SAM 9x60 Evaluation Kit board.</p>
 <p><img src="legato_dashboard_9x60_sk_wvga_conf1.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md188"></a>
+<h2><a class="anchor" id="autotoc_md189"></a>
 Running the Demonstration</h2>
 <p>On start-up, the application will display a splash screen. After the splash screen completes, the dashboard screen is shown. The initial state of the dashboard screen is “OFF” where the backlight is slightly dimmed, the needle in the 0 RPM position and the indicators and labels are hidden. Pressing the “ENGINE START STOP” button at the center-bottom section of the screen will “TURN ON” the dashboard.</p>
 <p>As the dashboard is turning on, the indicators and labels will show up, the tachometer needle will turn to MAX and back and the fuel gauge bars will go to full.</p>

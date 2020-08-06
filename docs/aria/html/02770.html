@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
 <head>
-<title>Graphics Pipeline</title>
+<title>Custom Event Handling and Dynamic Widget Creation</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="generator" content="Doc-O-Matic" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -18,7 +18,7 @@
 <!-- Begin Page Header -->
 <div class="Element710" id="areafixed">
 <div class="Element94">
-<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02749.html" target="topic">Advanced Topics</a> &gt; <a href="02755.html" target="topic">Draw Pipeline Options</a> &gt; <a href="02770.html" target="topic">Graphics Pipeline</a></div>
+<a href="00462.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02750.html" target="topic">Advanced Topics</a> &gt; <a href="02770.html" target="topic">Custom Event Handling and Dynamic Widget Creation</a></div>
 <div class="Element92">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -26,15 +26,15 @@
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element2">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00462.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element90">
-<a href="02755.html" target="topic">Previous</a> | <a href="02755.html" target="topic">Up</a> | <a href="02771.html" target="topic">Next</a></div>
+<a href="02791.html" target="topic">Previous</a> | <a href="02750.html" target="topic">Up</a> | <a href="02762.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element96">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG Graphics Pipeline Topic Title: Graphics Pipeline)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG Graphics Events Testbed Topic Title: Custom Event Handling and Dynamic Widget Creation)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table><div class="Element5">
-Graphics Pipeline</div>
+Custom Event Handling and Dynamic Widget Creation</div>
 </div>
 </div>
 
@@ -49,80 +49,281 @@ Graphics Pipeline</div>
 <a name="4465736372697074696F6E"></a><div class="Element11">
 <div class="Element10">
 <p class="Element10">
-<strong>Layer Clipping</strong>&nbsp;</p>
+This example is based on the Quick Start Guide “Adding an Event to the Aria Quickstart Demonstration” found in the Graphics Library documentation.&nbsp;</p>
 <p class="Element10">
-In order of the processing, Layer Clipping is first applied to the image. If the image extends beyond the edges of the layer that contains it then those pixels are not drawn. Failure to clip out-of-bound pixels can cause the application to crash. The following figures shows an example of layer clipping:&nbsp;</p>
+This example has a target configuration for the SAM E7 Xplained Ultra Board with a 4.3” WQVGA Diaplay. For setting up these boards see the instructions for the Aria Quickstart demonstration under Graphics Demonstrations.&nbsp;</p>
 <p class="Element10">
-<i>Before applying layer boundaries:</i>&nbsp;</p>
+This project demonstrates the following events/macros: </p><p class="Element10" style="text-align: center;">
+<img src="MHGC UG Events Testbed Events Table.png" border="0" alt="" title="">&nbsp;</p>
+<p class="Element10" style="text-align: center;">
+&nbsp;</p>
+<p class="Element10" style="text-align: center;">
+&nbsp;</p><p class="Element10">
+Asserting the “Make Changes. Generate. Run” button on the display changes its text to “Ouch! Ouch! Ouch!”. Pressing the board’s Switch changes the LEDs on the board as well as changing the virtual LEDs on the display. Pressing the display’s virtual S1 switch does the same. The list wheel changes the image displayed among { None | Baboon | Lena }: </p><p class="Element10" style="text-align: center;">
+<img src="MHGC UG Events Testbed Benchtop Setup.png" border="0" alt="" title="">&nbsp;</p>
+<p class="Element10" style="text-align: center;">
+&nbsp;</p>
 <p class="Element10">
-<img src="MHGC UG Before layer bounderies.png" border="0" alt="" title="">&nbsp;</p>
+The application’s events are defined in<strong> libaria_events.c</strong>: </p><div class="Element13"><div class="Element12"><pre class="Element12"><strong><span style="color: #000080">#include</span></strong> &quot;gfx/libaria/libaria_events.h&quot;
+<i><span style="color: #008000">// CUSTOM CODE - DO NOT DELETE</span></i>
+<strong><span style="color: #000080">#include</span></strong> &quot;app.h&quot;
+<strong><span style="color: #000080">extern</span></strong> APP_DATA appData;
+<i><span style="color: #008000">// END OF CUSTOM CODE</span></i>
+
+<i><span style="color: #008000">// Display_S1 - PressedEvent</span></i>
+<strong><span style="color: #000080">void</span></strong> Display_S1_PressedEvent(laButtonWidget* btn)
+{
+  <i><span style="color: #008000">// CUSTOM CODE - DO NOT DELETE</span></i>
+    appData.bDisplay_S1State = <strong><span style="color: #000080">true</span></strong>;
+  <i><span style="color: #008000">// END OF CUSTOM CODE</span></i>
+}
+
+<i><span style="color: #008000">// Display_S1 - ReleasedEvent</span></i>
+<strong><span style="color: #000080">void</span></strong> Display_S1_ReleasedEvent(laButtonWidget* btn)
+{
+  <i><span style="color: #008000">// CUSTOM CODE - DO NOT DELETE</span></i>
+    appData.bDisplay_S1State = <strong><span style="color: #000080">false</span></strong>;
+  <i><span style="color: #008000">// END OF CUSTOM CODE</span></i>
+}
+
+<i><span style="color: #008000">// SelectImage - SelectedItemChangedEvent</span></i>
+<strong><span style="color: #000080">void</span></strong> SelectImage_SelectedItemChangedEvent(laListWheelWidget* whl, uint32_t idx)
+{
+  <i><span style="color: #008000">// CUSTOM CODE - DO NOT CHANGE</span></i>
+    <i><span style="color: #008000">// ChangeImage - Set Image - ImageSelected</span></i>
+    <strong><span style="color: #000080">switch</span></strong> (idx)
+    {
+        <strong><span style="color: #000080">case</span></strong> 0:
+            appData.image_selected = APP_IMAGE_NOIMAGE;
+            <strong><span style="color: #000080">break</span></strong>;
+
+        <strong><span style="color: #000080">case</span></strong> 1:
+            appData.image_selected = APP_IMAGE_BABOON;
+            <strong><span style="color: #000080">break</span></strong>;
+
+        <strong><span style="color: #000080">case</span></strong> 2:
+            appData.image_selected = APP_IMAGE_LENA;
+            <strong><span style="color: #000080">break</span></strong>;
+    }
+  <i><span style="color: #008000">// END OF CUSTOM CODE</span></i>
+}
+
+<i><span style="color: #008000">// ButtonWidget1 - PressedEvent</span></i>
+<strong><span style="color: #000080">void</span></strong> ButtonWidget1_PressedEvent(laButtonWidget* btn)
+{
+    <i><span style="color: #008000">// ButtonDown - Set Text - ButtonWidget1</span></i>
+    laButtonWidget_SetText((laButtonWidget*)ButtonWidget1,
+                           laString_CreateFromID(string_OuchOuchOuch));
+}
+
+<i><span style="color: #008000">// ButtonWidget1 - ReleasedEvent</span></i>
+<strong><span style="color: #000080">void</span></strong> ButtonWidget1_ReleasedEvent(laButtonWidget* btn)
+{
+    <i><span style="color: #008000">// ButtonUp - Set Text - ButtonWidget1</span></i>
+    laButtonWidget_SetText((laButtonWidget*)ButtonWidget1,
+                            laString_CreateFromID(string_Instructions));
+}</pre></div></div>
 <p class="Element10">
-<i>After applying layer boundaries:</i>&nbsp;</p>
+The <strong>SelectImage</strong> list wheel selects which image is shown in the <strong>ImageSelected</strong> image by setting the variable <strong>appData.image_selected</strong>.&nbsp;</p>
 <p class="Element10">
-<img src="MHGC UG after layer boundaries.png" border="0" alt="" title="">&nbsp;</p>
+The widget <strong>ButtonWidget1</strong> changes its test using the <strong><a href="00898.html" target="topic">laButtonWidget_SetText</a></strong> function. Details on how this is accomplished are discussed in the Quick Start Guide “Adding an Event to the Aria Quickstart Demonstration”.&nbsp;</p>
 <p class="Element10">
-<strong>Rectangle Clipping</strong>&nbsp;</p>
+The <strong>Display_S1</strong> widget just sets a Boolean semaphore <strong>appData.bDisplay_S1State</strong>.&nbsp;</p>
 <p class="Element10">
-Next, the image is clipped to the boundaries of any widgets that contain it as a parent, such as a rectangle.&nbsp;</p>
+The application’s macros are defined in <strong>libaria_macros.c</strong>. They change the coloring scheme for the display’s virtual LEDs: </p><div class="Element13"><div class="Element12"><pre class="Element12"><strong><span style="color: #000080">#include</span></strong> &quot;gfx/libaria/libaria_macros.h&quot;
+
+<strong><span style="color: #000080">void</span></strong> LEDsTurnOn(<strong><span style="color: #000080">void</span></strong>)
+{
+    <strong><span style="color: #000080">if</span></strong>(laContext_GetActiveScreenIndex() != default_ID)
+        <strong><span style="color: #000080">return</span></strong>;
+
+    <i><span style="color: #008000">// TurnOnDisplayD6 - Set Scheme - SAME70_LED1</span></i>
+    laWidget_SetScheme((laWidget*)SAME70_LED1 &amp;LED1_ON);
+    <i><span style="color: #008000">// TurnOnDisplayD7 - Set Scheme - SAME70_LED2</span></i>
+    laWidget_SetScheme((laWidget*) SAME70_LED2, &amp;LED2_ON);
+}
+
+
+<strong><span style="color: #000080">void</span></strong> LEDsTurnOff(<strong><span style="color: #000080">void</span></strong>)
+{
+    <strong><span style="color: #000080">if</span></strong>(laContext_GetActiveScreenIndex() != default_ID)
+        <strong><span style="color: #000080">return</span></strong>;
+
+    <i><span style="color: #008000">// TurnOffDisplayD6 - Set Scheme - SAME70_LED1</span></i>
+    laWidget_SetScheme((laWidget*)MEB2_LED_D6, &amp;LED_OFF);
+    <i><span style="color: #008000">// TurnOffDisplayD7 - Set Scheme - SAME70_LED2</span></i>
+    laWidget_SetScheme((laWidget*) SAME70_LED2, &amp;LED_OFF);
+}</pre></div></div>
 <p class="Element10">
-<i>Before applying the clipping rectangle</i>.:&nbsp;</p>
+&nbsp;</p>
 <p class="Element10">
-<img src="MHGC UG before clipping rectangle.png" border="0" alt="" title="">&nbsp;</p>
+The difference among the color schemes is only in the base color: </p><p class="Element10" style="text-align: center;">
+<img src="MHGC UG Graphics Events Testbed Color Schemes.png" border="0" alt="" title="">&nbsp;</p>
+<p class="Element10" style="text-align: center;">
+&nbsp;</p>
+<p class="Element10" style="text-align: center;">
+&nbsp;</p><p class="Element10">
+The macros <strong>LEDsTurnOn</strong> and <strong>LEDsTurnOff</strong> are called from the application’s main task loop, <strong>APP_Tasks</strong>. The work of controlling the LEDs is done in the <strong>APP_STATE_SERVICE_TASKS</strong> state: </p><div class="Element13"><div class="Element12"><pre class="Element12"><strong><span style="color: #000080">void</span></strong> APP_Image_Tasks( <strong><span style="color: #000080">void</span></strong> );
+
+<strong><span style="color: #000080">static</span></strong> <strong><span style="color: #000080">bool</span></strong> bS1State = <strong><span style="color: #000080">false</span></strong>;
+<strong><span style="color: #000080">static</span></strong> <strong><span style="color: #000080">bool</span></strong> bLED_State = <strong><span style="color: #000080">false</span></strong>;
+<strong><span style="color: #000080">static</span></strong> <strong><span style="color: #000080">bool</span></strong> bLED_StateNow;
+
+<strong><span style="color: #000080">char</span></strong> *msgBuffer = &quot;\r\nApplication created &quot; __DATE__ &quot; &quot; __TIME__
+                  &quot; initialized!\r\n&quot;;
+
+<strong><span style="color: #000080">void</span></strong> APP_Tasks ( <strong><span style="color: #000080">void</span></strong> )
+{
+    <i><span style="color: #008000">/* Check the application's current state. */</span></i>
+    <strong><span style="color: #000080">switch</span></strong> ( appData.state )
+    {
+        <i><span style="color: #008000">/* Application's initial state. */</span></i>
+        <strong><span style="color: #000080">case</span></strong> APP_STATE_INIT:
+        {
+            <strong><span style="color: #000080">bool</span></strong> appInitialized = <strong><span style="color: #000080">true</span></strong>;
+            <i><span style="color: #008000">/* Show Hyperterminal is working using available output functions */</span></i>
+            SYS_CONSOLE_Write(SYS_CONSOLE_INDEX_0, STDOUT_FILENO,
+                              msgBuffer, strlen(msgBuffer));
+            <strong><span style="color: #000080">if</span></strong> (appInitialized)
+            {
+                appData.state = APP_STATE_SERVICE_TASKS;
+            }
+            <strong><span style="color: #000080">break</span></strong>;
+        }
+
+        <strong><span style="color: #000080">case</span></strong> APP_STATE_SERVICE_TASKS:
+        {
+            APP_Image_Tasks(); <i><span style="color: #008000">// Handle images</span></i>
+            bS1State = !SW1_Get(); <i><span style="color: #008000">// Closed --&gt; grounded</span></i>
+            bLED_StateNow = bS1State || appData.bDisplay_S1State; <i><span style="color: #008000">// S1 and virtual S1</span></i>
+            <strong><span style="color: #000080">if</span></strong> ( bLED_State != bLED_StateNow )
+            {<i><span style="color: #008000">// LED state has changed</span></i>
+                <strong><span style="color: #000080">if</span></strong> ( bLED_StateNow )
+                {
+                    LED1_On();  <i><span style="color: #008000">// LED1 On</span></i>
+                    LED2_On();  <i><span style="color: #008000">// LED2 On</span></i>
+                    LEDsTurnOn();   <i><span style="color: #008000">// Turn display LEDs off; // Turn display LEDs on</span></i>
+                }
+                <strong><span style="color: #000080">else</span></strong>
+                {
+                    LED1_Off(); <i><span style="color: #008000">// LED1 Off</span></i>
+                    LED2_Off(); <i><span style="color: #008000">// LED2 Off</span></i>
+                    LEDsTurnOff();   <i><span style="color: #008000">// Turn display LEDs off</span></i>
+                }<i><span style="color: #008000">//end if ( bMEB2_S1State || bDisplay_S1State )</span></i>
+                bLED_State = bLED_StateNow; <i><span style="color: #008000">// Remember new state</span></i>
+            }
+            <strong><span style="color: #000080">break</span></strong>;
+        }
+
+        <strong><span style="color: #000080">default</span></strong>:
+        { <i><span style="color: #008000">/* The default state should never be executed. */</span></i>
+           <strong><span style="color: #000080">#define</span></strong> UNKNOWN_APP_STATE 0
+            assert(UNKNOWN_APP_STATE);
+            <strong><span style="color: #000080">break</span></strong>;
+        }
+
+    }<i><span style="color: #008000">//end switch ( appData.state )</span></i>
+
+}<i><span style="color: #008000">//end APP_Tasks</span></i></pre></div></div>
 <p class="Element10">
-<i>After applying the clipping rectangle:</i>&nbsp;</p>
+&nbsp;</p>
 <p class="Element10">
-<img src="MHGC UG after clipping rectangle.png" border="0" alt="" title="">&nbsp;</p>
+The image widget is managed in <strong>APP_Image_Tasks</strong>. This state machine is responsible for the dynamic changing of the image displayed based on the list wheel <strong>Select_Image</strong>. </p><div class="Element13"><div class="Element12"><pre class="Element12"><strong><span style="color: #000080">void</span></strong> APP_Image_Tasks( <strong><span style="color: #000080">void</span></strong> )
+{
+    <strong><span style="color: #000080">static</span></strong> APP_IMAGE_SELECTED image_selected_old = APP_IMAGE_NOIMAGE;
+
+    <strong><span style="color: #000080">if</span></strong> ( laContext_IsDrawing() )
+    { <i><span style="color: #008000">// Don't do anything.  Wait until all drawing is done.</span></i>
+        <strong><span style="color: #000080">return</span></strong>;
+    }
+
+    <strong><span style="color: #000080">switch</span></strong> ( appData.image_selected )
+    {
+        <strong><span style="color: #000080">case</span></strong> APP_IMAGE_NOIMAGE:
+            <strong><span style="color: #000080">if</span></strong> ( appData.bImageDrawn )
+            { <i><span style="color: #008000">// If image is visible, hide it</span></i>
+                laWidget_SetVisible((laWidget *)ImageSelected,LA_FALSE);
+                appData.bImageDrawn = <strong><span style="color: #000080">false</span></strong>;
+            }
+            image_selected_old = APP_IMAGE_NOIMAGE;
+            <strong><span style="color: #000080">break</span></strong>;
+
+        <strong><span style="color: #000080">case</span></strong> APP_IMAGE_BABOON:
+            <strong><span style="color: #000080">if</span></strong> ( !appData.bImageCreated )
+            { <i><span style="color: #008000">// Create image for the first time</span></i>
+                _APP_Image_Create();
+                appData.bImageCreated = <strong><span style="color: #000080">true</span></strong>;
+                appData.bImageDrawn   = <strong><span style="color: #000080">true</span></strong>;
+            }
+            <strong><span style="color: #000080">if</span></strong> ( !appData.bImageDrawn )
+            { <i><span style="color: #008000">// Image hidden, make it visible</span></i>
+                laWidget_SetVisible((laWidget *)ImageSelected,LA_TRUE);
+                appData.bImageDrawn = <strong><span style="color: #000080">true</span></strong>;
+            }
+            <strong><span style="color: #000080">if</span></strong> ( image_selected_old != APP_IMAGE_BABOON )
+            { <i><span style="color: #008000">// Select Baboon as the image displayed</span></i>
+                laImageWidget_SetImage((laImageWidget*)ImageSelected,
+                                       &amp;Baboon_quartersized);
+                image_selected_old = APP_IMAGE_BABOON;
+            }
+            <strong><span style="color: #000080">break</span></strong>;
+
+        <strong><span style="color: #000080">case</span></strong> APP_IMAGE_LENA:
+            <strong><span style="color: #000080">if</span></strong> ( !appData.bImageCreated )
+            { <i><span style="color: #008000">// Create image for the first time</span></i>
+                _APP_Image_Create();
+                appData.bImageCreated = <strong><span style="color: #000080">true</span></strong>;
+                appData.bImageDrawn   = <strong><span style="color: #000080">true</span></strong>;
+            }
+            <strong><span style="color: #000080">if</span></strong> ( !appData.bImageDrawn )
+            { <i><span style="color: #008000">// Image hidden, make it visible</span></i>
+                laWidget_SetVisible((laWidget *)ImageSelected,LA_TRUE);
+                appData.bImageDrawn = <strong><span style="color: #000080">true</span></strong>;
+            }
+            <strong><span style="color: #000080">if</span></strong> ( image_selected_old != APP_IMAGE_LENA )
+            { <i><span style="color: #008000">// Select Lena as the image displayed</span></i>
+                laImageWidget_SetImage((laImageWidget*)ImageSelected,
+                                       &amp;Lena_quartersized);
+                image_selected_old = APP_IMAGE_LENA;
+            }
+            <strong><span style="color: #000080">break</span></strong>;
+
+        <strong><span style="color: #000080">default</span></strong>:
+           <strong><span style="color: #000080">#define</span></strong> UNKNOWN_IMAGE_TASK_STATE 0
+            assert(UNKNOWN_IMAGE_TASK_STATE);
+            <strong><span style="color: #000080">break</span></strong>;
+
+    }<i><span style="color: #008000">//end switch ( appData.image_state )</span></i>
+
+}<i><span style="color: #008000">//end APP_Image_Tasks( void )</span></i></pre></div></div>
 <p class="Element10">
-<strong>Color Masking of Pixels</strong>&nbsp;</p>
+&nbsp;</p>
 <p class="Element10">
-Pixels in the image are matched to a mask color. If the colors match the pixel is discarded (not drawn). In the following example, the black border of the image is removed by defining the mask color to be black.&nbsp;</p>
+At boot-up the widget <strong>ImageSelected</strong> has not been created. Only when the image is changed from <i>None</i> to <i>Baboon</i> or <i>Lena</i> is the image created for the first time. Then if the image is changed back to <i>None</i> the <strong>APP_Image_Tasks</strong> hides the image by making it invisible. </p><div class="Element13"><div class="Element12"><pre class="Element12"><strong><span style="color: #000080">static</span></strong> <strong><span style="color: #000080">void</span></strong> _APP_Image_Create( <strong><span style="color: #000080">void</span></strong> )
+{ <i><span style="color: #008000">// Create the image widget for the first time.</span></i>
+    <strong><span style="color: #000080">while</span></strong> ( laContext_IsDrawing() )
+    { <i><span style="color: #008000">// Don't do anything.  Wait until all drawing is done.</span></i>
+    }
+
+    ImageSelected = laImageWidget_New();
+    laWidget_SetPosition((laWidget*)ImageSelected, 6, 66);
+    laWidget_SetSize((laWidget*)ImageSelected, 128, 128);
+    laWidget_SetBackgroundType((laWidget*)ImageSelected, LA_WIDGET_BACKGROUND_NONE);
+    laWidget_SetBorderType((laWidget*)ImageSelected, LA_WIDGET_BORDER_NONE);
+    laWidget_AddChild((laWidget*)Images, (laWidget*)ImageSelected);
+
+}<i><span style="color: #008000">//end APP_Image_Create</span></i></pre></div></div>
 <p class="Element10">
-<i>Before applying color mask:</i>&nbsp;</p>
+&nbsp;</p>
 <p class="Element10">
-<img src="MHGC UG before color mask.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10">
-<i>After applying color mask:</i>&nbsp;</p>
-<p class="Element10">
-<img src="MHGC UG after color mask.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10">
-<strong>Orientation and Mirroring</strong>&nbsp;</p>
-<p class="Element10">
-The logical orientation of the graphics design may not match the physical layout of the display. Pixels may need to be reoriented from logical to physical space before being rendered.&nbsp;</p>
-<p class="Element10">
-<img src="MHGC UG reorienting from logical to physical.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10">
-Pixels may also need to be flipped (mirrored) before being rendered.&nbsp;</p>
-<p class="Element10">
-<img src="MHGC UG flipping pixelsbefore rendering.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10">
-<strong>Alpha Blending</strong>&nbsp;</p>
-<p class="Element10">
-Each pixel drawn is a composite of the image color and the background color based on the alpha blend value defined by a global alpha value, the pixels alpha value, or both.&nbsp;</p>
-<p class="Element10">
-<i>Before alpha blending:</i>&nbsp;</p>
-<p class="Element10">
-<img src="MHGC UG before alpha blending.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10">
-<i>After alpha blending:</i>&nbsp;</p>
-<p class="Element10">
-<img src="MHGC UG after alpha blending.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10">
-<strong>Color Conversion</strong>&nbsp;</p>
-<p class="Element10">
-The image color format may not be the same as the destination frame buffer. Each pixel must be converted before it is written. In the following example, the image is stored using 24 bits per pixel; however, the frame buffer uses 16 bits per pixel.&nbsp;</p>
-<p class="Element10">
-<img src="MHGC UG color conversion.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10">
-<strong>Frame Buffer Write</strong>&nbsp;</p>
-<p class="Element10">
-The final stage in rendering an image is to write each-color converted pixel to the frame buffer.</p></div>
+If <strong>laContect_IsDrawing</strong> returns true, then neither <strong>APP_Image_Tasks</strong> or <strong>_APP_Image_Create</strong> runs. This is to prevent conflicts in the redraws by the graphics library.</p></div>
 </div>
 </div>
 <!-- End Page Content -->
 
 <!-- Begin Page Footer -->
 <div class="Element95">
-<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02749.html" target="topic">Advanced Topics</a> &gt; <a href="02755.html" target="topic">Draw Pipeline Options</a> &gt; <a href="02770.html" target="topic">Graphics Pipeline</a></div>
+<a href="00462.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02750.html" target="topic">Advanced Topics</a> &gt; <a href="02770.html" target="topic">Custom Event Handling and Dynamic Widget Creation</a></div>
 <div class="Element93">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -130,13 +331,13 @@ The final stage in rendering an image is to write each-color converted pixel to 
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element4">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00462.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element91">
-<a href="02755.html" target="topic">Previous</a> | <a href="02755.html" target="topic">Up</a> | <a href="02771.html" target="topic">Next</a></div>
+<a href="02791.html" target="topic">Previous</a> | <a href="02750.html" target="topic">Up</a> | <a href="02762.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element97">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG Graphics Pipeline Topic Title: Graphics Pipeline)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG Graphics Events Testbed Topic Title: Custom Event Handling and Dynamic Widget Creation)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table></div>
 
 <!-- End Page Footer -->

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
 <head>
-<title>libaria_list.h</title>
+<title>libaria_layer.h</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="generator" content="Doc-O-Matic" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -18,7 +18,7 @@
 <!-- Begin Page Header -->
 <div class="Element710" id="areafixed">
 <div class="Element94">
-<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00566.html" target="topic">Graphics Library</a> &gt; <a href="00558.html" target="topic">Aria Graphics Library</a> &gt; <a href="00560.html" target="topic">Files</a> &gt; <a href="02700.html" target="topic">libaria_list.h</a></div>
+<a href="00462.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00567.html" target="topic">Graphics Library</a> &gt; <a href="00559.html" target="topic">Aria Graphics Library</a> &gt; <a href="00561.html" target="topic">Files</a> &gt; <a href="02700.html" target="topic">libaria_layer.h</a></div>
 <div class="Element92">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -26,15 +26,15 @@
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element2">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00462.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element90">
-<a href="02699.html" target="topic">Previous</a> | <a href="00560.html" target="topic">Up</a> | <a href="02701.html" target="topic">Next</a></div>
+<a href="02698.html" target="topic">Previous</a> | <a href="00561.html" target="topic">Up</a> | <a href="02701.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element96">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: libaria_list.h Topic Title: libaria_list.h)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: libaria_layer.h Topic Title: libaria_layer.h)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table><div class="Element5">
-libaria_list.h</div>
+libaria_layer.h</div>
 </div>
 </div>
 
@@ -49,7 +49,52 @@ libaria_list.h</div>
 <a name="4465736372697074696F6E"></a><div class="Element11">
 <div class="Element10">
 <p class="Element10">
-This is file libaria_list.h.</p></div>
+This is file libaria_layer.h.</p></div>
+</div>
+<a name="456E756D65726174696F6E73"></a><div class="Element14">
+Enumerations</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element201">
+ &nbsp;</div></td><td class="Element200" valign="top" width="25%">
+<div class="Element201">
+Name&nbsp;</div></td><td class="Element204" valign="top" width="65%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_enum.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01689.html" target="topic">laLayerBufferType_t</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Defines the type of a layer. If the layer has an explicit address then Aria tries to set that through the HAL when the layer is being set up.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_enum.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01693.html" target="topic">laLayerFrameState_t</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Defines the frame state of a layer. Certain actions must only be performed at the start of a new frame and other actions must wait until the end of the current frame.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_structure.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01689.html" target="topic">laLayerBufferType</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Defines the type of a layer. If the layer has an explicit address then Aria tries to set that through the HAL when the layer is being set up.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_structure.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01693.html" target="topic">laLayerFrameState</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Defines the frame state of a layer. Certain actions must only be performed at the start of a new frame and other actions must wait until the end of the current frame.&nbsp;</div></td></tr></table></div></div>
+</div>
 </div>
 <a name="46756E6374696F6E73"></a><div class="Element14">
 Functions</div>
@@ -70,100 +115,170 @@ Description&nbsp;</div></td></tr><tr>
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01816.html" target="topic">laList_Assign</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01636.html" target="topic">laLayer_AddDamageRect</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Assignes a new pointer to an index in the list&nbsp;</div></td></tr><tr>
+Adds a damaged rectangle to the list. Damage rectangles are used in minimal redraw algorithms.&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01817.html" target="topic">laList_Clear</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01637.html" target="topic">laLayer_Delete</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Removes all nodes from a given list&nbsp;</div></td></tr><tr>
+Destructor for the layer object&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01818.html" target="topic">laList_Copy</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01638.html" target="topic">laLayer_GetAllowInputPassThrough</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Creates a duplicate of an existing list&nbsp;</div></td></tr><tr>
+Gets the layer's input passthrough setting&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01819.html" target="topic">laList_Create</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01639.html" target="topic">laLayer_GetAlphaAmount</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Initializes a new linked list&nbsp;</div></td></tr><tr>
+Get's the amount of alpha blending for a given layer&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01820.html" target="topic">laList_Destroy</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01640.html" target="topic">laLayer_GetAlphaEnable</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Removes all nodes from a given list and frees the data of each node&nbsp;</div></td></tr><tr>
+Gets the layer alpha enable flag&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01821.html" target="topic">laList_Find</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01641.html" target="topic">laLayer_GetBufferCount</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Retrieves the index of a value from the list&nbsp;</div></td></tr><tr>
+Return the buffer count for the current layer&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01822.html" target="topic">laList_Get</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01642.html" target="topic">laLayer_GetEnabled</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Retrieves a value from the list&nbsp;</div></td></tr><tr>
+Returns the boolean value of the layer enabled property&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01823.html" target="topic">laList_InsertAt</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01643.html" target="topic">laLayer_GetInputRect</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Inserts an item into a list at a given index. All existing from index are shifted right one place.&nbsp;</div></td></tr><tr>
+Gets the layer's input rectangle.&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01824.html" target="topic">laList_PopBack</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01644.html" target="topic">laLayer_GetInputRectLocked</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Removes the last value from the list&nbsp;</div></td></tr><tr>
+Gets the layer's input rect locked flag&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01825.html" target="topic">laList_PopFront</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01645.html" target="topic">laLayer_GetMaskColor</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Removes the first value from the list&nbsp;</div></td></tr><tr>
+Returns the mask color value for the current layer&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01826.html" target="topic">laList_PushBack</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01646.html" target="topic">laLayer_GetMaskEnable</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Pushes a new node onto the back of the list&nbsp;</div></td></tr><tr>
+Gets the layer mask enable flag&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01827.html" target="topic">laList_PushFront</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01647.html" target="topic">laLayer_GetVSync</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Pushes a new node onto the front of the list&nbsp;</div></td></tr><tr>
+Gets the layer's vsync flag setting&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01828.html" target="topic">laList_Remove</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01648.html" target="topic">laLayer_IsDrawing</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Removes an item from the list&nbsp;</div></td></tr><tr>
+Queries a layer to find out if it is currently drawing a frame.&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01829.html" target="topic">laList_RemoveAt</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01649.html" target="topic">laLayer_New</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Removes an item from the list at an index&nbsp;</div></td></tr></table></div></div>
+Constructor for a new layer&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01650.html" target="topic">laLayer_SetAllowInputPassthrough</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Sets the layer's input passthrough flag.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01651.html" target="topic">laLayer_SetAlphaAmount</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Set's the amount of alpha blending for a given layer&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01652.html" target="topic">laLayer_SetAlphaEnable</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Sets the layer alpha enable flag to the specified value&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01653.html" target="topic">laLayer_SetBufferCount</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Set the buffer count for the current layer to the specified value&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01654.html" target="topic">laLayer_SetEnabled</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Sets the boolean value of the layer enabled property&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01655.html" target="topic">laLayer_SetInputRect</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Sets the layer's input rect dimensions.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01656.html" target="topic">laLayer_SetInputRectLocked</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Sets the layer's input rect locked flag.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01657.html" target="topic">laLayer_SetMaskColor</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Set the mask color value for the current layer to the specified value&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01658.html" target="topic">laLayer_SetMaskEnable</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Sets the layer mask enable flag to the specified value&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
+<div class="Element203">
+<img src="indicator_method.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
+<div class="Element203">
+<a href="01659.html" target="topic">laLayer_SetVSync</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<div class="Element207">
+Sets the layer's vsync flag.&nbsp;</div></td></tr></table></div></div>
 </div>
 </div>
 <a name="53747275637475726573"></a><div class="Element14">
@@ -185,23 +300,23 @@ Description&nbsp;</div></td></tr><tr>
 <div class="Element203">
 <img src="indicator_structure.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01830.html" target="topic">laList_t</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01660.html" target="topic">laLayer_t</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Linked list definition&nbsp;</div></td></tr><tr>
+Primary definition of a layer. Builds on base functions of a standard widget. Should never have a direct parent.&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_structure.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01841.html" target="topic">laListNode_t</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01685.html" target="topic">laLayerBuffer_t</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Linked list node definition&nbsp;</div></td></tr><tr>
+Structure to maintain the buffer type and track the buffer location for each layer&nbsp;</div></td></tr><tr>
 <td class="Element202" valign="top" width="10%" style="white-space: nowrap;">
 <div class="Element203">
 <img src="indicator_structure.gif" border="0" alt="" title="">&nbsp;</div></td><td class="Element202" valign="top" width="25%">
 <div class="Element203">
-<a href="01841.html" target="topic">laListNode</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
+<a href="01685.html" target="topic">laLayerBuffer</a>&nbsp;</div></td><td class="Element206" valign="top" width="65%">
 <div class="Element207">
-Linked list node definition&nbsp;</div></td></tr></table></div></div>
+Structure to maintain the buffer type and track the buffer location for each layer&nbsp;</div></td></tr></table></div></div>
 </div>
 </div>
 </div>
@@ -209,7 +324,7 @@ Linked list node definition&nbsp;</div></td></tr></table></div></div>
 
 <!-- Begin Page Footer -->
 <div class="Element95">
-<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00566.html" target="topic">Graphics Library</a> &gt; <a href="00558.html" target="topic">Aria Graphics Library</a> &gt; <a href="00560.html" target="topic">Files</a> &gt; <a href="02700.html" target="topic">libaria_list.h</a></div>
+<a href="00462.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="00567.html" target="topic">Graphics Library</a> &gt; <a href="00559.html" target="topic">Aria Graphics Library</a> &gt; <a href="00561.html" target="topic">Files</a> &gt; <a href="02700.html" target="topic">libaria_layer.h</a></div>
 <div class="Element93">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -217,13 +332,13 @@ Linked list node definition&nbsp;</div></td></tr></table></div></div>
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element4">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00462.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element91">
-<a href="02699.html" target="topic">Previous</a> | <a href="00560.html" target="topic">Up</a> | <a href="02701.html" target="topic">Next</a></div>
+<a href="02698.html" target="topic">Previous</a> | <a href="00561.html" target="topic">Up</a> | <a href="02701.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element97">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: libaria_list.h Topic Title: libaria_list.h)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: libaria_layer.h Topic Title: libaria_layer.h)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table></div>
 
 <!-- End Page Footer -->

@@ -73,21 +73,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md177">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md178">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md178">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md179">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md179">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md180">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md181">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md182">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md180">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md181">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md182">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md183">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md177"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md178"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_9x60_ek_tm5000_arch.png" alt="" class="inline"/></p>
 <p>The project uses a draw surface widget as a container to draw the gauge needle using lines. When the user touches the screen, a touch event is sent to the application. The application updates the values of the tachometer, speedometer and fuel gauge. The needle is cleared and redrawn every time the tachometer value changes. The speed, distance and fuel gauge are also updated. Label widgets are used to show the speed and distance, while image widgets are used to show the indicators and fuel gauge.</p>
-<h3><a class="anchor" id="autotoc_md178"></a>
+<h3><a class="anchor" id="autotoc_md179"></a>
 Demonstration Features</h3>
 <ul>
 <li>LCDC display controller with multiple HW layers</li>
@@ -100,12 +100,12 @@ Demonstration Features</h3>
 <li>Software-based image rotation</li>
 <li>Backlight PWM control</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md179"></a>
+<h2><a class="anchor" id="autotoc_md180"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_9x60_ek_tm5000_pg.png" alt="" class="inline"/></p>
 <p>The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
 <p>Adding the “SAM 9x60 Evaluation Kit BSP” and “Aria Graphics w/ PDA TM4301b Display” Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller</p>
-<h2><a class="anchor" id="autotoc_md180"></a>
+<h2><a class="anchor" id="autotoc_md181"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/aria_dashboard. To build this application, open the IAR project at: gfx/apps/aria_dashboard/firmware/aria_db_9x60_ek_tm5000.eww. Once IAR is launched simply build the application to produce the harmony.bin image. Copy harmony.bin to a FAT32-formatted SD card. The SD card must also contain the supplied bootloader binary needed to boot Harmony applications. Insert the card to the SDMMC1 port on the board</p>
 <p>The SAM 9x60 build environment is similar to SAMA592. For more building information, see: Getting started with Harmony 3 on the SAMA5D2.</p>
@@ -121,12 +121,12 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md181"></a>
+<h2><a class="anchor" id="autotoc_md182"></a>
 Configuring the Hardware</h2>
 <p>The final hardware set-up should be:</p>
 <p>Connect the ribbon cable from the display to the J16 connector on the back of the SAM 9x60 Evaluation Kit board.</p>
 <p><img src="legato_dashboard_9x60_sk_wvga_conf1.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md182"></a>
+<h2><a class="anchor" id="autotoc_md183"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, the demonstration will display a similar menu to that shown in the following figure (different configurations may have slight variation in the screen aspect ratio):</p>
 <p><img src="legato_qs_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>

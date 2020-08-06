@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
 <head>
-<title>String Assets</title>
+<title>Speed and Performance of Different Image Decode Formats in MHGC</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="generator" content="Doc-O-Matic" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -18,7 +18,7 @@
 <!-- Begin Page Header -->
 <div class="Element710" id="areafixed">
 <div class="Element94">
-<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02793.html" target="topic">Designer</a> &gt; <a href="02768.html" target="topic">Microchip Aria Designer</a> &gt; <a href="02767.html" target="topic">Graphics Composer Asset Management</a> &gt; <a href="02787.html" target="topic">String Assets</a></div>
+<a href="00462.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02750.html" target="topic">Advanced Topics</a> &gt; <a href="02787.html" target="topic">Speed and Performance of Different Image Decode Formats in MHGC</a></div>
 <div class="Element92">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -26,15 +26,15 @@
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element2">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00462.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element90">
-<a href="02788.html" target="topic">Previous</a> | <a href="02767.html" target="topic">Up</a> | <a href="02751.html" target="topic">Next</a></div>
+<a href="02750.html" target="topic">Previous</a> | <a href="02750.html" target="topic">Up</a> | <a href="02791.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element96">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG String Assets Topic Title: String Assets)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG Speed and Performance of Different Image Decode Formats in MHGC Topic Title: Speed and Performance of Different Image Decode Formats in MHGC)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table><div class="Element5">
-String Assets</div>
+Speed and Performance of Different Image Decode Formats in MHGC</div>
 </div>
 </div>
 
@@ -49,89 +49,73 @@ String Assets</div>
 <a name="4465736372697074696F6E"></a><div class="Element11">
 <div class="Element10">
 <p class="Element10">
-The String Assets window is launched from the Graphics Composer’s Asset menu.&nbsp;</p>
-<p class="Element10">
-The String Assets window supports managing the strings in the application. Strings are referenced by graphic widgets using an application-wide unique name. This unique name is built into an enumeration that the application’s C code uses. For each language supported text is defined and a font asset selected. </p><div class="Element63">
-<div class="TableDiv">
-<table cellspacing="0" class="Table0">
-<tr>
-<td class="Element67" valign="top" width="10%" style="border:none;">
-<div class="Element68">
-<img src="Note Icon.png" border="0" alt="" title=""><strong> Note:</strong>&nbsp;</div></td><td class="Element67" valign="top" width="90%" style="border:none;">
-<div class="Element68">
-There are three dimensions to text support: Languages, Fonts, and Strings. Language “ID” strings are identified when an application supports more than one language. (In the case of single language support, the language default is provided.) Fonts are imported and organized using the Font Assets window. Strings are defined by a string name, and this name is used by widgets to reference the string. For each string and each language supported the glyphs are defined to spell out the string’s text and the font is chosen for that text.</p>
+MHGC supports various image formats and the MHGC Image Assets Manager provides the ability to convert and store a source image into to the following formats</p>
 <ul class="Element630">
-<li class="Element600">Languages are managed within the <a href="02788.html" target="topic">String Table Configuration</a> window</li>
-<li class="Element600">Fonts are managed within the <a href="02748.html" target="topic">Font Assets</a> window</li>
-<li class="Element600">Strings are managed within the String Assets window (this topic)</li>
-</ul><p class="Element68">
-&nbsp;</div></td></tr></table></div></div>
+<li class="Element600">Bitmap RAW</li>
+<li class="Element600">Bitmap Raw Run-Length Encoded (RLE)</li>
+<li class="Element600">JPEG</li>
+<li class="Element600">PNG</li>
+<li class="Element600">Predecoded RAW Bitmap in DDR (PIC32MZ DA)</li>
+</ul><p class="Element10">
+The following table shows the relative rendering time and Flash memory requirements of the different image formats in the MPLAB Harmony Graphics Library. The rendering time includes decoding the image and drawing it to the screen. This information is helpful when optimizing a MPLAB Harmony graphics project for performance and Flash memory space. For example, as shown by the red highlighted text in the table, a 40x40 pixel 16-bit RAW image renders 2.38 times faster and uses 2.59 times more Flash space than a JPEG image. </p><p class="Element10" style="text-align: center;">
+<img src="MHGC UG Decode Table.png" border="0" alt="" title=""></p><div class="Element15">
+Predecoded Images in DDR (RAW)</div>
 <p class="Element10">
-The following figure shows an example taken from the <span class="Element145">Aria Coffee Maker</span> demonstration. The string name, InfoText_Desc9, defines a string asset that is used by the application. </p><p class="Element10" style="text-align: center;">
-<img src="MHGC UG String Assets InfoText_Desc9.png" border="0" alt="" title=""></p><p class="Element10">
-The Total Size in Byte: for a string asset represents the memory needed to store the glyph indices for all the text defined for that string asset. Adding more text will increase the number of glyph indices needed thus increasing the size of the string’s memory. Adding another language will do the same, since the number of glyph indices also increases. Changing the font does not increase the size of the string’s memory, but may increase the size of the font chosen if it is a “bigger” font and adds more glyphs to the new font. (By “bigger” we mean a font with more pixels, for example because it is bigger in size, or perhaps because it is anti-aliased and the original font was not.) </p><div class="Element63">
+For PIC32MZ DA devices with DDR, the MHGC Image Asset Manager provides an option to predecode images from Flash and store them into DDR as RAW images. The GPU is used to render the decoded image from DDR to the frame buffer. This provides a faster render time than an equivalent RAW image in Flash memory, specifically for large images (up to 10 times faster for a 200x200 image). Conversely, predecoding small images 40x40 pixels or smaller in DDR may not render faster due to the additional overhead of setting up the GPU.&nbsp;</p>
+<p class="Element10">
+<i>Recommendations:</i>&nbsp;</p>
+<ul class="Element630">
+<li class="Element600">If there is adequate DDR memory available, consider predecoding images to DDR for best performance</li>
+<li class="Element600">Using JPEG images and predecoding them into DDR can provide the best rendering performance and most Flash memory savings.</li>
+</ul><div class="Element63">
 <div class="TableDiv">
 <table cellspacing="0" class="Table0">
 <tr>
 <td class="Element67" valign="top" width="10%" style="border:none;">
 <div class="Element68">
-<img src="Note Icon.png" border="0" alt="" title=""><strong> Note:</strong>&nbsp;</div></td><td class="Element67" valign="top" width="90%" style="border:none;">
+<img src="Note Icon.png" border="0" alt="" title=""> <strong>Note:</strong>&nbsp;</div></td><td class="Element67" valign="top" width="90%" style="border:none;">
 <div class="Element68">
-The Reference Count shown reflects the number of build-time references to the string. Dynamic uses of a string, such as through macros or events, is not reflected in this number.&nbsp;</div></td></tr></table></div></div>
+The images are decoded from Flash to DDR memory by the Graphics Library during initialization and may introduce delay at boot-up, depending on the number and size of the images.&nbsp;</div></td></tr></table></div></div>
 <div class="Element15">
-Window Toolbar</div>
+RAW Images</div>
 <p class="Element10">
-There are four icons on the toolbar:</p>
-<ol class="Element630">
-<li value="1" class="Element600"><strong>Add New String</strong> – Adds a new string.</li>
-<li value="2" class="Element600"><strong>Rename Selected Item</strong> – Allows renaming the string.</li>
-<li value="3" class="Element600"><strong>Describe Selected String</strong> - Provides a <i>Description</i> field value for selected string.</li>
-<li value="4" class="Element600"><strong>Create New Virtual Folder</strong> – Creates a new virtual folder, allowing the user to organize strings in a hierarchy. Here’s an example reorganization of the existing strings. Note the order of virtual folders or items in the list is strictly alphabetical. Virtual folders and string asset organization is merely for the convenience of the developer. Neither has an effect on how the application is built.</li>
-</ol><p class="Element10" style="text-align: center;">
-<img src="MHGC UG String Assets GPU_On.png" border="0" alt="" title=""></p>
-<ol class="Element630">
-<li value="5" class="Element600"><strong>Delete Selected Items</strong> – Deletes selected strings from the application.</li>
-<li value="6" class="Element600"><strong>Import String Table</strong> - Imports an Excel CSV (Comma Separated Value) file to replace the current string table.</li>
-<li value="7" class="Element600"><strong>Export String Table</strong> - Exports the current string table as an Excel CSV (Comma Separated Value) text file.</li>
-</ol><p class="Element10">
-&nbsp;</p>
-<div class="Element15">
-Creating New Strings</div>
+RAW images provide fast rendering time, as there is no decoding needed. However, depending on image content, it can be two times larger than a Run-Length Encoded (RLE) image and about 3 to 10 times larger than a JPEG.&nbsp;</p>
 <p class="Element10">
-To create a new string, click Add New String ( <img src="MHGC UG Add New String Icon.png" border="0" alt="" title=""> ).&nbsp;</p>
+<i>Recommendation:</i>&nbsp;</p>
 <p class="Element10">
-Selecting this icon opens the Add String dialog to name the string. The text chosen for the string name should be acceptable as a C variable. </p><p class="Element10" style="text-align: center;">
-<img src="MHGC UG Add String Dialog.png" border="0" alt="" title="">&nbsp;</p>
-<p class="Element10" style="text-align: center;">
-&nbsp;</p>
-<p class="Element10" style="text-align: center;">
-&nbsp;</p><p class="Element10">
-After entering the new string’s name and click Create, the following String Assets window appears. </p><p class="Element10" style="text-align: center;">
-<img src="MHGC UG String Assets Add String.png" border="0" alt="" title=""></p><p class="Element10">
-&nbsp;</p>
+For small images that are to be rendered frequently, consider using a RAW image for better performance</p><div class="Element15">
+JPEG Images</div>
 <p class="Element10">
-In the String Assets window, there will be a line for each of the languages defined for the application. Provide the string text and font for each of the languages. An empty string will be used if the text is not provided. Not providing a font causes the string to be rendered as a string of boxes ( <img src="MHGC UG Unrendered Font Notification.png" border="0" alt="" title=""> ).</p><div class="Element15">
-Importing and Exporting String Tables</div>
+JPEG images provide the most Flash space savings, but are slower to render compared to RAW and RAW RLE.&nbsp;</p>
 <p class="Element10">
-Importing an Excel CSV (Comma Separated Values) file replaces the existing string assets table. Exporting creates an Excel CSV file that can be imported into another project or target configuration. Exported string tables can be manipulated in Excel, even combining multiple string tables into a single string table that can then be imported.&nbsp;</p>
+<i>Recommendations:</i>&nbsp;</p>
+<ul class="Element630">
+<li class="Element600">If images are large and not used frequently, consider using the JPEG image format to save flash memory space</li>
+<li class="Element600">If DDR memory is available, consider predecoding JPEG images in DDR for better rendering performance</li>
+</ul><div class="Element15">
+Run-Length Encoded RAW Images</div>
 <p class="Element10">
-If the string asset table contains UTF-8 then the file cannot be directly loaded into Excel. Instead, within Excel create a new sheet. Import the string table using <i>Get Data</i>, selecting <i>From File, From Text</i>, or <i>CSV</i>. Then in the dialog window change the <i>File Origin </i>to <i>Unicode (UTF-8</i>). </p><div class="Element63">
-<div class="TableDiv">
-<table cellspacing="0" class="Table0">
-<tr>
-<td class="Element67" valign="top" width="10%" style="border:none;">
-<div class="Element68">
-<img src="Note Icon.png" border="0" alt="" title=""><strong> Note:</strong>&nbsp;</div></td><td class="Element67" valign="top" width="90%" style="border:none;">
-<div class="Element68">
-Excel does not support importing UTF-16.&nbsp;</div></td></tr></table></div></div>
-</div>
+In terms of rendering speed and size, RAW RLE images are in between RAW and other compressed formats like JPEG or PNG. Depending on the image contents, RAW RLE can be approximately 1.5 times faster than JPEG, but could be significantly larger in size for large images. Again, depending on the image content, RAW RLE can be about half the size and performance of a RAW image.&nbsp;</p>
+<p class="Element10">
+<i>Recommendation:</i>&nbsp;</p>
+<p class="Element10">
+If optimizing your application for both speed and flash size consider using RAW RLE images</p><div class="Element15">
+PNG Images</div>
+<p class="Element10">
+Among the image formats, PNG is slowest to render and requires more memory to decode.&nbsp;</p>
+<p class="Element10">
+<i>Recommendations:</i>&nbsp;</p>
+<ul class="Element630">
+<li class="Element600">Unless fine levels of alpha-blending are needed, it is better to use other image formats to achieve the best performance. Use the MHGC Asset Manager to convert the source PNG image and store it in a different image format.</li>
+<li class="Element600">If you would like to use an image with a transparent background, it may be better to use a RAW RLE image with background color masking to achieve the same effect with better performance than a PNG. Color masking is supported in the MHGC Image Asset Manager.</li>
+</ul></div>
 </div>
 </div>
 <!-- End Page Content -->
 
 <!-- Begin Page Footer -->
 <div class="Element95">
-<a href="00461.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02793.html" target="topic">Designer</a> &gt; <a href="02768.html" target="topic">Microchip Aria Designer</a> &gt; <a href="02767.html" target="topic">Graphics Composer Asset Management</a> &gt; <a href="02787.html" target="topic">String Assets</a></div>
+<a href="00462.html" target="topic">MPLAB® Harmony Graphics Suite</a> &gt; <a href="02750.html" target="topic">Advanced Topics</a> &gt; <a href="02787.html" target="topic">Speed and Performance of Different Image Decode Formats in MHGC</a></div>
 <div class="Element93">
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr><td width="25%">
@@ -139,13 +123,13 @@ Excel does not support importing UTF-16.&nbsp;</div></td></tr></table></div></di
 MPLAB® Harmony Graphics Suite</div>
 </td><td width="25%">
 <div class="Element4">
-<a href="contents.html" target="tocidx">Contents</a> | <a href="00461.html" target="topic">Home</a></div>
+<a href="contents.html" target="tocidx">Contents</a> | <a href="00462.html" target="topic">Home</a></div>
 </td><td width="25%">
 <div class="Element91">
-<a href="02788.html" target="topic">Previous</a> | <a href="02767.html" target="topic">Up</a> | <a href="02751.html" target="topic">Next</a></div>
+<a href="02750.html" target="topic">Previous</a> | <a href="02750.html" target="topic">Up</a> | <a href="02791.html" target="topic">Next</a></div>
 </td><td width="25%">
 <div class="Element97">
-<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG String Assets Topic Title: String Assets)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
+<a href="mailto:docerrors@microchip.com&subject=MPLAB Harmony Documentation Feedback (Topic ID: MHGC UG Speed and Performance of Different Image Decode Formats in MHGC Topic Title: Speed and Performance of Different Image Decode Formats in MHGC)&body=Thank you for your feedback! Please include a description of your feedback, and indicate whether you are reporting an an error in the documentation or an enhancement.">Documentation Feedback</a><br> <a href="http://support.microchip.com" target="_blank">Microchip Support</a></div>
 </td></tr></table></div>
 
 <!-- End Page Footer -->

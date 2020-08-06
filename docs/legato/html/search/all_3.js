@@ -8,7 +8,6 @@ var searchData=
   ['colormode_86',['colorMode',['../structlePalette.html#abc94789c79a0808aa63cf3bdbc57397b',1,'lePalette']]],
   ['compare_87',['compare',['../legato__string_8h.html#a9a0884614b95218aeeba25a9a5d9db33',1,'legato_string.h']]],
   ['configurator_88',['Configurator',['../Configurator.html',1,'GraphicsSuite']]],
-  ['custom_20events_20and_20dynamic_20widgets_89',['Custom Events and Dynamic Widgets',['../CustomEventDynamicWidgets.html',1,'DevelopmentTopics']]],
-  ['climatecontrol_90',['ClimateControl',['../LegatoClimateControl.html',1,'LegatoApplications']]],
-  ['cooker_91',['Cooker',['../LegatoCooker.html',1,'LegatoApplications']]]
+  ['climatecontrol_89',['ClimateControl',['../LegatoClimateControl.html',1,'LegatoApplications']]],
+  ['cooker_90',['Cooker',['../LegatoCooker.html',1,'LegatoApplications']]]
 ];

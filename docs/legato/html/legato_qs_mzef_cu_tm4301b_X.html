@@ -73,22 +73,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md231">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md232">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md232">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md233">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md233">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md234">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md235">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md236">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md234">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md235">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md236">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md237">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md231"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md232"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_mzef_cu_tm4301b_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>This configuration runs on the PIC32MZ EF Curiosity 2.0 with RGB565 GFX Interface board and WQVGA display. A 16-bit RGB565 frame buffer is stored in the internal SRAM, and the Low Cost Controller-less (LCC) display driver is used to manage the DMA that transfers the framebuffer contents to the display via the EBI peripheral.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
-<h3><a class="anchor" id="autotoc_md232"></a>
+<h3><a class="anchor" id="autotoc_md233"></a>
 Demonstration Features</h3>
 <ul>
 <li>Legato Graphics Library</li>
@@ -100,12 +100,12 @@ Demonstration Features</h3>
 <li>I2C peripheral library and driver</li>
 <li>JPEG image stored in internal flash</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md233"></a>
+<h2><a class="anchor" id="autotoc_md234"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_mzef_cu_tm4301b_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
 <p>Adding the “PIC32MZ EF Curiosity 2.0 BSP” and “Legato Graphics w/ PDA TM4301B Display” Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
-<h2><a class="anchor" id="autotoc_md234"></a>
+<h2><a class="anchor" id="autotoc_md235"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_quickstart. To build this application, use MPLAB X IDE to open the gfx/apps/legato_quickstart/firmware/legato_qs_mzef_cu_tm4301b.X project file.</p>
 <p>The following table lists configuration properties: <br  />
@@ -119,12 +119,12 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md235"></a>
+<h2><a class="anchor" id="autotoc_md236"></a>
 Configuring the Hardware</h2>
 <p>The final setup should be:</p>
 <p>Configure the hardware as follows: • Attach the RGB565 GFX Interface Card to the J601 connector on the PIC32MZ EF Curiosity 2.0 board. • Connect the ribbon cable from the WQVGA display to the J2 connector on the RGB565 GFX Interface card. • Connect a USB cable from the host computer to the DEBUG USB port on the PIC32MZ EF Curiosity 2.0 board. This USB connection is used for power, code download and debugging. The final hardware setup should be:</p>
 <p><img src="legato_qs_mzef_cu_tm4301b_conf1.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md236"></a>
+<h2><a class="anchor" id="autotoc_md237"></a>
 Running the Demonstration</h2>
 <p><img src="legato_qs_mzef_cu_tm4301b_run1.png" alt="" class="inline"/></p>
 <p>When Make changes. Generate. Run. is touched, the button will toggle with each individual touch.</p>

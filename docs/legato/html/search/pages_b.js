@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['phantom_20button_20touch_1387',['Phantom Button Touch',['../PhantomButtonTouch.html',1,'DevelopmentTopics']]],
-  ['porting_20applications_1388',['Porting Applications',['../PortingApplications.html',1,'DevelopmentTopics']]]
+  ['quickstart_1386',['Quickstart',['../BlankQuickstart.html',1,'BlankApplications']]],
+  ['quickstart_1387',['Quickstart',['../LegatoQuickstart.html',1,'LegatoApplications']]],
+  ['quickstart_20external_20resource_1388',['Quickstart External Resource',['../LegatoQuickstartExtRes.html',1,'LegatoApplications']]]
 ];
