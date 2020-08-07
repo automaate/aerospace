@@ -13,7 +13,7 @@ nav_order: 99
 
 * **Development kit and demo application support** - The following table provides number of applications available for different development kits
 
-| Development Kits  | Applications |
+| Development Kits     | Applications |
 | ---  | --- |
 | [SAM A5D2 Xplained Ultra](https://www.microchip.com/developmenttools/ProductDetails/atsama5d2c-xult)      | [legato_quickstart](./docs/legato/html/LegatoQuickstart.html)  |
 | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)           | [legato_quickstart](./docs/legato/html/LegatoQuickstart.html)  |
@@ -84,6 +84,9 @@ nav_order: 99
 * FreeRTOS osal has an incorrect include path that causes build failures in non-Windows environments.
 * SAM E54/D51 must be debugged using MPLABX v5.25
 * legato_flash SAM E54 configuration support for USB is non-functional. SDCARD is functional.
+* Pin 7 of the EXT1 connector on the PIC32MZ EF should drive the backlight. However, on rev1.0 of the board, it's not connected to any pin on the MCU. As a workaround, it needs to be connected to a v3.3 pin.
+* A complete Legato Graphics Composer user guide is forthcoming in a future release. Practical use of Legato Graphics Composer v3.7 beta can be observed by referencing
+applications in Examples and Demonstrations.  Each application illustrate best practices against supported development kits.
     
 For a list of post release issues that affect this release, refer to MPLAB Harmony [GFX Issues and Errata](https://github.com/Microchip-MPLAB-Harmony/gfx/wiki/Issues-and-Errata).
 
