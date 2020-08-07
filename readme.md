@@ -60,8 +60,8 @@ The performance improved graphics for MPLAB Harmony Graphics Suite. Supports Mic
 
 | Category | Item | Description | Release Type |
 | --- | --- | ---- |---- |
-|  apps | [legato_adventure](https://automaate.github.io/aerospace/docs/legato/html/LegatoAdventure.html) | Parallax and sprite animation example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
-|     | [legato_benchmark](https://automaate.github.io/aerospace/docs/legato/html/LegatoBenchmark.html) | Performance utility example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|  apps | [legato_adventure](./docs/legato/html/LegatoAdventure.html) | Parallax and sprite animation example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [legato_benchmark](./docs/legato/html/LegatoBenchmark.html) | Performance utility example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
 |     | [legato_climate_control](https://automaate.github.io/aerospace/docs/legato/html/LegatoClimateControl.html) | Climate control UI example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
 |     | [legato_cooker](https://automaate.github.io/aerospace/docs/legato/html/LegatoCooker.html) | Appliance cooker UI example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
 |     | [legato_dashboard](https://automaate.github.io/aerospace/docs/legato/html/LegatoDashboard.html) | Vehicle dashboard example | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
