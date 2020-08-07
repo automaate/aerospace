@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoAdventure.html">Adventure</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoAdventure.html">Adventure Application</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -73,22 +73,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md99">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md100">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md63">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md64">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md101">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md102">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md103">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md104">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md65">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md66">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md67">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md68">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md99"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md63"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_mzef_cu_tm4301b_arch.png" alt="" width="480" height="272" class="inline"/></p>
 <p>This configuration runs on the PIC32MZ EF Curiosity 2.0 with RGB565 GFX Interface board and WQVGA display. A 16-bit RGB565 frame buffer is stored in the internal SRAM, and the Low Cost Controller-less (LCC) display driver is used to manage the DMA that transfers the framebuffer contents to the display via the EBI peripheral.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
-<h3><a class="anchor" id="autotoc_md100"></a>
+<h3><a class="anchor" id="autotoc_md64"></a>
 Demonstration Features</h3>
 <ul>
 <li>Legato Graphics Library</li>
@@ -100,12 +100,12 @@ Demonstration Features</h3>
 <li>I2C peripheral library and driver</li>
 <li>JPEG image stored in internal flash</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md101"></a>
+<h2><a class="anchor" id="autotoc_md65"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_mzef_cu_tm4301b_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
 <p>Adding the PIC32MZ EF Curiosity 2.0 BSP and Legato Graphics w/ PDA TM4301B Display Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
-<h2><a class="anchor" id="autotoc_md102"></a>
+<h2><a class="anchor" id="autotoc_md66"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_adventure. To build this application, use MPLAB X IDE to open the gfx/apps/legato_adventure/firmware/legato_adv_mzef_cu_tm4301b.X project file.</p>
 <p>The following table lists configuration properties: <br  />
@@ -119,7 +119,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md103"></a>
+<h2><a class="anchor" id="autotoc_md67"></a>
 Configuring the Hardware</h2>
 <p>The final setup should be:</p>
 <p>Configure the hardware as follows:</p>
@@ -130,7 +130,7 @@ Configuring the Hardware</h2>
 </ul>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_qs_mzef_cu_tm4301b_conf1.png" alt="" width="480" height="272" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md104"></a>
+<h2><a class="anchor" id="autotoc_md68"></a>
 Running the Demonstration</h2>
 <p>The application first boots to an animated Splash Screen. Once the Splash Screen animation completes, the application boots to a Main Screen.</p>
 <p>When at rest, the demo will cycle through idle sprite animations. Various areas of the screen are touch interactive</p>

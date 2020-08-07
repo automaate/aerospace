@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoQuickstartExtRes.html">Quickstart External Resource</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoQuickstartExtRes.html">Quickstart External Resource Application</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -73,16 +73,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md244">Defining the Architecture</a></li>
-<li class="level2"><a href="#autotoc_md245">Demonstration Features</a></li>
-<li class="level2"><a href="#autotoc_md246">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md247">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md248">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md249">Running the Demonstration</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md226">Defining the Architecture</a></li>
+<li class="level2"><a href="#autotoc_md227">Demonstration Features</a></li>
+<li class="level2"><a href="#autotoc_md228">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md229">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md230">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md231">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md244"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md226"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_x_r_e54_cult_cpro_parallel_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The legato_quickstart_external_resources (external flash reader) application uses the reads previously programmed binary data from the external non-volatile QSPI memory. The Graphics Library is used to render graphics to the scratch buffer. Via the ILI9488 Display Driver, boosted with a combination of DMA and CCL peripherals, scratch buffer data is transferred out to the ILI9488 controller via 8-bit parallel in 8080 mode.</p>
@@ -90,7 +90,7 @@ Defining the Architecture</h2>
 <p>This configuration runs on the SAM E54 Curiosity Ultra with maXTouch Curiosity Pro Display.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
 <p>The application reads the binary data from the external non-volatile memory via the QSPI peripheral configured with the SST26 driver.</p>
-<h2><a class="anchor" id="autotoc_md245"></a>
+<h2><a class="anchor" id="autotoc_md227"></a>
 Demonstration Features</h2>
 <ul>
 <li>Legato Graphics Library</li>
@@ -103,7 +103,7 @@ Demonstration Features</h2>
 <li>SST26 QSPI driver</li>
 <li>Images and Fonts for user interface stored in internal flash</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md246"></a>
+<h2><a class="anchor" id="autotoc_md228"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_x_r_e54_cult_cpro_parallel_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Adding the “SAM E54 Curiosity Ultra BSP” and “Legato Graphics w/ MXT Curiosity Pro Display” Graphics Template component into the project graph.</p>
@@ -119,7 +119,7 @@ Creating the Project Graph</h2>
 <p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
 <p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md247"></a>
+<h2><a class="anchor" id="autotoc_md229"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_quickstart_ext_res. To build this application, use MPLABX to open the gfx/apps/legato_quickstart_ext_res/firmware/legato_qs_x_r_e54_cult_cpro_parallel.X project file.</p>
 <p>The following table lists configuration properties:</p>
@@ -132,7 +132,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md248"></a>
+<h2><a class="anchor" id="autotoc_md230"></a>
 Configuring the Hardware</h2>
 <p>This section describes how to configure the supported hardware.</p>
 <p>Configure the hardware as follows:</p>
@@ -147,7 +147,7 @@ Configuring the Hardware</h2>
 <p>•Connect the USB MSD device to the ‘Target USB’ USB micro port. This can be connected before or at any point after the application is powered-on.</p>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel.X_conf7.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md249"></a>
+<h2><a class="anchor" id="autotoc_md231"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, the following screen will appear on the display</p>
 <p><img src="legato_qs_x_r_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>

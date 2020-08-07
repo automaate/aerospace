@@ -9,10 +9,11 @@ var searchData=
   ['blank_5fqs_5fmzda_5fintddr_5fsk_5fmeb2_5fwqvga_2ex_72',['blank_qs_mzda_intddr_sk_meb2_wqvga.X',['../blank_qs_mzda_intddr_sk_meb2_wqvga_X.html',1,'BlankQuickstart']]],
   ['blank_5fqs_5fmzef_5fcu_5fwqvga_2ex_73',['blank_qs_mzef_cu_wqvga.X',['../blank_qs_mzef_cu_wqvga_X.html',1,'BlankQuickstart']]],
   ['blank_20applications_74',['Blank Applications',['../BlankApplications.html',1,'ExamplesDemonstrations']]],
-  ['bottom_75',['bottom',['../structleMargin.html#a9880178aac6c2ab6f16ed7dc6560a06c',1,'leMargin']]],
-  ['bpp_76',['bpp',['../structleColorModeInfo.html#ac2987cad919bae7cfaa2b2a9122e5702',1,'leColorModeInfo']]],
-  ['bppordinal_77',['bppOrdinal',['../structleColorModeInfo.html#a1f7f876b6cdab0036549c6f0b3c4187d',1,'leColorModeInfo']]],
-  ['bspsupportobj_78',['bspSupportObj',['../classbsp__utils_1_1bspSupportObj.html',1,'bsp_utils']]],
-  ['bufferflags_79',['BufferFlags',['../legato__pixelbuffer_8h.html#a19cab0989f730daa7ad67f06f483712f',1,'legato_pixelbuffer.h']]],
-  ['benchmark_80',['Benchmark',['../LegatoBenchmark.html',1,'LegatoApplications']]]
+  ['blank_20quickstart_20application_75',['Blank Quickstart Application',['../BlankQuickstart.html',1,'BlankApplications']]],
+  ['bottom_76',['bottom',['../structleMargin.html#a9880178aac6c2ab6f16ed7dc6560a06c',1,'leMargin']]],
+  ['bpp_77',['bpp',['../structleColorModeInfo.html#ac2987cad919bae7cfaa2b2a9122e5702',1,'leColorModeInfo']]],
+  ['bppordinal_78',['bppOrdinal',['../structleColorModeInfo.html#a1f7f876b6cdab0036549c6f0b3c4187d',1,'leColorModeInfo']]],
+  ['bspsupportobj_79',['bspSupportObj',['../classbsp__utils_1_1bspSupportObj.html',1,'bsp_utils']]],
+  ['bufferflags_80',['BufferFlags',['../legato__pixelbuffer_8h.html#a19cab0989f730daa7ad67f06f483712f',1,'legato_pixelbuffer.h']]],
+  ['benchmark_20application_81',['Benchmark Application',['../LegatoBenchmark.html',1,'LegatoApplications']]]
 ];

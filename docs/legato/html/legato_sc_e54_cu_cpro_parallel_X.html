@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoShowcase.html">Showcase</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoShowcase.html">Showcase Application</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -73,16 +73,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md265">Defining the Architecture</a></li>
-<li class="level2"><a href="#autotoc_md266">Demonstration Features</a></li>
-<li class="level2"><a href="#autotoc_md267">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md268">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md269">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md270">Running the Demonstration</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md247">Defining the Architecture</a></li>
+<li class="level2"><a href="#autotoc_md248">Demonstration Features</a></li>
+<li class="level2"><a href="#autotoc_md249">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md250">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md251">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md252">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md265"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md247"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_e54_cult_cpro_parallel_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The block diagrams below show the various software and hardware blocks used in this application.</p>
@@ -90,7 +90,7 @@ Defining the Architecture</h2>
 <p>Finally, the application uses the Timer System Service and driver to send timer events for transitioning images in the Slideshow Demo at specified intervals.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service. <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md266"></a>
+<h2><a class="anchor" id="autotoc_md248"></a>
 Demonstration Features</h2>
 <ul>
 <li>Legato Graphics Library</li>
@@ -101,7 +101,7 @@ Demonstration Features</h2>
 <li>Graphics widgets: List wheel, Touch Test, Keypad, Slideshow</li>
 <li>Alpha-blending</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md267"></a>
+<h2><a class="anchor" id="autotoc_md249"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_e54_cult_cpro_parallel_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Adding the <b>SAM E54 Curiosity Ultra BSP</b> and <b>Legato Graphics w/ MXT Curiosity Pro Display</b> Graphics Template component into the project graph.</p>
@@ -115,7 +115,7 @@ Creating the Project Graph</h2>
 <p><img src="legato_qs_e54_cult_cpro_parallel_pg3.png" alt="" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
 <p><img src="legato_qs_e54_cult_cpro_parallel_pg4.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md268"></a>
+<h2><a class="anchor" id="autotoc_md250"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx_apps/legato_showcase. To build this application, use MPLAB X IDE to open the gfx_apps/legato_showcase/firmware/legato_sc_e54_cult_xpro_parallel.X project file.</p>
 <p>The following table lists configuration properties:</p>
@@ -128,7 +128,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md269"></a>
+<h2><a class="anchor" id="autotoc_md251"></a>
 Configuring the Hardware</h2>
 <p>This section describes how to configure the supported hardware.</p>
 <p>Configure the hardware as follows:</p>
@@ -141,7 +141,7 @@ Configuring the Hardware</h2>
 </ul>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_qs_e54_cult_cpro_parallel_conf1.png" alt="" width="800" height="480" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md270"></a>
+<h2><a class="anchor" id="autotoc_md252"></a>
 Running the Demonstration</h2>
 <p>The app first boots to the animation Splash Screen. Once the Splash Screen animation completes, the Home Screen is shown:</p>
 <p><img src="legato_sc_e54_cult_xpro_parallel-run1.png" alt="" class="inline"/></p>

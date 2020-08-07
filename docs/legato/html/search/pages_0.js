@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adventure_1332',['Adventure',['../LegatoAdventure.html',1,'LegatoApplications']]]
+  ['adventure_20application_1324',['Adventure Application',['../LegatoAdventure.html',1,'LegatoApplications']]]
 ];

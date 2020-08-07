@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoQuickstartExtRes.html">Quickstart External Resource</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoQuickstartExtRes.html">Quickstart External Resource Application</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -73,20 +73,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md256">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md257">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md238">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md239">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md258">Creating the Project Graph</a><ul><li class="level3"><a href="#autotoc_md259">SST26</a></li>
-<li class="level3"><a href="#autotoc_md260">SQI access, make sure all 7 pins for SQI1 is mapped.</a></li>
+<li class="level2"><a href="#autotoc_md240">Creating the Project Graph</a><ul><li class="level3"><a href="#autotoc_md241">SST26</a></li>
+<li class="level3"><a href="#autotoc_md242">SQI access, make sure all 7 pins for SQI1 is mapped.</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md261">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md262">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md263">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md243">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md244">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md245">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md256"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md238"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_x_r_mzef_cu_tm4301b_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The legato_quickstart_external_resources (external flash reader) application uses the reads previously programmed binary data from the external non-volatile QSPI memory. The Graphics Library is used to render graphics to the display. Using the DMA, the Low-Cost Controllerless (LCC) Display Driver continuously transfers frame data from the frame buffer out to the LCD display.</p>
@@ -94,7 +94,7 @@ Defining the Architecture</h2>
 <p>This configuration runs on the PIC32MZ EF Curiosity 2.0 with RGB565 GFX Interface board and WQVGA display. The Low-Cost Controllerless (LCC) display driver is used to manage the DMA that transfers the read frame buffer contents to the display via the EBI peripheral. The Legato Graphics Library draws the updated sections of the frame to an internal scratch buffer which is used by the LCC display driver to update the frame buffer.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
 <p>The application reads the binary data from the external non-volatile memory via the QSPI peripheral configured with the SST26 driver.</p>
-<h3><a class="anchor" id="autotoc_md257"></a>
+<h3><a class="anchor" id="autotoc_md239"></a>
 Demonstration Features</h3>
 <ul>
 <li>Legato Graphics Library</li>
@@ -107,21 +107,21 @@ Demonstration Features</h3>
 <li>SST26 QSPI driver</li>
 <li>Images and Fonts for user interface stored in external flash (NVM)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md258"></a>
+<h2><a class="anchor" id="autotoc_md240"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_x_r_mzef_cu_tm4301b_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>Adding the “PIC32 MZ EF Curiosity 2.0 BSP” and “Legato Graphics w/ PDA TM4301B Display” Graphics Template component into the project graph.</p>
 <p>This will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
 <p>Additional components to support QSPI and SST26 needs to be added and connected manually. Some of these components are fine with default settings, while other require some changes. The following is a list of all the components that required custom settings.</p>
-<h3><a class="anchor" id="autotoc_md259"></a>
+<h3><a class="anchor" id="autotoc_md241"></a>
 SST26</h3>
 <p><img src="legato_qs_x_r_mzef_cu_tm4301b_pg2.png" alt="" width="800" height="480" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md260"></a>
+<h3><a class="anchor" id="autotoc_md242"></a>
 SQI access, make sure all 7 pins for SQI1 is mapped.</h3>
 <p><img src="legato_qs_x_r_mzef_cu_tm4301b_pg3.png" alt="" width="800" height="480" class="inline"/></p>
 <p>We will need to use the 12 MHz oscillator crystal on the MZ EF Curiosity 2.0 to drive the USB PLL. Setup POSC, POSCMOD, System PLL, SYSCLK and REFCLK2 as shown:</p>
 <p><img src="legato_qs_x_r_mzef_cu_tm4301b_pg4.png" alt="" width="800" height="480" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md261"></a>
+<h2><a class="anchor" id="autotoc_md243"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_quickstart. To build this application, use MPLAB X IDE open the gfx/apps/legato_quickstart/firmware/legato_qs_e70_xu_tm4301b.X project file.</p>
 <p>The following table lists configuration properties: <br  />
@@ -135,7 +135,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md262"></a>
+<h2><a class="anchor" id="autotoc_md244"></a>
 Configuring the Hardware</h2>
 <p>Configure the hardware as follows:</p><ul>
 <li>Attach the RGB565 GFX Interface Card to the J601 connector on the PIC32MZ EF Curiosity 2.0 board.</li>
@@ -143,7 +143,7 @@ Configuring the Hardware</h2>
 </ul>
 <p>The final hardware set-up should be:</p>
 <p><img src="legato_qs_mzef_sk_meb2_tm4301b_conf3.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md263"></a>
+<h2><a class="anchor" id="autotoc_md245"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, the following screen will appear on the display</p>
 <p><img src="legato_qs_x_r_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>

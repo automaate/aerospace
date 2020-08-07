@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['porting_20applications_1385',['Porting Applications',['../PortingApplications.html',1,'DevelopmentTopics']]]
+  ['showcase_20application_1376',['Showcase Application',['../LegatoShowcase.html',1,'LegatoApplications']]]
 ];

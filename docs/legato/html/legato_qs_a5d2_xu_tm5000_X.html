@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoQuickstart.html">Quickstart</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoQuickstart.html">Quickstart Application</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -73,24 +73,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md184">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md185">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md148">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md149">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md186">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md187">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md188">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md189">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md150">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md151">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md152">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md153">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md184"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md148"></a>
 Defining the Architecture</h2>
-<p><img src="https://microchip-mplab-harmony.github.io/gfx_apps/APPS GFX a5d2 arch.png" alt="" class="inline"/></p>
-<p>The project uses a draw surface widget as a container to draw the gauge needle using lines. When the user touches the screen, a touch event is sent to the application. The application updates the values of the tachometer, speedometer and fuel gauge. The needle is cleared and redrawn every time the tachometer value changes. The speed, distance and fuel gauge are also updated. Label widgets are used to show the speed and distance, while image widgets are used to show the indicators and fuel gauge.</p>
-<p>The application uses the 3 layers in the LCDC display controller to compose the final screen. Each layer uses double-buffering to eliminate tearing. When the screen needs to be updated, the graphics library updates the frame on the write buffer while the LCDC display controller sends the read buffer content to the display panel. When the graphics library is done updating, the write buffer is swapped with the read buffer and its contents are pushed out to the display controller.</p>
-<p>Each frame buffer uses 32-bit per pixel, and each pixel has its own alpha channel. This allows the sections of the upper layers to be transparent and show the contents of the layers underneath.</p>
-<p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
-<h3><a class="anchor" id="autotoc_md185"></a>
+<p><img src="legato_qs_a5d2_xu_tm5000.X_arch.png" alt="" width="480" height="272" class="inline"/></p>
+<p>In this configuration, the Legato Graphics library renders the frame to a 32-bit frame buffer in external DDR. The LCDC display controller on the A5D2 is used to drive frame data from DDR to the display. 16-bit RGB565 frame buffer is stored in the internal SRAM.</p>
+<p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch events to the Aria Graphics Library Task thru the Input System Service Task.</p>
+<h3><a class="anchor" id="autotoc_md149"></a>
 Demonstration Features</h3>
 <ul>
 <li>LCDC display controller with multiple HW layers</li>
@@ -101,12 +99,12 @@ Demonstration Features</h3>
 <li>Draw surface, image, label widgets</li>
 <li>Backlight PWM control</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md186"></a>
+<h2><a class="anchor" id="autotoc_md150"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_a5d2_xu_tm5000_pg.png" alt="" class="inline"/></p>
 <p>The Project Graph diagram below shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
-<p>First, add the “SAM A5D2 XPlained Ultra BSP” into the project. Then, add “Aria Graphics w/ PDA TM4301B Display” Graphics Template component to the project if using a 4.3” WQVGA TM4301b display or the “Aria Graphics w/ PDA TM4301B Display” Graphics Template component to the project if using a 5” or 7” WVGA TM4301b display. The template will automatically add the components needed for a graphics project and resolve their dependencies and configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
-<h2><a class="anchor" id="autotoc_md187"></a>
+<p>First, add the <b>SAM A5D2 XPlained Ultra BSP</b> into the project. Then, add <b>Legato Graphics w/ PDA TM5000 Display</b> Graphics Template component to the project if using a 4.3" WQVGA TM5000 display or the **Aria Graphics w/ PDA TM4301B Display** Graphics Template component to the project if using a 5" or 7" WVGA TM4301b display. The template will automatically add the components needed for a graphics project and resolve their dependencies and configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
+<h2><a class="anchor" id="autotoc_md151"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/aria_dashboard. To build this application, open the IAR project at: gfx/apps/aria_dashboard/firmware/aria_db_a5d2_xu_tm5000.X.</p>
 <p>For more building information, see: Getting started with Harmony 3 on the SAMA5D2.</p>
@@ -115,22 +113,21 @@ Building the Application</h2>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Project Name </th><th class="markdownTableHeadNone">BSP Used </th><th class="markdownTableHeadNone">Graphics Template Used </th><th class="markdownTableHeadNone">Description  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">aria_db_a5d2_xu_tm5000.X </td><td class="markdownTableBodyNone">SAM A5D2 Xplained Ultra </td><td class="markdownTableBodyNone">Aria Graphics w/ PDA TM5000 Display </td><td class="markdownTableBodyNone">Aria GFX on SAM A5D2 Xplained Ultra Board and PDA TM5000 WVGA Display with FreeRTOS  </td></tr>
+<td class="markdownTableBodyNone">legato_qs_a5d2_xu_tm5000.X </td><td class="markdownTableBodyNone">SAM A5D2 Xplained Ultra </td><td class="markdownTableBodyNone">Graphics w/ PDA TM5000 Display </td><td class="markdownTableBodyNone">GFX on SAM A5D2 Xplained Ultra Board and PDA TM5000 WVGA Display  </td></tr>
 </table>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md188"></a>
+<h2><a class="anchor" id="autotoc_md152"></a>
 Configuring the Hardware</h2>
 <p>Connect the ribbon cable from the display to the J16 connector on the back of the SAM 9x60 Evaluation Kit board.</p>
 <p><img src="legato_dashboard_9x60_sk_wvga_conf1.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md189"></a>
+<h2><a class="anchor" id="autotoc_md153"></a>
 Running the Demonstration</h2>
-<p>On start-up, the application will display a splash screen. After the splash screen completes, the dashboard screen is shown. The initial state of the dashboard screen is “OFF” where the backlight is slightly dimmed, the needle in the 0 RPM position and the indicators and labels are hidden. Pressing the “ENGINE START STOP” button at the center-bottom section of the screen will “TURN ON” the dashboard.</p>
-<p>As the dashboard is turning on, the indicators and labels will show up, the tachometer needle will turn to MAX and back and the fuel gauge bars will go to full.</p>
-<p><img src="legato_dashboard_9x60_sk_wvga_conf1.png" alt="" class="inline"/></p>
-<p>Touching the screen will simulate a running vehicle, and the tachometer gauge needle, speed and distance labels, fuel gauge will change. Touching the left or right side of the screen will toggle the left or right-turn indicators. When the fuel gauge goes down to empty (“E”), the simulated vehicle will go to a stop and refuel.</p>
-<p>Touching the “ENGINE START STOP” button will “TURN OFF” the dashboard where the backlight will be dimmed and the indicators/labels will be hidden. </p>
+<p>When power-on is successful, the demonstration will display a similar menu to that shown in the following figure (different configurations may have slight variation in the screen aspect ratio):</p>
+<p><img src="legato_qs_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>
+<p>When Make changes. Generate. Run. is touched, the button will toggle with each individual touch.</p>
+<p><img src="legato_qs_e70_xu_tm4301b_run2.png" alt="" class="inline"/> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

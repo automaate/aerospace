@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoDashboard.html">Dashboard</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoDashboard.html">Dashboard Application</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -73,22 +73,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md146">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md147">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md110">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md111">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md148">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md149">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md150">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md151">Running the Demonstration</a></li>
-<li class="level2"><a href="#autotoc_md152">User Interface Guide</a></li>
+<li class="level2"><a href="#autotoc_md112">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md113">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md114">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md115">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md116">User Interface Guide</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md146"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md110"></a>
 Defining the Architecture</h2>
 <p><img src="legato_db_arch.png" alt="" width="480" height="272" class="inline"/></p>
 <p>The demo uses pre-rotated, RAW needle sprite images in DDR to show two rotating needles overlaid on top of a dashboard background image. These images are pre-processed and drawn into DDR using the Legato Graphics library. The application code uses the Graphics Canvas library to configure sprite animation and overlay of the needles using the GLCD layers. User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service. The needles are rotated based on the location of the touch events on the screen.</p>
-<h3><a class="anchor" id="autotoc_md147"></a>
+<h3><a class="anchor" id="autotoc_md111"></a>
 Demonstration Features</h3>
 <ul>
 <li>Legato Graphics Library and Graphics Canvas</li>
@@ -99,7 +99,7 @@ Demonstration Features</h3>
 <li>Graphics Acceleration using integrated display controller (GLCD)</li>
 <li>Uses pre-rotated need images and GLCD layers to accelerate needle animation</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md148"></a>
+<h2><a class="anchor" id="autotoc_md112"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_db_mzda_cu_tm5000_pg.png" alt="" width="480" height="272" class="inline"/></p>
 <p>Adding the <b>PIC32MZ DA TM5000</b> and <b>Legato Graphics w/ MXT Curiosity Pro Display</b> Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display.</p>
@@ -124,7 +124,7 @@ Creating the Project Graph</h2>
 <li>Pin RD0 is set to OC1 function to generate the PWM backlight signal. The OCMP1 and TMR2 components are added into the project for backlight control and configured as shown. Using the pin manager, pin RD0 is set to OC1 function so that it's driven as a PWM signal.</li>
 </ul>
 <p><img src="legato_db_mzda_cu_tm5000_pg3.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md149"></a>
+<h2><a class="anchor" id="autotoc_md113"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_dashboard. To build this application, use MPLAB X IDE to open the gfx_apps/apps/legato_dashboard/firmware/legato_db_mzda_cu_tm5000.X project file.</p>
 <p>The following table lists configuration properties: <br  />
@@ -133,12 +133,12 @@ Building the Application</h2>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Project Name </th><th class="markdownTableHeadNone">BSP Used </th><th class="markdownTableHeadNone">Graphics Template Used </th><th class="markdownTableHeadNone">Description  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">legato_db_mzda_cu_tm5000_X </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 </td><td class="markdownTableBodyNone">Legato Graphics w/ PDA TM5000 Display </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 with RGBA8888 GFX Interface and 5in WVGA PCAP Touch display  </td></tr>
+<td class="markdownTableBodyNone">legato_db_mzda_cu_tm5000_X </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 </td><td class="markdownTableBodyNone">Legato Graphics w/ PDA TM5000 Display </td><td class="markdownTableBodyNone">PIC32MZ DA Curiosity 2.0 with RGBA8888 GFX Interface and 5" WVGA PCAP Touch display  </td></tr>
 </table>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md150"></a>
+<h2><a class="anchor" id="autotoc_md114"></a>
 Configuring the Hardware</h2>
 <p>The final setup should be:</p>
 <p>Configure the hardware as follows:</p>
@@ -149,7 +149,7 @@ Configuring the Hardware</h2>
 </ul>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_qs_mzda_cu_tm5000_conf1.png" alt="" width="480" height="272" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md151"></a>
+<h2><a class="anchor" id="autotoc_md115"></a>
 Running the Demonstration</h2>
 <p><img src="legato_db_splash_screen.png" alt="" width="480" height="272" class="inline"/></p>
 <p>The demo first boots to a splash screen. While the splash screen is shown, the application pre-processes the needle images to DDR and renders the dashboard screens.</p>
@@ -163,7 +163,7 @@ Running the Demonstration</h2>
 <li>Swiping down from top will show the information page.</li>
 <li>Swiping left or right from the edge will switch between the Primary and Secondary screens</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md152"></a>
+<h2><a class="anchor" id="autotoc_md116"></a>
 User Interface Guide</h2>
 <p><b>Interactions</b></p>
 <p><img src="legato_db_mzda_cu_tm5000_ui1.png" alt="" width="480" height="272" class="inline"/></p>

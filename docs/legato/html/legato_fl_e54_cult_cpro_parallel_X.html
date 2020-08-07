@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoFlash.html">Flash</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoFlash.html">Quickstart Flash Application</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -73,16 +73,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md153">Defining the Architecture</a></li>
-<li class="level2"><a href="#autotoc_md154">Demonstration Features</a></li>
-<li class="level2"><a href="#autotoc_md155">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md156">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md157">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md158">Running the Demonstration</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md117">Defining the Architecture</a></li>
+<li class="level2"><a href="#autotoc_md118">Demonstration Features</a></li>
+<li class="level2"><a href="#autotoc_md119">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md120">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md121">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md122">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md153"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md117"></a>
 Defining the Architecture</h2>
 <p><img src="legato_fl_e54_cult_cpro_parallel_arch.png" alt="" width="480" height="272" class="inline"/></p>
 <p>This application uses the USB file systems in MPLAB Harmony and the USB driver to scan the MSD for a .hex file with resources and reads them sector by sector and programs the external non-volatile QSPI memory. The Graphics Library is used to render graphics to the scratch buffer. Via the ILI9488 Display Driver, boosted with a combination of DMA and CCL peripherals, scratch buffer data is transferred out to the ILI9488 controller via 8-bit parallel in 8080 mode.</p>
@@ -90,7 +90,7 @@ Defining the Architecture</h2>
 <p>This configuration runs on the SAM E54 Curiosity Ultra board with a 24-bit passthrough GFX interface card and a maXTouch Curiosity Pro display. The maXTouch Curiosity Pro display has an ILI9488 display controller that is connected to the SAM E54 thru the port/GPIO peripheral using an 8-bit 8080/Parallel interface, boosted with a combination of DMA and CCL peripherals. The Legato graphics library draws the updated sections of the frame to an internal scratch buffer which is used by the ILI9488 display driver to update the ILI9488 display controller.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
 <p>The USB peripheral is setup in MSD Host mode with the File System service support. It scans for a file named SQI.hex when a USB MSD device is connected. The application reads the hex data from the file and decodes it with a hex decoder into binary data. The binary is written to external non-volatile memory via the QSPI peripheral configured with the SST26 driver.</p>
-<h2><a class="anchor" id="autotoc_md154"></a>
+<h2><a class="anchor" id="autotoc_md118"></a>
 Demonstration Features</h2>
 <ul>
 <li>Legato Graphics Library</li>
@@ -104,7 +104,7 @@ Demonstration Features</h2>
 <li>USB MSD driver (Host Mode)</li>
 <li>Images and Fonts for user interface stored in internal flash</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md155"></a>
+<h2><a class="anchor" id="autotoc_md119"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_fl_e54_cult_cpro_parallel_pg.png" alt="" width="480" height="272" class="inline"/></p>
 <p>Adding the <b>SAM E54 Curiosity Ultra BSP</b> and <b>Legato Graphics w/ MXT Curiosity Pro Display</b> Graphics Template component into the project graph.</p>
@@ -121,7 +121,7 @@ Creating the Project Graph</h2>
 <p><img src="legato_fl_e54_cult_cpro_parallel_conf5.png" alt="" class="inline"/></p>
 <p>Instead of write strobe, make sure PB17 is setup as RSDC instead</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel_conf6.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md156"></a>
+<h2><a class="anchor" id="autotoc_md120"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_flash. To build this application, use MPLAB X IDE to open the gfx/apps/legato_flash/firmware/legato_fl_e54_cult_cpro_parallel.X project file.</p>
 <p>The following table lists configuration properties:</p>
@@ -134,7 +134,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md157"></a>
+<h2><a class="anchor" id="autotoc_md121"></a>
 Configuring the Hardware</h2>
 <p>This section describes how to configure the supported hardware.</p>
 <p>Configure the hardware as follows:</p>
@@ -151,7 +151,7 @@ Configuring the Hardware</h2>
 </ul>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel.X_conf7.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md122"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, without a USB MSD device or SD MMC device attached to the <b>Target USB</b> port the demonstration will display a screen with the message <b>No valid storage mediums found. Please insert a USB device or SD Card</b>:</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel_run1.png" alt="" class="inline"/></p>
