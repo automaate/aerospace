@@ -85,8 +85,6 @@ nav_order: 99
 * SAM E54/D51 must be debugged using MPLABX v5.25
 * legato_flash SAM E54 configuration support for USB is non-functional. SDCARD is functional.
 * Pin 7 of the EXT1 connector on the PIC32MZ EF should drive the backlight. However, on rev1.0 of the board, it's not connected to any pin on the MCU. As a workaround, it needs to be connected to a v3.3 pin.
-* A complete Legato Graphics Composer user guide is forthcoming in a future release. Practical use of Legato Graphics Composer v3.7 beta can be observed by referencing
-applications in Examples and Demonstrations.  Each application illustrate best practices against supported development kits.
     
 For a list of post release issues that affect this release, refer to MPLAB Harmony [GFX Issues and Errata](https://github.com/Microchip-MPLAB-Harmony/gfx/wiki/Issues-and-Errata).
 

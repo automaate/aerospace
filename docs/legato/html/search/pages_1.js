@@ -8,6 +8,6 @@ var searchData=
   ['blank_5fqs_5fmzda_5fintddr_5fsk_5fmeb2_5fwqvga_2ex_1330',['blank_qs_mzda_intddr_sk_meb2_wqvga.X',['../blank_qs_mzda_intddr_sk_meb2_wqvga_X.html',1,'BlankQuickstart']]],
   ['blank_5fqs_5fmzef_5fcu_5fwqvga_2ex_1331',['blank_qs_mzef_cu_wqvga.X',['../blank_qs_mzef_cu_wqvga_X.html',1,'BlankQuickstart']]],
   ['blank_20applications_1332',['Blank Applications',['../BlankApplications.html',1,'ExamplesDemonstrations']]],
-  ['blank_20quickstart_20application_1333',['Blank Quickstart Application',['../BlankQuickstart.html',1,'BlankApplications']]],
-  ['benchmark_20application_1334',['Benchmark Application',['../LegatoBenchmark.html',1,'LegatoApplications']]]
+  ['blank_20quickstart_1333',['Blank Quickstart',['../BlankQuickstart.html',1,'BlankApplications']]],
+  ['benchmark_1334',['Benchmark',['../LegatoBenchmark.html',1,'LegatoApplications']]]
 ];

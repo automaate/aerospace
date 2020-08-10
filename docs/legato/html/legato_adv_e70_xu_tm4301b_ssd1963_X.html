@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoAdventure.html">Adventure Application</a></li>  </ul>
+<li class="navelem"><a class="el" href="ExamplesDemonstrations.html">Examples and Demonstrations</a></li><li class="navelem"><a class="el" href="LegatoApplications.html">Legato Applications</a></li><li class="navelem"><a class="el" href="LegatoAdventure.html">Adventure</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
@@ -84,8 +84,9 @@ $(function() {
 </div>
 <div class="textblock"><h2><a class="anchor" id="autotoc_md51"></a>
 Defining the Architecture</h2>
-<p><img src="legato_qs_e54_cult_cpro_parallel_arch.png" alt="" width="480" height="272" class="inline"/></p>
-<p>This configuration runs on the SAM E54 Curiosity Ultra board with a 24-bit passthrough GFX interface card and a maXTouch Curiosity Pro display. The maXTouch Curiosity Pro display has an ILI9488 display controller that is connected to the SAM E54 thru the port/GPIO peripheral using an 8-bit 8080/Parallel interface, boosted with a combination of DMA and CCL peripherals. The Legato graphics library draws the updated sections of the frame to an internal scratch buffer which is used by the ILI9488 display driver to update the ILI9488 display controller.</p>
+<p><img src="legato_adv_e70_xu_tm4301b_ssd1963_arch.png" alt="" width="480" height="272" class="inline"/></p>
+<p>The architecture for this configuraiton is the SAM E70 Xplained Ultra + 4.3” WQVGA with SSD1963 GFX Interface Card interface through the 16-bit 8080 mode.</p>
+<p>The SSD1963 is connected to the SAM E70 thru the SMC peripheral and GPIOs which are used to send 16-bit parallel data/commands and to bit-bang control signals to the SSD1963 controller, respectively. The frame buffer is stored externally in the SSD1963 controller.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service. <br  />
 </p>
 <h2><a class="anchor" id="autotoc_md52"></a>

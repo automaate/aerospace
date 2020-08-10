@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['climatecontrol_20application_1335',['ClimateControl Application',['../LegatoClimateControl.html',1,'LegatoApplications']]],
-  ['cooker_20application_1336',['Cooker Application',['../LegatoCooker.html',1,'LegatoApplications']]]
+  ['climatecontrol_1335',['ClimateControl',['../LegatoClimateControl.html',1,'LegatoApplications']]],
+  ['cooker_1336',['Cooker',['../LegatoCooker.html',1,'LegatoApplications']]]
 ];

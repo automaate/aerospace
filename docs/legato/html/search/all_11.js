@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['showcase_20application_624',['Showcase Application',['../LegatoShowcase.html',1,'LegatoApplications']]],
+  ['showcase_624',['Showcase',['../LegatoShowcase.html',1,'LegatoApplications']]],
   ['setbuffer_625',['setBuffer',['../legato__fixedstring_8h.html#a7f3b9c3b0a5aedb00d618c2ab7d1e9dd',1,'legato_fixedstring.h']]],
   ['setcapacity_626',['setCapacity',['../legato__dynamicstring_8h.html#ab6e6e438395a978e8ffce8224c21166d',1,'legato_dynamicstring.h']]],
   ['setcenterangle_627',['setCenterAngle',['../legato__widget__arc_8h.html#a643312fd6c9a6913fe14bcfcc2137497',1,'legato_widget_arc.h']]],

@@ -7,6 +7,6 @@ var searchData=
   ['colorcount_86',['colorCount',['../structlePalette.html#aa7814662d841c9730df86e132fe48a77',1,'lePalette']]],
   ['colormode_87',['colorMode',['../structlePalette.html#abc94789c79a0808aa63cf3bdbc57397b',1,'lePalette']]],
   ['compare_88',['compare',['../legato__string_8h.html#a9a0884614b95218aeeba25a9a5d9db33',1,'legato_string.h']]],
-  ['climatecontrol_20application_89',['ClimateControl Application',['../LegatoClimateControl.html',1,'LegatoApplications']]],
-  ['cooker_20application_90',['Cooker Application',['../LegatoCooker.html',1,'LegatoApplications']]]
+  ['climatecontrol_89',['ClimateControl',['../LegatoClimateControl.html',1,'LegatoApplications']]],
+  ['cooker_90',['Cooker',['../LegatoCooker.html',1,'LegatoApplications']]]
 ];
