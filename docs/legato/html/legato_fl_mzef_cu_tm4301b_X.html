@@ -73,17 +73,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md129">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md130">Demonstration Features</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md133">Defining the Architecture</a><ul><li class="level3"><a href="#autotoc_md134">Demonstration Features</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md131">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md132">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md133">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md134">Running the Demonstration</a></li>
+<li class="level2"><a href="#autotoc_md135">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md136">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md137">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md138">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md129"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md133"></a>
 Defining the Architecture</h2>
 <p><img src="legato_fl_mzef_cu_tm4301b_arch.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The legato_flash application uses the USB file systems in MPLAB Harmony and the USB driver to scan the MSD for a .hex file with resources and reads them sector by sector and programs the external non-volatile SQI memory. The Graphics Library is used to render graphics to the display. Using the DMA, the Low-Cost Controllerless (LCC) Display Driver continuously transfers frame data from the frame buffer out to the LCD display.</p>
@@ -91,7 +91,7 @@ Defining the Architecture</h2>
 <p>This configuration runs on the PIC32MZ EF Curiosity 2.0 with RGB565 GFX Interface board and WQVGA display. A 16-bit RGB565 frame buffer is stored in the internal SRAM, and the Low Cost Controller-less (LCC) display driver is used to manage the DMA that transfers the framebuffer contents to the display via the EBI peripheral.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
 <p>The USB peripheral is setup in MSD Host mode with the File System service support. It scans for a file named SQI.hex when a USB MSD device is connected. The application reads the hex data from the file and decodes it with a hex decoder into binary data. The binary is written to external non-volatile memory via the QSPI peripheral configured with the SST26 driver.</p>
-<h3><a class="anchor" id="autotoc_md130"></a>
+<h3><a class="anchor" id="autotoc_md134"></a>
 Demonstration Features</h3>
 <ul>
 <li>Legato Graphics Library</li>
@@ -106,7 +106,7 @@ Demonstration Features</h3>
 <li>File System</li>
 <li>Images and Fonts for user interface stored in internal flash</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md131"></a>
+<h2><a class="anchor" id="autotoc_md135"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_fl_mzef_cu_tm4301b_pg.png" alt="" width="800" height="480" class="inline"/></p>
 <p>The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
@@ -117,7 +117,7 @@ Creating the Project Graph</h2>
 <p><img src="legato_fl_mzef_cu_tm4301b_pg3.png" alt="" class="inline"/></p>
 <p>To drive the USB peripheral, make sure UPLL is enabled with the 40x multiplier, with USB FS Clock output 48 MHz.</p>
 <p><img src="legato_fl_mzef_cu_tm4301b_pg4.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md132"></a>
+<h2><a class="anchor" id="autotoc_md136"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_flash. To build this application, use MPLAB X IDE to open the gfx/apps/legato_flash/firmware/legato_fl_mzef_cu_tm4301b.X project file.</p>
 <p>The following table lists configuration properties: <br  />
@@ -131,7 +131,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md133"></a>
+<h2><a class="anchor" id="autotoc_md137"></a>
 Configuring the Hardware</h2>
 <p>PIC32MZ EF Curiosity 2.0 with the 4.3” WQVGA PCAP Touch Display Configure the hardware as follows:</p><ul>
 <li>Attach the RGB565 GFX Interface Card to the J601 connector on the PIC32MZ EF Curiosity 2.0 board.</li>
@@ -142,7 +142,7 @@ Configuring the Hardware</h2>
 </ul>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_qs_mzef_cu_tm4301b_conf1.png" alt="" width="800" height="480" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md134"></a>
+<h2><a class="anchor" id="autotoc_md138"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, without a USB MSD device or SD MMC device attached to the <b>Target USB</b> port the demonstration will display a screen with the message <b>No valid storage mediums found. Please insert a USB device or SD Card</b>:</p>
 <p><img src="legato_fl_e54_cult_cpro_parallel_run1.png" alt="" class="inline"/></p>

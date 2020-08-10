@@ -73,22 +73,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md166">Defining the Architecture</a></li>
-<li class="level2"><a href="#autotoc_md167">Demonstration Features</a></li>
-<li class="level2"><a href="#autotoc_md168">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md169">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md170">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md171">Running the Demonstration</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md170">Defining the Architecture</a></li>
+<li class="level2"><a href="#autotoc_md171">Demonstration Features</a></li>
+<li class="level2"><a href="#autotoc_md172">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md173">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md174">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md175">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md166"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md170"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_e54_cu_tm4301b_ssd1963_arch.png" alt="" width="480" height="272" class="inline"/></p>
 <p>The application uses the Legato Graphics library to render text on a label widget, an image and a user-interactive button to the screen. Touching the button on the screen will show the button being pressed.</p>
 <p>The SSD1963 display controller is used to send the display data and timing to a display. The SSD1963 is connected to the SAM E54 thru the PORT peripheral and GPIOs which are used to send 16-bit parallel data/commands and to bit-bang control signals to the SSD1963 controller, respectively. The frame buffer is stored externally in the SSD1963 controller.</p>
 <p>User touch input on the display panel is received thru the PCAP capacitive touch controller, which sends a notification to the Touch Input Driver. The Touch Input Driver reads the touch information over I2C and sends the touch event to the Graphics Library thru the Input System Service.</p>
-<h2><a class="anchor" id="autotoc_md167"></a>
+<h2><a class="anchor" id="autotoc_md171"></a>
 Demonstration Features</h2>
 <ul>
 <li>Legato Graphics Library</li>
@@ -100,12 +100,12 @@ Demonstration Features</h2>
 <li>16-bit RGB565 color depth support (65535 unique colors)</li>
 <li>JPEG image stored in internal flash</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md168"></a>
+<h2><a class="anchor" id="autotoc_md172"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_e54_cu_tm4301b_ssd1963_pg.png" alt="" width="480" height="272" class="inline"/></p>
 <p>The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
 <p>Adding the <b>SAM E54 Curiosity Ultra BSP</b> and <b>Legato Graphics w/ PDA TM4301B Display</b> Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
-<h2><a class="anchor" id="autotoc_md169"></a>
+<h2><a class="anchor" id="autotoc_md173"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_quickstart. To build this application, use MPLAB X IDE open the gfx/apps/legato_quickstart/firmware/legato_qs_e54_cu_tm4301b_ssd1963.X project file..</p>
 <p>The following table lists configuration properties:</p>
@@ -118,7 +118,7 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md170"></a>
+<h2><a class="anchor" id="autotoc_md174"></a>
 Configuring the Hardware</h2>
 <p>Configure the hardware as follows:</p>
 <p>The demonstration will show the figure below on the display: <br  />
@@ -126,7 +126,7 @@ Configuring the Hardware</h2>
 <p>The final hardware setup should be:</p>
 <p><img src="legato_qs_e54_cu_tm4301b_ssd1963.png" alt="" class="inline"/></p>
 <p>Power up the board by connecting the power adapter to power connector or a powered USB cable to the DEBUG USB port on the board.</p>
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="autotoc_md175"></a>
 Running the Demonstration</h2>
 <p>When power-on is successful, the demonstration will display a similar menu to that shown in the following figure (different configurations may have slight variation in the screen aspect ratio):</p>
 <p><img src="legato_qs_e70_xu_tm4301b_run1.png" alt="" class="inline"/></p>

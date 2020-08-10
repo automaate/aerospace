@@ -73,20 +73,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md178">Defining the Architecture</a></li>
-<li class="level2"><a href="#autotoc_md179">Demonstration Features</a></li>
-<li class="level2"><a href="#autotoc_md180">Creating the Project Graph</a></li>
-<li class="level2"><a href="#autotoc_md181">Building the Application</a></li>
-<li class="level2"><a href="#autotoc_md182">Configuring the Hardware</a></li>
-<li class="level2"><a href="#autotoc_md183">Running the Demonstration</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md182">Defining the Architecture</a></li>
+<li class="level2"><a href="#autotoc_md183">Demonstration Features</a></li>
+<li class="level2"><a href="#autotoc_md184">Creating the Project Graph</a></li>
+<li class="level2"><a href="#autotoc_md185">Building the Application</a></li>
+<li class="level2"><a href="#autotoc_md186">Configuring the Hardware</a></li>
+<li class="level2"><a href="#autotoc_md187">Running the Demonstration</a></li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md178"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md182"></a>
 Defining the Architecture</h2>
 <p><img src="legato_qs_e70_xu_tm4301b_ssd1963_arch.png" alt="" width="480" height="272" class="inline"/></p>
 <p>In this configuration, the SSD1963 display controller is used to send the display data and timing to a WQVGA display. The SSD1963 is connected to the SAM E70 thru the SMC peripheral and GPIOs which are used to send 16-bit parallel data/commands and to bit-bang control signals to the SSD1963 controller, respectively. The frame buffer is stored externally in the SSD1963 controller.</p>
-<h2><a class="anchor" id="autotoc_md179"></a>
+<h2><a class="anchor" id="autotoc_md183"></a>
 Demonstration Features</h2>
 <ul>
 <li>Legato Graphics Library</li>
@@ -98,13 +98,13 @@ Demonstration Features</h2>
 <li>I2C peripheral library and driver</li>
 <li>JPEG image stored in internal flash</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md180"></a>
+<h2><a class="anchor" id="autotoc_md184"></a>
 Creating the Project Graph</h2>
 <p><img src="legato_qs_e70_xu_tm4301b_ssd1963_pg.png" alt="" width="480" height="272" class="inline"/></p>
 <p>The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.</p>
 <p>Adding the ?SAM E70 XPlained Ultra BSP? and ?Legato Graphics w/ PDA TM4301B Display? Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.</p>
 <p>By default, the template is configured to use the Low-Cost Controller-less (LCC) interface to the display. To configure the project for an SSD1963, set the Display Interface setting for the Legato component from LCC to SSD1963.</p>
-<h2><a class="anchor" id="autotoc_md181"></a>
+<h2><a class="anchor" id="autotoc_md185"></a>
 Building the Application</h2>
 <p>The parent directory for this application is gfx/apps/legato_quickstart. To build this application, use MPLAB X IDE open the gfx/apps/legato_quickstart/firmware/legato_qs_mzef_cu_tm4301b_ssd1963.X project file.</p>
 <p>The following table lists configuration properties:</p>
@@ -117,11 +117,11 @@ Building the Application</h2>
 <blockquote class="doxtable">
 <p>**_NOTE:_** This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md182"></a>
+<h2><a class="anchor" id="autotoc_md186"></a>
 Configuring the Hardware</h2>
 <p>The final hardware set-up should be:</p>
 <p>�<img src="legato_qs_e70_xu_tm4301b_ssd1963_conf1.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md183"></a>
+<h2><a class="anchor" id="autotoc_md187"></a>
 Running the Demonstration</h2>
 <p>The application first boots to an animated Splash Screen. Once the Splash Screen animation completes, the application boots to a Main Screen.</p>
 <p>When at rest, the demo will cycle through idle sprite animations. Various areas of the screen are touch interactive</p>

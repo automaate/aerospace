@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md135">Description</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md139">Description</a></li>
 </ul>
 </ul>
 </div>
@@ -92,7 +92,7 @@ $(function() {
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a href="legato_fl_mzef_cu_tm4301b_X.html">legato_fl_mzef_cu_tm4301b.X</a> </td><td class="markdownTableBodyNone"><a href="https://www.microchip.com/Developmenttools/ProductDetails/DM320209">Curiosity PIC32MZ EF 2.0 Development Board</a> using LCC software display controller to drive the <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/AC320005-4">High-Performance 4.3" WQVGA Display Module with maXTouch® Technology</a>  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md135"></a>
+<h2><a class="anchor" id="autotoc_md139"></a>
 Description</h2>
 <p>Applications that use large images or multiple page menu screens, which require several images or large or multiple font packages, etc., have a very large memory requirement for their graphics resources. In such applications, storing these graphics resources on-chip may result in insufficient memory or may be prohibitive to a possible cost benefit. A solution is to store the graphics resources to off-chip memory, such as non-volatile memory, thereby preserving the on-chip memory for program memory and allowing for more complex functional features.</p>
 <p>The legato_flash application flashes the .hex file containing the binary data of the external graphics resources, in this case QSPI.hex, into the external non-volatile memory. The resource file is copied from the computer to a USB Flash drive, which has a FAT32 file system installed. The USB Flash drive is then plugged into SAM E70 Curiosity Ultra development board and the application scans the MSD for the resource file. The legato_flash application copies the resource file sector by sector and flashes the binary resource content onto the QSPI Flash external memory.</p>

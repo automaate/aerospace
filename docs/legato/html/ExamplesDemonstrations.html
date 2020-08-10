@@ -70,12 +70,50 @@ $(function() {
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><ul><li class="level2"><a href="#autotoc_md44">Overview</a></li>
+<li class="level2"><a href="#autotoc_md45">General Naming Principles</a><ul><li class="level3"><a href="#autotoc_md46">Project Folder</a></li>
+<li class="level3"><a href="#autotoc_md47">Project Name:</a></li>
+<li class="level3"><a href="#autotoc_md48">Harmony Config Name:</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </div>
 <div class="textblock"><h2><a class="anchor" id="autotoc_md44"></a>
 Overview</h2>
 <p>Every MPLAB Harmony Graphics Suite release contains a set of examples that demonstrates its software which run on Microchip graphics kits. The applications are best practices meant to be either a quickstart solution, demonstration of features, or a signature UI illustrations. These apps provide functionality that customers can use immediately in their solution.</p>
+<h2><a class="anchor" id="autotoc_md45"></a>
+General Naming Principles</h2>
+<p>The primary goal of the graphics configuration naming convention is to be descriptive and brief.</p>
+<p>Application project names which includes the project folder, project name, and configuration files adhere to the following "_" delimited attribute naming convention:</p>
+<h3><a class="anchor" id="autotoc_md46"></a>
+Project Folder</h3>
+<p>Project folders could be either a MPLABX (.X) or IAR Embedded Workbench (.eww).</p>
+<p>&lt;gfx-library&gt;_&lt;abbr-app name&gt;_&lt;mcu&gt;_&lt;abbr-dev-board&gt;_&lt;display&gt;_&lt;opt-desc&gt;</p>
+<h3><a class="anchor" id="autotoc_md47"></a>
+Project Name:</h3>
+<p>&lt;gfx-library&gt;_&lt;full-app-name&gt;_&lt;mcu&gt;_&lt;dev-board&gt;_&lt;display-resolution&gt;_&lt;opt-desc&gt;</p>
+<h3><a class="anchor" id="autotoc_md48"></a>
+Harmony Config Name:</h3>
+<p>&lt;display-driver&gt;_&lt;color-mode&gt;_&lt;touch-driver&gt;_&lt;opt-desc&gt;</p>
+<p>The following list contain attributes and possible values:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Attribute </th><th class="markdownTableHeadNone">Value  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;gfx_library&gt; </td><td class="markdownTableBodyNone">aria, legato  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;full-app-name&gt; </td><td class="markdownTableBodyNone">quickstart, showcase, benchmark, radial_menu  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;abbr-app-name&gt; </td><td class="markdownTableBodyNone">qs, sc, bm, rm  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;mcu&gt; </td><td class="markdownTableBodyNone">mzda, mzef, c21, d21, e54, e70, a5d2, 9x60  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;dev-board&gt; </td><td class="markdownTableBodyNone">meb2, xult, xpro, cult, sk  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lt;opt-desc&gt; </td><td class="markdownTableBodyNone">tm4301b, tm5000, wvga, wqvga, ssd1963, spi, parallel, freertos, intddr, extddr  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lt;color-mode&gt; </td><td class="markdownTableBodyNone">rgba8888, rgb888, rgb565  </td></tr>
+</table>
 <p><a class="el" href="LegatoApplications.html">Legato Applications</a> <a class="el" href="BlankApplications.html">Blank Applications</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
