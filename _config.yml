@@ -85,7 +85,7 @@ exclude:
 aux_links:
 #  "See me on GitHub":
 #  "{% octicon mark-github %}":
-#    - "//github.com/Microchip-MPLAB-Harmony/aerospace"
+#    - "//github.com/Microchip-MPLAB-Harmony/gfx"
   "Obtain Support from Microchip":
     - "https://support.microchip.com"
 
