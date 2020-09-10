@@ -60,24 +60,14 @@ The following table lists configuration properties:
 
 The final hardware set-up should be:
 
-�<img src="legato_qs_e70_xu_tm4301b_ssd1963_conf1.png"/>
+<img src="legato_qs_e70_xu_tm4301b_ssd1963_conf1.png"/>
 
 ## Running the Demonstration
 
-The application first boots to an animated Splash Screen. Once the Splash Screen animation completes, the application boots to a Main Screen.
+When power-on is successful, the demonstration will display a similar menu to that shown in the following figure (different configurations may have slight variation in the screen aspect ratio):
 
-When at rest, the demo will cycle through idle sprite animations. Various areas of the screen are touch interactive
+<img src="legato_qs_e70_xu_tm4301b_run1.png"/>
 
-<img src="legato_adv_e54_cu_cpro_parallel_img1.png"/>
+When Make changes. Generate. Run. is touched, the button will toggle with each individual touch.
 
-If initiated to run, the lamb sprite will run to the end of the screen, and play out a sequence of smacking into a wall, hurt and dizzy animations.
-
-<img src="legato_adv_e54_cu_cpro_parallel_img2.png"/>
-
-Tap Jump and the lamb will play out a jump animation.
-
-<img src="legato_adv_e54_cu_cpro_parallel_img3.png"/>
-
-Info Screen describes the features supported by this demo
-
-<img src="legato_adv_e54_cu_cpro_parallel_img4.png"/>
+<img src="legato_qs_e70_xu_tm4301b_run2.png"/>

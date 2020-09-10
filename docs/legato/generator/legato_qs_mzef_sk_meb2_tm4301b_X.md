@@ -26,7 +26,7 @@ User touch input on the display panel is received thru the PCAP capacitive touch
 
 The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.
 
-Adding the “PIC32MZ EF Starter Kit BSP” and “Legato Graphics w/ PDA TM4301B Display” Graphics Template components into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller. 
+Adding the ï¿½PIC32MZ EF Starter Kit BSPï¿½ and ï¿½Legato Graphics w/ PDA TM4301B Displayï¿½ Graphics Template components into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller. 
 
 ## Building the Application
 
@@ -36,7 +36,7 @@ The following table lists configuration properties:
 
 | Project Name  | BSP Used |Graphics Template Used | Description |
 |---------------| ---------|---------------| ---------|
-| legato_qs_mzef_sk_meb2_tm4301b.X | PIC32MZ EF Starter Kit| Legato Graphics w/ PDA TM4301B Display| PIC32MZ EF Starter Kit with MEBII and 4.3” WQVGA PCAP Touch display |
+| legato_qs_mzef_sk_meb2_tm4301b.X | PIC32MZ EF Starter Kit| Legato Graphics w/ PDA TM4301B Display| PIC32MZ EF Starter Kit with MEBII and 4.3ï¿½ WQVGA PCAP Touch display |
 
 > **_NOTE:_**  This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code.
 
